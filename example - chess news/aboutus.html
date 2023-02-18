@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head section contains the page's invisible information -->
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Informs device to set viewport to its own width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Summary of the web page as a news provider -->
+    <meta name="description" content="Learn about the team and fundamental values of Chess News." />
+    <!-- Author of the web page -->
+    <meta name="author" content="Jonathan" />
+    <!-- Keywords relevant to web page content -->
+    <meta name="keywords" content="chess, news, championship" />
+    <!-- Link external CSS file to style and format web page !-->
+    <link rel="stylesheet" href="stylesheet/main.css">
+    <!-- Link external JS file for user interactivity !-->
+    <!-- Defer ensures DOM is fully loaded before JS scripts are executed -->
+    <script src="scripts/scripts.js" defer></script>
+    <!-- Link third party library to provide different font families !-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Link jQuery's CDN used for accessibility dropdown menu -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Inform user of current page within site structure: shown on web page's tab -->
+    <title>Chess News | About Us</title>
+</head>
+
+<!-- Body section contains the structure for all visible content
+    1. Company logo
+    2. Navigation menu
+    3. 'Contrast Toggle' button
+    4. Scroll to top button
+    5. Accessibility dropdown menu
+-->
+
+<body>
+    <header aria-label="navigation menu">
+
+        <!-- Main navigation area: composed of the company logo, a hamburger menu for tablet/mobile devices, and navigational
+            links to the five web pages within the site structure -->
+
+        <section class="nav-bar">
+            <!-- Company logo composed of two chess pieces and company title, "Chess News" -->
+            <!-- Company title is fetched asynchronously from a JSON file on a web server and appended after the chess logo -->
+            <div class="company-name-JSON"><i class="fas fa-chess"></i> </div>
+            <!-- Company logo that appears when the navigation bar changes state from default to fixed -->
+            <div class="company-logo-scroll"><i class="fas fa-chess"></i></div>
+            <!-- Hamburger menu for navigation on mobile and tablet devices.
+                Invisible on desktop devices. -->
+            <a href="#" class="toggle-button" aria-label="toggle-button">
+                <span class="bar" id="first-bar"></span>
+                <span class="bar" id="second-bar"></span>
+                <span class="bar" id="third-bar"></span>
+            </a>
+            <!-- Main navigation menu which contains links to every other web page within the site structure -->
+            <nav class="nav-bar-links">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="currentnews.html">Current News</a></li>
+                    <li><a href="topplayers.html">Top Players</a></li>
+                    <li><a href="contactus.html">Contact Us</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                </ul>
+            </nav>
+
+            <!-- Scroll to top button
+                Becomes visible once the user has scrolled down to a certain point on the page !-->
+
+            <nav>
+                <!-- Up arrow icon from imported library !-->
+                <button class="back-to-top-button">
+                    <i class="fa fa-chevron-up"></i>
+                </button>
+            </nav>
+
+            <!-- Contrast toggle button: high and low contrast options
+                Default mode is high contrast -->
+
+            <button class="low-contrast-toggle" id="low-contrast-toggle">Toggle Contrast</button>
+
+            <!-- Fixed accessibility button: becomes dropdown menu when toggled
+                Each menu item has a accessibility-tooltip on the right indicating its accessibility feature. -->
+
+            <aside class="accessibility-menu">
+                <section class="dropdown-menu">
+                    <!-- Main wheelchair icon which is visible by default. Dropdown menu options hidden by default -->
+                    <div class="accessibility-tooltip tooltip-right accessibility-toggle" title="Accessibility Menu">
+                        <a><i class="fa fa-wheelchair"></i></a>
+                    </div>
+                    <!-- Dropdown menu with accessibility options which becomes visible when clicked -->
+                    <aside class="sub-menu">
+                        <!-- Makes fonts more legible with Arial font -->
+                        <div class="accessibility-tooltip tooltip-right" title="Readable Font">
+                            <!-- Accessibility tooltip on the right indicating a "Readable Font" feature -->
+                            <a href="#" class="dropdown-item"><i class="fa fa-font"></i></a>
+                        </div>
+                        <!-- Underlines hyperlinks -->
+                        <div class="accessibility-tooltip tooltip-right" title="Underline Links">
+                            <!-- Accessibility tooltip on the right indicating an "Underline Links" feature -->
+                            <a href="#" class="dropdown-item"><i class="fa fa-link"></i></a>
+                        </div>
+                        <!-- Change site's color scheme to grayscale. Grayscale mode applies to images as well. -->
+                        <div class="accessibility-tooltip tooltip-right" title="Grayscale Mode">
+                            <!-- Accessibility tooltip on the right indicating a "Grayscale Mode" feature -->
+                            <a href="#" class="dropdown-item"><i class="fas fa-palette"></i></a>
+                        </div>
+                    </aside>
+                </section>
+            </aside>
+        </section>
+    </header>
+
+    <!-- Main section contains the unique content of the "About Us" page
+        1. Text-image and image-text section: "Small Beginnings" and "Our Team" headers which explain the origins of Chess News
+        and its employees
+        2. Same structured text-image and image-text section: "Our Vision" and "Our Supporters" headers which explain the long-term
+        goals and the support of patrons
+        3. Grid containing statistics and icons and two background images: one light-themed chess background and a contrasting dark-
+        themed chess background
+        4. FAQ accordion menu: contains three accordion windows with informative responses which expand and collapse when toggled
+    -->
+
+    <main>
+        <!-- Header for "About Us" page which informs the user of the current page within web site structure -->
+        <header class="section-header center" id="about-us-header">
+            <h2>
+                About Us | Our Journey
+            </h2>
+            <!-- Subheader that describes the purpose of the articles to follow: the journey from a small company to one with
+                international success-->
+            <h3>
+                From Stanford University to International Recognition
+            </h3>
+        </header>
+
+        <!-- Divider between the page header/subheader above and the text-image section below ("Small Beginnings" section) -->
+        <aside>
+            <!-- Decorative design with two lines on either side of a circle -->
+            <div class="decorative-line center">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </aside>
+
+        <!-- Text description to the left of the Stanford University building image
+            This section describes the roots of Chess News as a company that began as a small startup at Stanford University.
+            It includes the reasons why the company was created in the first place. -->
+
+        <section class="text-image-section" id="stanford-university-building">
+            <section class="text-left-image-right ">
+                <h2>Small Beginnings</h2>
+                <h3>Our Roots at Stanford University</h3>
+                <!-- Discussion of the origins of Chess News, how the company was founded, and the motivation for creating the company -->
+                <p>Chess News was not once a popular and internationally renowned brand. The company has its roots as a
+                    small startup that originated at Stanford University. The president of the Stanford chess club and
+                    an avid chess player came together to create what is now known as Chess News. It was the passion,
+                    curiosity, and desire to unite chess players across the world and provide a safe and pleasant
+                    environment to access up to date and accurate news.</p>
+            </section>
+            <!-- Supporting image: entrance to a Stanford University building. -->
+            <section class="image-right-text-left image-main-container grid-image">
+                <img src="images/stanford-university-building.jpg" alt="Stanford University building."
+                    class="grid-image">
+                <!-- Text overlay that becomes visible when a user hovers over the Stanford University building image.
+                    Text overlay describes the Stanford Chess Club, which was open to players of all experience levels.
+                    The white text overlay is framed against a black semi-opaque background that provides contrast -->
+                <section class="text-overlay blurry-text-overlay">
+                    <header class="image-header">
+                        Stanford University
+                    </header>
+                    <p>Home to the Stanford Chess Club, which used to operate inside Tresidder Union, and welcomed
+                        students of all experience levels to participate.</p>
+                </section>
+            </section>
+        </section>
+
+        <!-- Developers at a table image to the left of its corresponding text description
+            This section describes the diversity of the company's employees. It discusses the company's founders' decision to pursue
+            the company full-time and some of the fundamental values promoted by the company. -->
+
+        <section class="image-text-section">
+            <!-- Supporting image: a team of developers coding and discussing plans at a table. -->
+            <section class="image-left-text-right image-main-container grid-image">
+                <img src="images/developers.jpg" alt="A group of developers collaborating at a table.">
+                <!-- Text overlay that becomes visible when a user hovers over the team of developers image.
+                    Text overlay describes the company's emphasis on diversity as one of its core values.
+                    The white text overlay is framed against a black semi-opaque background that provides contrast -->
+                <section class="text-overlay blurry-text-overlay">
+                    <header class="image-header">
+                        Team Diversity
+                    </header>
+                    <p>One of our company's core philosophies is the incorporation of diverse perspectives, which comes
+                        from the unique vantage points presented by our developers from all walks of life.</p>
+                </section>
+            </section>
+            <section class="text-right-image-left">
+                <h2>Our Team</h2>
+                <h3>And our Fundamental Values</h3>
+                <!-- Discussion of the ecosystem of Chess News, the diversity of its employees, and the core values upheld by the company -->
+                <p> To sustain the entire ecosystem of
+                    eager chess fans, we require a team of over 300+ employees from over 40 countries. Many are employed
+                    as remote developers and content editors. The decision to drop out of Stanford to pursue this avenue
+                    was a tough one. However, it was one of the best choices that could have been made. As a company, we
+                    promote kindness, generosity, and a joy of learning. We hope that our community can recognize and
+                    uphold these standards.</p>
+            </section>
+        </section>
+
+        <!-- Divider between the image-text section above ("Our Team" section) and the text-image section below ("Our Vision" section) -->
+        <aside>
+            <!-- Decorative design with two lines on either side of a circle -->
+            <div class="decorative-line center">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </aside>
+
+        <!-- Text description to the left of a red and white bullseye image
+            This section describes the long term goals of the company, including changes to the user interface, increasing the number of
+            support languages, and charity events. It also discusses transparency as being one of the core values of the company. -->
+
+        <section class="text-image-section">
+            <section class="text-left-image-right ">
+                <h2>Our Vision</h2>
+                <h3>Our Long Term Goals</h3>
+                <!-- Discussion of the open-source nature of Chess News, the long term goals of the company, and the company's emphasis
+                    on transparency as a core value -->
+                <p>Chess News originated as an open source project, meaning that the source code was available to
+                    developers and contributions could be made with ease. Continuing with our tradition of transparency,
+                    we would like to share with you our long-term vision. We plan to revamp the site's UI, to increase
+                    the number of supported languages, and to host charity events to raise
+                    awareness for disadvantaged groups. We plan to continue expanding the quality of our news articles
+                    and improving our enquiry response times.</p>
+            </section>
+            <!-- Supporting image: an arrow striking the bullseye of a red and white target. -->
+            <section class="image-right-text-left image-main-container">
+                <img src="images/target.jpg" alt="A target with an arrow stuck in the center.">
+                <!-- Text overlay that becomes visible when a user hovers over the image containing an arrow striking the bullseye of a
+                    target.
+                    Text overlay describes the company's emphasis on customer satisfaction and gearing the long-term changes to cater to
+                    customer desires.
+                    The white text overlay is framed against a black semi-opaque background that provides contrast -->
+                <section class="text-overlay blurry-text-overlay">
+                    <header class="image-header">
+                        Our Five Year Plan
+                    </header>
+                    <p>Our plan is to continue pleasing our visitors and offering a plethora of new and innovative
+                        services. All of our changes are geared towards customer satisfaction.</p>
+                </section>
+            </section>
+        </section>
+
+        <!-- Thumbs up image to the left of its corresponding text description
+            This section describes the amount of maintenance required to host Chess News. It extends the company's gratitude towards
+            volunteers, the executive team, and patrons that support the company financially. -->
+
+        <section class="image-text-section">
+            <section class="image-left-text-right image-main-container grid-image">
+                <!-- Supporting image: a group of people performing a thumbs up sign with their hands. -->
+                <img src="images/supporters.jpg" alt="A group of hands in a thumbs-up position.">
+                <!-- Text overlay that becomes visible when a user hovers over the thumbs up image.
+                    Text overlay describes the company's gratitude towards the generosity of its supporters.
+                    The white text overlay is framed against a black semi-opaque background that provides contrast -->
+                <section class="text-overlay blurry-text-overlay">
+                    <header class="image-header">
+                        Our Gratitude
+                    </header>
+                    <p>Chess News would never have become what it is today without the plentiful generosity and
+                        altruism
+                        of all our supporters. We would like to extend our gratitude on behalf of all of Chess News.
+                    </p>
+                </section>
+            </section>
+            <section class="text-right-image-left">
+                <h2>Our Supporters</h2>
+                <h3>Our Token of Appreciation</h3>
+                <!-- Discussion of the groups of people that contribute to maintaining the company. This includes volunteers, an executive
+                    team, patrons, and visitors. -->
+                <p>A company as extensive as Chess News requires many people to maintain it. It also requires a
+                    large
+                    amount of capital in order to pay for hosting services and servers. There are many groups of
+                    people
+                    that we would like to extend our thanks to, including but not limited to: thousands of
+                    volunteers
+                    who create features and debug issues, our executive team that manages the site and aids in
+                    creating
+                    a long term vision, our patrons who provide a stable income to the site, and our visitors who
+                    keep
+                    us motivated to put out more content!</p>
+            </section>
+        </section>
+
+        <!-- Divider between the image-text section above ("Our Supporters" section) and the grid container below -->
+        <aside>
+            <!-- Decorative design with two lines on either side of a circle -->
+            <div class="decorative-line center">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </aside>
+
+        <!-- Header and subheader for the grid section below -->
+        <header class="section-header center" id="statistics-header">
+            <h2>
+                An Overview of our Journey
+            </h2>
+            <h3>
+                Dedicated to our Generous Supporters, Developers, and Content Editors
+            </h3>
+        </header>
+
+        <!-- Grid layout with two different chess-themed backgrounds (one dark, one light) with icon and text overlay for each grid section
+            The "Country Location", "Language Availability", "Application Downloads", and "Database Games" grid sections occupy two-widths in desktop
+            devices. In tablet and mobile devices, they occupy the same width as the remaining grid sections. -->
+
+        <article class="grid-layout-container single-background">
+            <!-- Country location grid container with an icon of a globe -->
+            <section class="mountain-sunset-background wide-grid-left left-divide">
+                <i class="fas fa-globe"></i>
+                <p>Locations in 83 Countries</p>
+            </section>
+            <!-- Number of user grid container with an icon composed of three users -->
+            <section class="mountain-sunset-background right-divide" id="number-of-users">
+                <i class="fas fa-users"></i>
+                <p>40+ million users</p>
+            </section>
+            <!-- Date founded grid container with an icon of a calendar -->
+            <section class="cloudy-landscape-background left-divide">
+                <i class="fas fa-calendar-alt"></i>
+                <p>Founded in 1993</p>
+            </section>
+            <!-- Logo change grid container with an icon of a pawn (chess piece) -->
+            <section class="mountain-sunset-background right-divide">
+                <i class="fas fa-chess-pawn"></i>
+                <p>New Logo in 2004</p>
+            </section>
+            <!-- Charity events grid container with an icon composed of a hand holding a heart -->
+            <section class="mountain-sunset-background left-divide">
+                <i class="fas fa-hand-holding-heart"></i>
+                <p>150+ Charity Events</p>
+            </section>
+            <!-- Language availability grid container with an icon composed of characters in different languages -->
+            <section class="cloudy-landscape-background wide-grid-right right-divide">
+                <i class="fas fa-language"></i>
+                <p>Available in 14+ languages</p>
+            </section>
+            <!-- Number of employees grid container with an icon of a building -->
+            <section class="mountain-sunset-background left-divide">
+                <i class="fas fa-university"></i>
+                <p>300+ Employees</p>
+            </section>
+            <!-- Audience gender demographics grid container with an icon of a male symbol -->
+            <section class="mountain-sunset-background right-divide">
+                <i class="fas fa-mars"></i>
+                <p>56% Male Audience</p>
+            </section>
+            <!-- iOS application downloads grid container with an icon of the iOS app store logo -->
+            <section class="cloudy-landscape-background wide-grid-right left-divide">
+                <i class="fab fa-app-store-ios"></i>
+                <p>Most Downloaded iOS App in 2016</p>
+            </section>
+            <!-- Number of database games grid container with an icon of a database symbol -->
+            <section class="cloudy-landscape-background wide-grid-left right-divide" id="database">
+                <i class="fas fa-database"></i>
+                <p>Database Reaches 1 Bill.+ Games in 2019</p>
+            </section>
+            <!-- Number of articles grid container with an icon of a newspaper -->
+            <section class="cloudy-landscape-background left-divide">
+                <i class="fas fa-newspaper"></i>
+                <p>40 000 Total Articles</p>
+            </section>
+            <!-- Traffic grid container with an icon of a globe focused on the continent of Europe -->
+            <section class="cloudy-landscape-background right-divide">
+                <i class="fas fa-globe-europe"></i>
+                <p>Most Traffic from Europe</p>
+            </section>
+        </article>
+
+        <!-- Divider between the icon-statistic grid container above and the FAQ accordion menu below -->
+        <aside>
+            <!-- Decorative design with two lines on either side of a circle -->
+            <div class="decorative-line center">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </aside>
+
+        <!-- Accordion menu with three collapsable/expandable accordion windows discussing the answers to commonly asked questions -->
+
+        <article>
+            <!-- Header and subheader for the FAQ accordion section below -->
+            <header class="section-header center">
+                <h2>
+                    FAQ
+                </h2>
+                <h3>
+                    Our Answers to our Most Popular Questions
+                </h3>
+            </header>
+            <!-- First accordion menu button: FAQ about picking up chess at a late age -->
+            <button class="accordion-header">Can I start playing chess even in my late 40s?</button>
+            <section class="accordion-window">
+                <h2>Of course!</h2>
+                <!-- This accordion window discusses the possibilities of becoming an expert at chess at an old age,
+                    but emphasizes that young players tend to improve faster -->
+                <p>At Chess News, we firmly believe that it is never too late to pick up chess as a hobby. If you study
+                    chess books regularly and frequently play in longer time control games, it is feasible to become an
+                    expert level player within a few years. Despite this, it is true that chess is a sport that is by
+                    and large dominated by young players. If you wish to play chess at a professional level (i.e. making
+                    a living out of chess), it is recommended that you start at a much younger age, since your ability
+                    to learn new skills and process positional themes and patterns tends to be much sharper at a younger
+                    age.</p>
+            </section>
+            <!-- Second accordion menu button: FAQ about what is considered the best chess opening -->
+            <button class="accordion-header">What is considered the best opening to play?</button>
+            <section class="accordion-window">
+                <h2>Short answer: there is no 'best opening'!</h2>
+                <!-- This accordion window discusses the many factors that determine what opening is most suitable for
+                a specific player, and how there does not exist a universally regarded 'best opening' -->
+                <p>And now, for the more lengthy answer... There are many popular openings to choose from, which ranges
+                    from the Italian game to the English opening, and the Queen's pawn. Choosing an opening depends on
+                    several factors such as your experience level, the level of aggressiveness of your play, how
+                    tactically or positionally sound your playstyle is, and how willing you are to learn many
+                    intricate variations. With many factors to take into consideration, there is no definitive way of
+                    declaring a 'best' opening.</p>
+            </section>
+            <!-- Third accordion menu button: FAQ about whether a player should learn a few or many chess openings -->
+            <button class="accordion-header">Should I memorize chess openings?</button>
+            <section class="accordion-window">
+                <h2>Learn a few openings in detail</h2>
+                <!-- This accordion window -->
+                <p>It is much more efficient for a beginner or intermediate level player to hone in on a few common
+                    openings such as the Sicilian Defense, the French Defense, and the Caro-Kann defence. This allows
+                    you to understand the general plans for white and black, enables you to be in control of the game
+                    (i.e. by playing in a theoretically optimal way), and presents you with a clear course of action
+                    that
+                    gives you a 'home field advantage' by being prepared for different possible lines. This approach is
+                    not
+                    limited to memorizing opening theory, but also serves to reinforces fundamental principles that
+                    constitute
+                    good chess.</p>
+            </section>
+        </article>
+
+    </main>
+
+    <!-- Footer section
+        1. Four sections: Language, menu, resources, and social media platforms
+        2. Copyright information
+    -->
+
+    <footer>
+        <!-- Four column sections: each with a header and four links related to the header -->
+        <section class="footer-body">
+
+            <!-- First column: Language section
+                Provide language accessibility for popular languages used by the majority of users -->
+
+            <section class="footer-section">
+                <!-- Language section header -->
+                <h3>Languages</h3>
+                <ul>
+                    <li><a href="#">English</a></li>
+                    <li><a href="#">Français</a></li>
+                    <li><a href="#">Español</a></li>
+                    <li><a href="#">中文</a></li>
+                </ul>
+            </section>
+
+            <!-- Second column: Menu section
+                Provide information on legal and security related concerns -->
+
+            <section class="footer-section">
+                <!-- Menu section header -->
+                <h3>Menu</h3>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms and Conditions</a></li>
+                    <li><a href="#">Support</a></li>
+                </ul>
+            </section>
+
+            <!-- Third column: Resources section
+                Provide an interface for users to interact with the chess database through an interactive board -->
+
+            <section class="footer-section">
+                <!-- Resources section header -->
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="#">Openings Explorer</a></li>
+                    <li><a href="#">Games Database</a></li>
+                    <li><a href="#">Board Editor</a></li>
+                    <li><a href="#">Analysis Board</a></li>
+                </ul>
+            </section>
+
+            <!-- Fourth column: Social media section
+                Provide an outlet for users to connect with the company through popular social media platforms -->
+
+            <section class="footer-section">
+                <!-- Social media section header -->
+                <h3>Connect with Us</h3>
+                <!-- Circular social media icons for Facebook, Twitter, LinkedIn and Instagram-->
+                <ul class="social-icons">
+                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                </ul>
+            </section>
+            <!-- Copyright information -->
+            <section class="copyright-statement">
+                <h4>© 2021 Chess News | All Rights Reserved</h4>
+            </section>
+        </section>
+    </footer>
+</body>
+
+</html>

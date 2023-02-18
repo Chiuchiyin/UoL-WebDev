@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head section contains the page's invisible information -->
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Informs device to set viewport to its own width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Summary of the web page as a news provider -->
+    <meta name="description" content="Learn about the best modern and historical chess players." />
+    <!-- Author of the web page -->
+    <meta name="author" content="Jonathan" />
+    <!-- Keywords relevant to web page content -->
+    <meta name="keywords" content="chess, news, championship" />
+    <!-- Link external CSS file to style and format web page !-->
+    <link rel="stylesheet" href="stylesheet/main.css">
+    <!-- Link external JS file for user interactivity !-->
+    <!-- Defer ensures DOM is fully loaded before JS scripts are executed -->
+    <script src="scripts/scripts.js" defer></script>
+    <!-- Link third party library to provide different font families !-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Link jQuery's CDN used for accessibility dropdown menu -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Inform user of current page within site structure: shown on web page's tab -->
+    <title>Chess News | Top Players</title>
+</head>
+
+<!-- Body section contains the structure for all visible content
+    1. Company logo
+    2. Navigation menu
+    3. 'Contrast Toggle' button
+    4. Scroll to top button
+    5. Accessibility dropdown menu
+-->
+
+<body>
+    <header aria-label="navigation menu">
+
+        <!-- Main navigation area: composed of the company logo, a hamburger menu for tablet/mobile devices, and navigational
+            links to the five web pages within the site structure -->
+
+        <section class="nav-bar">
+            <!-- Company logo composed of two chess pieces and company title, "Chess News" -->
+            <!-- Company title is fetched asynchronously from a JSON file on a web server and appended after the chess logo -->
+            <div class="company-name-JSON"><i class="fas fa-chess"></i> </div>
+            <!-- Company logo that appears when the navigation bar changes state from default to fixed -->
+            <div class="company-logo-scroll"><i class="fas fa-chess"></i></div>
+            <!-- Hamburger menu for navigation on mobile and tablet devices.
+                Invisible on desktop devices. -->
+            <a href="#" class="toggle-button" aria-label="toggle-button">
+                <span class="bar" id="first-bar"></span>
+                <span class="bar" id="second-bar"></span>
+                <span class="bar" id="third-bar"></span>
+            </a>
+            <!-- Main navigation menu which contains links to every other web page within the site structure -->
+            <nav class="nav-bar-links">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="currentnews.html">Current News</a></li>
+                    <li><a href="topplayers.html">Top Players</a></li>
+                    <li><a href="contactus.html">Contact Us</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                </ul>
+            </nav>
+
+            <!-- Scroll to top button
+                Becomes visible once the user has scrolled down to a certain point on the page !-->
+
+            <nav>
+                <!-- Up arrow icon from imported library !-->
+                <button class="back-to-top-button">
+                    <i class="fa fa-chevron-up"></i>
+                </button>
+            </nav>
+
+            <!-- Contrast toggle button: high and low contrast options
+                Default mode is high contrast -->
+
+            <button class="low-contrast-toggle" id="low-contrast-toggle">Toggle Contrast</button>
+
+            <!-- Fixed accessibility button: becomes dropdown menu when toggled
+                Each menu item has a accessibility-tooltip on the right indicating its accessibility feature. -->
+
+            <aside class="accessibility-menu">
+                <section class="dropdown-menu">
+                    <!-- Main wheelchair icon which is visible by default. Dropdown menu options hidden by default -->
+                    <div class="accessibility-tooltip tooltip-right accessibility-toggle" title="Accessibility Menu">
+                        <a><i class="fa fa-wheelchair"></i></a>
+                    </div>
+                    <!-- Dropdown menu with accessibility options which becomes visible when clicked -->
+                    <aside class="sub-menu">
+                        <!-- Makes fonts more legible with Arial font -->
+                        <div class="accessibility-tooltip tooltip-right" title="Readable Font">
+                            <!-- Accessibility tooltip on the right indicating a "Readable Font" feature -->
+                            <a href="#" class="dropdown-item"><i class="fa fa-font"></i></a>
+                        </div>
+                        <!-- Underlines hyperlinks -->
+                        <div class="accessibility-tooltip tooltip-right" title="Underline Links">
+                            <!-- Accessibility tooltip on the right indicating an "Underline Links" feature -->
+                            <a href="#" class="dropdown-item"><i class="fa fa-link"></i></a>
+                        </div>
+                        <!-- Change site's color scheme to grayscale. Grayscale mode applies to images as well. -->
+                        <div class="accessibility-tooltip tooltip-right" title="Grayscale Mode">
+                            <!-- Accessibility tooltip on the right indicating a "Grayscale Mode" feature -->
+                            <a href="#" class="dropdown-item"><i class="fas fa-palette"></i></a>
+                        </div>
+                    </aside>
+                </section>
+            </aside>
+        </section>
+    </header>
+
+    <!-- Main section contains the unique content of the "Top PLayers" page
+        1. Column cards for players ranked no. 1 - 3: Fabiano Caruana, Ding Liren, and Magnus Carlsen
+        2. Column cards for players ranked no. 4 - 6: Anish Giri, Ian Nepomniachtchi, and Levon Aronian
+        3. Column cards for players ranked no. 7 - 9: Alireza Firouzja, Wesley So, and Alexander Grischuk
+        4. Timeline of the best players throughout history
+    -->
+
+    <main class="no-overflow" aria-label="main content">
+
+        <!-- Current top players section composed of nine identically structured column cards-->
+
+        <article class="main-container">
+            <header class="top-players-header" id="top-players">
+                <!-- Page header informing user of the current web page within the site structure -->
+                <h1>Top Players | FIDE</h1>
+                <!-- Last updated date for the "Top Players" page -->
+                <h3>Last Updated November 31, 2021</h3>
+            </header>
+
+            <!-- First group of top players composed of three column cards
+                Structure of each column card: player image, player's country flag, FIDE rating and rank, and player
+                awards, accomplishments, and relevant information -->
+
+            <section class="secondary-container fade-in-effect">
+
+                <!-- First column card section: Fabiano Caruana, rank no. 3 -->
+
+                <article class="secondary-container-section">
+                    <!-- Image of Fabiano Caruana shaking his opponent's hand -->
+                    <img src="images/fabiano-caruana.gif"
+                        alt="Fabiano Caruana shakes the hand of his opponent in an over the board chess match.">
+                    <!-- Flag of Italy -->
+                    <div class="country-flag">
+                        <img src="images/italy-flag.png" alt="Flag of Italy.">
+                    </div>
+                    <!-- Player name -->
+                    <section class="top-player-name">Fabiano Caruana</section>
+                    <!-- Rating and ranking information -->
+                    <section class="rating-and-rank">FIDE Rating: 2791 | Rank No. 3</section>
+                    <!-- Player description: Caruana obtained the Grandmaster title at age 14 and hit his peak rating
+                        in 2014 -->
+                    <section class="player-description">Caruana is a chess prodigy who became a Grandmaster at the age
+                        of 14
+                        years and 11
+                        months. He has reached a peak rating of 2844 in 2014 and is the youngest Grandmaster in the
+                        history
+                        of Italy and America.</section>
+                </article>
+
+                <!-- Second column card section: Ding Liren, rank no. 2 -->
+
+                <article class="secondary-container-section">
+                    <!-- Image of Ding Liren with one hand on his forehead -->
+                    <img src="images/ding-liren.jpg"
+                        alt="Ding Liren sits at a chess board analyzing the position with one hand on his forehead.">
+                    <!-- Flag of China -->
+                    <div class="country-flag">
+                        <img src="images/china-flag.png" alt="Flag of China.">
+                    </div>
+                    <!-- Player name -->
+                    <section class="top-player-name">Ding Liren</section>
+                    <!-- Rating and ranking information -->
+                    <section class="rating-and-rank">FIDE Rating: 2799 | Rank No. 2</section>
+                    <!-- Player description: Ding ended Carlsen's reign in 2019, and has won many Chinese Chess
+                        Champion titles -->
+                    <section class="player-description">Ding holds three Chinese Chess Champion titles and was the
+                        winner of
+                        the
+                        2019 Grand
+                        Chess Tour. In 2019, Ding won the Sinquefield Cup and ended Carlsen's reign of consecutive
+                        playoff
+                        wins since 2007.</section>
+                </article>
+
+                <!-- Third column card section: Magnus Carlsen, rank no. 1 -->
+
+                <article class="secondary-container-section">
+                    <!-- Image of Magnus Carlsen in a suit with his arms crossed -->
+                    <img src="images/magnuscarlsen.jpeg.jfif"
+                        alt="Magnus gazes at his opponent with a serious look on his face and his arms crossed.">
+                    <!-- Flag of Norway -->
+                    <div class="country-flag">
+                        <img src="images/norway-flag.jfif" alt="Flag of Norway.">
+                    </div>
+                    <!-- Player name -->
+                    <section class="top-player-name">Magnus Carlsen</section>
+                    <!-- Rating and ranking information -->
+                    <section class="rating-and-rank">FIDE Rating: 2855 | Rank No. 1</section>
+                    <!-- Player description: Carlsen excels at endgames, and defeated Anand to become the World
+                        Chess Champion -->
+                    <section class="player-description">In 2013, Carlsen defeated Viswanathan Anand and became World
+                        Chess
+                        Champion. Renowned
+                        for his endgame mastery, he has been compared to former world champions Karpov and Fischer.
+                    </section>
+                </article>
+            </section>
+
+            <!-- Divider between the first group of top players (Ding Liren, Fabiano Caruana, Magnus Carlsen)
+                    and the second group of top players (Anish Giri, Ian Nepomniachtchi, Levon Aronian) -->
+            <aside>
+                <!-- Decorative design with two lines on either side of a circle -->
+                <div class="decorative-line center">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </aside>
+
+            <!-- Second group of top players composed of three column cards
+                Structure of each column card: player image, player's country flag, FIDE rating and rank, and
+                player awards, accomplishments, and relevant information -->
+
+            <section class="secondary-container fade-in-effect">
+
+                <!-- Fourth column card section: Anish Giri, rank no. 6 -->
+
+                <article class="secondary-container-section">
+                    <!-- Image of Anish Giri with his head in between his hands -->
+                    <img src="images/anish-giri.jfif"
+                        alt="Anish Giri analyzes a chess game with his head resting on both of his hands.">
+                    <!-- Flag of Netherlands -->
+                    <div class="country-flag">
+                        <img src="images/netherlands-flag.png" alt="Flag of Netherlands.">
+                    </div>
+                    <!-- Player name -->
+                    <section class="top-player-name">Anish Giri</section>
+                    <!-- Rating and ranking information -->
+                    <section class="rating-and-rank">FIDE Rating: 2774 | Rank No. 6</section>
+                    <!-- Player description: Giri is the top player in the Netherlands and obtained the Grandmaster
+                        title at age 14 -->
+                    <section class="player-description">Giri is a world class chess player that was awarded the
+                        Grandmaster
+                        title in 2009 at a meager age of 14 years, 7 months and 2 days. As of August of 2021, Giri
+                        is
+                        the number 1 top ranked player in the Netherlands.</section>
+                </article>
+
+                <!-- Fifth column card section: Ian Nepomniachtchi, rank no. 5 -->
+
+                <article class="secondary-container-section">
+                    <!-- Image of Ian Nepomniachtchi preparing to move a white chess piece -->
+                    <img src="images/ian-nepomniachtchi.jpeg"
+                        alt="Ian Nepomniachtchi sits at a chess board, preparing to move a white piece.">
+                    <!-- Flag of Russia -->
+                    <div class="country-flag">
+                        <img src="images/russian-flag.png" alt="Flag of Russia.">
+                    </div>
+                    <!-- Player name -->
+                    <section class="top-player-name">Ian Nepomniachtchi</section>
+                    <!-- Rating and ranking information -->
+                    <section class="rating-and-rank">FIDE Rating: 2782 | Rank No. 5</section>
+                    <!-- Player description: Nepomniachtchi won the Russian Superfinal in two consecutive years and
+                        was awarded the European Individual title -->
+                    <section class="player-description">Nepomniachtchi was
+                        victorious in the 2010 and 2020 Russian Superfinal and also won the 2010 European Individual
+                        titles. In 2016, he won the Tal Memorial in addition to the Aeroflot Open in 2008 and 2015.
+                    </section>
+                </article>
+
+                <!-- Sixth column card section: Levon Aronian, rank no. 4 -->
+
+                <article class="secondary-container-section">
+                    <!-- Image of Levon Aronian with one hand on his forehead -->
+                    <img src="images/levon-aronian-thinking.jpeg"
+                        alt="Levon Aronian analyzes a chess position with his left hand placed on his forehead.">
+                    <!-- Flag of the United States -->
+                    <div class="country-flag">
+                        <img src="images/american-flag.jpg" alt="Flag of the United States.">
+                    </div>
+                    <!-- Player name -->
+                    <section class="top-player-name">Levon Aronian</section>
+                    <!-- Rating and ranking information -->
+                    <section class="rating-and-rank">FIDE Rating: 2772 | Rank No. 4</section>
+                    <!-- Player description: Aronian is known for his sportsmanship in Armenia and reached a peak
+                        rating in 2014 -->
+                    <section class="player-description">Aronian attained his peak FIDE rating of 2830 in March of 2014.
+                        In
+                        2005, he was named the best
+                        sportsman of Armenia. In 2009, he was awarded the title of Honoured Master of Sport of the
+                        Republic of Armenia in 2009.
+                    </section>
+                </article>
+            </section>
+
+            <!-- Divider between the second top players section (Anish Giri, Ian Nepomniachtchi, Levon Aronian)
+                    and the third top players section (Alireza Firouzja, Wesley So, Alexander Grischuk)-->
+            <aside>
+                <!-- Decorative design with two lines on either side of a circle -->
+                <div class="decorative-line center">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </aside>
+
+            <!-- Third group of top players composed of three column cards
+                Structure of each column card: player image, player's country flag, FIDE rating and rank, and
+                player awards, accomplishments, and relevant information -->
+
+            <section class="secondary-container fade-in-effect">
+
+                <!-- Seventh column card section: Alireza Firouzja, rank no. 9 -->
+
+                <article class="secondary-container-section">
+                    <!-- Image of Alireza Firouzja with one hand stretched behind his neck -->
+                    <img src="images/alireza-firouzja.jpg"
+                        alt="Alireza Firouzja stretches his hand behind his neck while looking at a chess board.">
+                    <!-- Flag of France -->
+                    <div class="country-flag">
+                        <img src="images/france-flag.png" alt="Flag of France.">
+                    </div>
+                    <!-- Player name -->
+                    <section class="top-player-name">Alireza Firouzja</section>
+                    <!-- Rating and ranking information -->
+                    <section class="rating-and-rank">FIDE Rating: 2770 | Rank No. 9</section>
+                    <!-- Player description: Firouzja obtained the Grandmaster title at age 14 and performed
+                        exceptionally well at the World Rapid Chess Championship for his age -->
+                    <section class="player-description">Firouzja won the Iranian Chess Championship at age 12 and became
+                        a Grandmaster at age 14. At
+                        the 2019 World Rapid Chess Championship, Firouzja became the second youngest 2700-rated
+                        player
+                        to win a silver medal at the event.</section>
+                </article>
+
+                <!-- Eighth column card section: Wesley So, rank no. 8 -->
+
+                <article class="secondary-container-section">
+                    <!-- Image of Wesley So dressed in a black suit, analyzing a chess position -->
+                    <img src="images/wesley-so.jfif"
+                        alt="Close up picture of Wesley So analyzing a chess position on a chess board.">
+                    <!-- Flag of the United States-->
+                    <div class="country-flag">
+                        <img src="images/american-flag.jpg" alt="Flag of the U.S..">
+                    </div>
+                    <!-- Player name -->
+                    <section class="top-player-name">Wesley So</section>
+                    <!-- Rating and ranking information -->
+                    <section class="rating-and-rank">FIDE Rating: 2772 | Rank No. 8</section>
+                    <!-- Player description: So has held the U.S. Chess Champion title on three occassions and has
+                        held the fifth highest rating in history. -->
+                    <section class="player-description">So is the current U.S. Chess Champion and held the title on
+                        three
+                        occassions: in 2017, 2020, and 2021. On March of 2017, he was ranked second in the world and
+                        had
+                        a FIDE rating of 2822 - the fifth-highest rating in history.</section>
+                </article>
+
+                <!-- Ninth column card section: Alexander Grischuk -->
+
+                <article class="secondary-container-section">
+                    <!-- Image of Alexander Grischuk staring off to the side -->
+                    <img src="images/alexander-grischuk.jpeg"
+                        alt="Alexander Grischuk sitting down at a chess board staring off to the side.">
+                    <!-- Flag of Russia -->
+                    <div class="country-flag">
+                        <img src="images/russian-flag.png" alt="Flag of Russia.">
+                    </div>
+                    <!-- Player name -->
+                    <section class="top-player-name">Alexander Grischuk</section>
+                    <!-- Rating and ranking information -->
+                    <section class="rating-and-rank">FIDE Rating: 2773 | Rank No. 7</section>
+                    <!-- Player description: Grischuk has won three world blitz championships and performed
+                        very well at the Chess Olympiads. -->
+                    <section class="player-description">Grischuk was the Russian champion in 2009 and is the three-time
+                        world blitz chess champion in 2006, 2012, and 2015. At the Chess Olympiads, Grischuk won two
+                        team gold-medals, three team silvers, one team bronze, and one individual bronze medal.
+                    </section>
+                </article>
+            </section>
+        </article>
+
+        <!-- Divider between the top players section above and the timeline below -->
+        <aside>
+            <!-- Decorative design with two lines on either side of a circle -->
+            <div class="decorative-line center">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </aside>
+
+        <!-- Timeline introduction -->
+
+        <section class="section-header center">
+            <!-- Header for timeline section -->
+            <h2>
+                The Best Players in History
+            </h2>
+            <!-- Subheader for timeline section: gives the timeline historical context by referencing a historical
+                player and a modern player -->
+            <h3>
+                From Bobby Fischer to Magnus Carlsen
+            </h3>
+        </section>
+
+        <!-- Best players timeline composed of timeline components, a vertical ruler, and a series of dates that
+            correspond to when the corresponding player was the world's best.
+            Structure of a timeline component: player name, country flag, peak rating, months at no. 1, age at
+            first time no. 1, and rating at first time no. 1
+
+            The timeline components and dates have a slide-in animation that is triggered based on the user's
+            scroll position. -->
+
+        <article class="timeline">
+            <!-- Date corresponding to Bobby Fischer timeline component-->
+            <section class="timeline-component timeline-date timeline-date-right from-left slide-in-effect">
+                <h5>July 1, 1971</h5>
+            </section>
+            <!-- Middle verticle ruler with circle that overlays it-->
+            <div class="vertical-ruler">
+                <div class="timeline-circle"></div>
+            </div>
+
+            <!-- Timeline component on right side of vertical ruler: Bobby Fischer -->
+
+            <section class="timeline-component timeline-component-background from-right slide-in-effect">
+                <!-- Player name header: Bobby Fischer -->
+                <h2 class="timeline-header">Bobby Fischer</h2>
+                <!-- Flag of the United States -->
+                <div class="country-flag">
+                    <img src="images/american-flag.jpg" alt="United States flag.">
+                </div>
+                <!-- Player statistics: peak rating, months at no. 1, age at first time no. 1, rating at first time
+                    no. 1 -->
+                <p class="timeline-description"><br><b>Peak rating</b>: 2785
+                    <br><b>Months at No. 1</b>: 54
+                    <br><b>Age at first time No. 1</b>: 28 years, 114 days
+                    <br><b>Rating at first time No. 1</b>: 2785
+                </p>
+            </section>
+
+            <!-- Timeline component on left side of vertical ruler: Anatoly Karpov -->
+
+            <section
+                class="timeline-component timeline-component-background timeline-component-align from-left slide-in-effect">
+                <!-- Player name header: Anatoly Karpov -->
+                <h2 class="timeline-header">Anatoly Karpov</h2>
+                <!-- Flag of Russia -->
+                <div class="country-flag">
+                    <img src="images/russian-flag.png" alt="Flag of Russia.">
+                </div>
+                <!-- Player statistics: peak rating, months at no. 1, age at first time no. 1, rating at first time
+                    no. 1 -->
+                <p class="timeline-description"><br><b>Peak rating</b>: 2780
+                    <br><b>Months at No. 1</b>: 102
+                    <br><b>Age at first time No. 1</b>: 24 years, 223 days
+                    <br><b>Rating at first time No. 1</b>: 2780
+            </section>
+
+            <!-- Middle verticle ruler with circle that overlays it -->
+            <div class="vertical-ruler">
+                <div class="timeline-circle"></div>
+                <div class="timeline-circle timeline-circle-lower"></div>
+            </div>
+
+            <!-- Right align the left timeline component against vertical ruler -->
+            <section class="timeline-component timeline-component-align from-right slide-in-effect timeline-date">
+                <!-- Date corresponding to the Anatoly Karpov timeline component -->
+                <h5>January 1, 1976</h5>
+            </section>
+
+            <!-- Date corresponding to the Garry Kasparov timeline component -->
+            <section class="timeline-component timeline-date timeline-date-right from-left slide-in-effect">
+                <h5>January 1, 1984</h5>
+            </section>
+            <!-- Middle verticle ruler -->
+            <div class="vertical-ruler">
+            </div>
+
+            <!-- Timeline component on right side of vertical ruler: Garry Kasparov -->
+
+            <section class="timeline-component timeline-component-background from-right slide-in-effect">
+                <!-- Player name header: Garry Kasparov -->
+                <h2 class="timeline-header">Garry Kasparov</h2>
+                <!-- Flag of Russia -->
+                <div class="country-flag">
+                    <img src="images/russian-flag.png" alt="Flag of Russia.">
+                </div>
+                <!-- Player statistics: peak rating, months at no. 1, age at first time no. 1, rating at first time
+                    no. 1 -->
+                <p class="timeline-description"><br><b>Peak rating</b>: 2851
+                    <br><b>Months at No. 1</b>: 255
+                    <br><b>Age at first time No. 1</b>: 20 years, 263 days
+                    <br><b>Rating at first time No. 1</b>: 2775
+            </section>
+
+            <!-- Timeline component on left side of vertical ruler: Vladimir Kramnik -->
+
+            <section
+                class="timeline-component timeline-component-background timeline-component-align from-left slide-in-effect">
+                <!-- Player name header: Vladimir Kramnik -->
+                <h2 class="timeline-header">Vladimir Kramnik</h2>
+                <!-- Flag of Russia -->
+                <div class="country-flag">
+                    <img src="images/russian-flag.png" alt="Flag of Russia.">
+                </div>
+                <!-- Player statistics: peak rating, months at no. 1, age at first time no. 1, rating at first time
+                    no. 1 -->
+                <p class="timeline-description"><br><b>Peak rating</b>: 2817
+                    <br><b>Months at No. 1</b>: 9
+                    <br><b>Age at first time No. 1</b>: 20 years, 190 days
+                    <br><b>Rating at first time No. 1</b>: 2710
+                </p>
+            </section>
+
+            <!-- Middle verticle ruler with circle that overlays it -->
+            <div class="vertical-ruler">
+                <div class="timeline-circle"></div>
+                <div class="timeline-circle timeline-circle-lower"></div>
+            </div>
+
+            <!-- Right align the left timeline component against vertical ruler -->
+            <section class="timeline-component timeline-component-align from-right slide-in-effect timeline-date">
+                <!-- Date corresponding to Vladimir Kramnik timeline component -->
+                <h5>January 1, 1996</h5>
+            </section>
+
+            <!-- Date corresponding to the Veselin Topalov timeline component -->
+            <section class="timeline-component timeline-date timeline-date-right from-left slide-in-effect">
+                <h5>April 1, 2006</h5>
+            </section>
+            <!-- Middle verticle ruler -->
+            <div class="vertical-ruler">
+            </div>
+
+            <!-- Timeline component on right side of vertical ruler: Veselin Topalov -->
+
+            <section class="timeline-component timeline-component-background from-right slide-in-effect">
+                <!-- Player name header: Veselin Topalov -->
+                <h2 class="timeline-header">Veselin Topalov</h2>
+                <!-- Flag of Bulgaria -->
+                <div class="country-flag">
+                    <img src="images/bulgaria-flag.png" alt="Flag of Bulgaria.">
+                </div>
+                <!-- Player statistics: peak rating, months at no. 1, age at first time no. 1, rating at first time
+                    no. 1 -->
+                <p class="timeline-description"><br><b>Peak rating</b>: 2816
+                    <br><b>Months at No. 1</b>: 27
+                    <br><b>Age at first time No. 1</b>: 31 years, 17 days
+                    <br><b>Rating at first time No. 1</b>: 2804
+                </p>
+            </section>
+
+            <!-- Timeline component on left side of vertical ruler: Viswanathan Anand -->
+
+            <section
+                class="timeline-component timeline-component-background timeline-component-align from-left slide-in-effect">
+                <!-- Player name header: Viswanathan Anand -->
+                <h2 class="timeline-header">Viswanathan Anand</h2>
+                <!-- Flag of India -->
+                <div class="country-flag">
+                    <img src="images/india-flag.jfif" alt="Flag of India.">
+                </div>
+                <!-- Player statistics: peak rating, months at no. 1, age at first time no. 1, rating at first time
+                    no. 1 -->
+                <p class="timeline-description"><br><b>Peak rating</b>: 2817
+                    <br><b>Months at No. 1</b>: 21
+                    <br><b>Age at first time No. 1</b>: 37 years, 111 days
+                    <br><b>Rating at first time No. 1</b>: 2804
+                </p>
+            </section>
+
+            <!-- Vertical ruler and circle -->
+            <div class="vertical-ruler">
+                <div class="timeline-circle"></div>
+                <div class="timeline-circle timeline-circle-lower"></div>
+            </div>
+
+            <!-- Date corresponding to the Viswanathan Anand timeline component -->
+            <section class="timeline-component timeline-component-align from-right slide-in-effect timeline-date">
+                <h5>April 1, 2007</h5>
+            </section>
+
+            <!-- Date corresponding to the Magnus Carlsen timeline component -->
+            <section class="timeline-component from-left slide-in-effect timeline-date timeline-date-right">
+                <h5>January 1, 2010</h5>
+            </section>
+            <!-- Middle verticle ruler with circle that overlays it -->
+            <div class="vertical-ruler">
+            </div>
+
+            <!-- Timeline component on right side of vertical ruler: Magnus Carlsen -->
+
+            <section class="timeline-component timeline-component-background from-right slide-in-effect">
+                <h2 class="timeline-header">Magnus Carlsen</h2>
+                <div class="country-flag">
+                    <img src="images/norway-flag.jfif" alt="Flag of Norway.">
+                </div>
+                <p class="timeline-description"><br><b>Peak rating</b>: 2882
+                    <br><b>Months at No. 1</b>: 135
+                    <br><b>Age at first time No. 1</b>: 19 years, 32 days
+                    <br><b>Rating at first time No. 1</b>: 2810
+                </p>
+            </section>
+
+            <!-- Timeline component on left side of vertical ruler: To be continued... -->
+
+            <section
+                class="timeline-component timeline-component-background timeline-component-align from-left slide-in-effect"
+                id="carlsen-timeline">
+                <h2 class="timeline-header">To be continued...</h2>
+                <!-- This timeline component discusses whether the current world champion (Magnus Carlsen) will
+                    continues his reign due to the emergence of young prodigies. This discussion ends by claiming
+                    that he will retain his title by citing historical, long-term dominance by Kasparov. -->
+                <p class="timeline-description"><br>Magnus has just turned 31 this year!<br> Although many
+                    speculate
+                    that
+                    young
+                    prodigies like Firouzja will contest his title, it is unlikely that he will be defeated in
+                    the
+                    near
+                    future. Magnus has been compared to Kasparov, who held the title for 37 years and remained a
+                    dominant figure in the game even after his retirement.</p>
+            </section>
+
+            <!-- Middle verticle ruler with circle that overlays it -->
+            <div class="vertical-ruler">
+                <div class="timeline-circle timeline-circle-lower"></div>
+            </div>
+        </article>
+    </main>
+
+    <!-- Footer section
+        1. Four sections: Language, menu, resources, and social media platforms
+        2. Copyright information
+    -->
+
+    <footer>
+        <!-- Four column sections: each with a header and four links related to the header -->
+        <section class="footer-body">
+
+            <!-- First column: Language section
+                Provide language accessibility for popular languages used by the majority of users -->
+
+            <section class="footer-section">
+                <!-- Language section header -->
+                <h3>Languages</h3>
+                <ul>
+                    <li><a href="#">English</a></li>
+                    <li><a href="#">Français</a></li>
+                    <li><a href="#">Español</a></li>
+                    <li><a href="#">中文</a></li>
+                </ul>
+            </section>
+
+            <!-- Second column: Menu section
+                Provide information on legal and security related concerns -->
+
+            <section class="footer-section">
+                <!-- Menu section header -->
+                <h3>Menu</h3>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms and Conditions</a></li>
+                    <li><a href="#">Support</a></li>
+                </ul>
+            </section>
+
+            <!-- Third column: Resources section
+                Provide an interface for users to interact with the chess database through an interactive board -->
+
+            <section class="footer-section">
+                <!-- Resources section header -->
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="#">Openings Explorer</a></li>
+                    <li><a href="#">Games Database</a></li>
+                    <li><a href="#">Board Editor</a></li>
+                    <li><a href="#">Analysis Board</a></li>
+                </ul>
+            </section>
+
+            <!-- Fourth column: Social media section
+                Provide an outlet for users to connect with the company through popular social media platforms -->
+
+            <section class="footer-section">
+                <!-- Social media section header -->
+                <h3>Connect with Us</h3>
+                <!-- Circular social media icons for Facebook, Twitter, LinkedIn and Instagram-->
+                <ul class="social-icons">
+                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                </ul>
+            </section>
+            <!-- Copyright information -->
+            <section class="copyright-statement">
+                <h4>© 2021 Chess News | All Rights Reserved</h4>
+            </section>
+        </section>
+    </footer>
+</body>
+
+</html>

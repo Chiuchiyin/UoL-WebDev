@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<!-- saved from url=(0055)https://sharedvwdbohhv.labs.coursera.org/contactus.html -->
+<html lang="en"><!-- Head section contains the page's invisible information --><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <!-- Informs device to set viewport to its own width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Summary of the web page as a news provider -->
+    <meta name="description" content="Send an enquiry to the support team at Chess News.">
+    <!-- Author of the web page -->
+    <meta name="author" content="Jonathan">
+    <!-- Keywords relevant to web page content -->
+    <meta name="keywords" content="chess, news, championship">
+    <!-- Link external CSS file to style and format web page !-->
+    <link rel="stylesheet" href="./Chess News _ Contact Us_files/main.css">
+    <!-- Link external JS file for user interactivity !-->
+    <!-- Defer ensures DOM is fully loaded before JS scripts are executed -->
+    <script src="./Chess News _ Contact Us_files/scripts.js.download" defer=""></script>
+    <!-- Link third party library to provide different font families !-->
+    <link rel="stylesheet" href="./Chess News _ Contact Us_files/all.min.css">
+    <!-- Link jQuery's CDN used for accessibility dropdown menu -->
+    <script src="./Chess News _ Contact Us_files/jquery.min.js.download"></script>
+    <!-- Inform user of current page within site structure: shown on web page's tab -->
+    <title>Chess News | Contact Us</title>
+<script src="chrome-extension://bnfdmghkeppfadphbnkjcicejfepnbfe/spFormElementPrototypeEx.js" id="spHTMLFormElementPrototypeScript"></script></head>
+
+<!-- Body section contains the structure for all visible content
+    1. Company logo
+    2. Navigation menu
+    3. 'Contrast Toggle' button
+    4. Scroll to top button
+    5. Accessibility dropdown menu
+-->
+
+<body>
+    <header aria-label="navigation menu">
+
+        <!-- Main navigation area: composed of the company logo, a hamburger menu for tablet/mobile devices, and navigational
+            links to the five web pages within the site structure -->
+
+        <section class="nav-bar sticky">
+            <!-- Company logo composed of two chess pieces and company title, "Chess News" -->
+            <!-- Company title is fetched asynchronously from a JSON file on a web server and appended after the chess logo -->
+            <div class="company-name-JSON"><i class="fas fa-chess"></i> Chess News</div>
+            <!-- Company logo that appears when the navigation bar changes state from default to fixed -->
+            <div class="company-logo-scroll company-logo-scroll-active"><i class="fas fa-chess"></i></div>
+            <!-- Hamburger menu for navigation on mobile and tablet devices.
+                Invisible on desktop devices. -->
+            <a href="https://sharedvwdbohhv.labs.coursera.org/contactus.html#" class="toggle-button" aria-label="toggle-button" style="text-decoration: none;">
+                <span class="bar" id="first-bar"></span>
+                <span class="bar" id="second-bar"></span>
+                <span class="bar" id="third-bar"></span>
+            </a>
+            <!-- Main navigation menu which contains links to every other web page within the site structure -->
+            <nav class="nav-bar-links">
+                <ul>
+                    <li><a href="https://sharedvwdbohhv.labs.coursera.org/index.html" style="text-decoration: none;">Home</a></li>
+                    <li><a href="https://sharedvwdbohhv.labs.coursera.org/currentnews.html" style="text-decoration: none;">Current News</a></li>
+                    <li><a href="https://sharedvwdbohhv.labs.coursera.org/topplayers.html" style="text-decoration: none;">Top Players</a></li>
+                    <li><a href="https://sharedvwdbohhv.labs.coursera.org/contactus.html" style="text-decoration: none;">Contact Us</a></li>
+                    <li><a href="https://sharedvwdbohhv.labs.coursera.org/aboutus.html" style="text-decoration: none;">About Us</a></li>
+                </ul>
+            </nav>
+
+            <!-- Scroll to top button
+                Becomes visible once the user has scrolled down to a certain point on the page !-->
+
+            <nav>
+                <!-- Up arrow icon from imported library !-->
+                <button class="back-to-top-button" style="display: block;">
+                    <i class="fa fa-chevron-up"></i>
+                </button>
+            </nav>
+
+            <!-- Contrast toggle button: high and low contrast options
+                Default mode is high contrast -->
+
+            <button class="low-contrast-toggle sticky-adjust" id="low-contrast-toggle">Toggle Contrast</button>
+
+            <!-- Fixed accessibility button: becomes dropdown menu when toggled
+                Each menu item has a accessibility-tooltip on the right indicating its accessibility feature. -->
+
+            <aside class="accessibility-menu">
+                <section class="dropdown-menu">
+                    <!-- Main wheelchair icon which is visible by default. Dropdown menu options hidden by default -->
+                    <div class="accessibility-tooltip tooltip-right accessibility-toggle" title="Accessibility Menu">
+                        <a style="text-decoration: none;"><i class="fa fa-wheelchair"></i></a>
+                    </div>
+                    <!-- Dropdown menu with accessibility options which becomes visible when clicked -->
+                    <aside class="sub-menu">
+                        <!-- Makes fonts more legible with Arial font -->
+                        <div class="accessibility-tooltip tooltip-right" title="Readable Font">
+                            <!-- Accessibility tooltip on the right indicating a "Readable Font" feature -->
+                            <a href="https://sharedvwdbohhv.labs.coursera.org/contactus.html#" class="dropdown-item" style="text-decoration: none;"><i class="fa fa-font"></i></a>
+                        </div>
+                        <!-- Underlines hyperlinks -->
+                        <div class="accessibility-tooltip tooltip-right" title="Underline Links">
+                            <!-- Accessibility tooltip on the right indicating an "Underline Links" feature -->
+                            <a href="https://sharedvwdbohhv.labs.coursera.org/contactus.html#" class="dropdown-item" style="text-decoration: none;"><i class="fa fa-link"></i></a>
+                        </div>
+                        <!-- Change site's color scheme to grayscale. Grayscale mode applies to images as well. -->
+                        <div class="accessibility-tooltip tooltip-right" title="Grayscale Mode">
+                            <!-- Accessibility tooltip on the right indicating a "Grayscale Mode" feature -->
+                            <a href="https://sharedvwdbohhv.labs.coursera.org/contactus.html#" class="dropdown-item" style="text-decoration: none;"><i class="fas fa-palette"></i></a>
+                        </div>
+                    </aside>
+                </section>
+            </aside>
+        </section>
+    </header>
+
+    <!-- Main section contains the unique content of the "Contact Us" page
+        1. "Contact Us" main banner
+        2. First overlapping card section ("Talk to a Human")
+        3. Second overlapping card section ("Ask Us a Question")
+        4. Contact information (Phone no., e-mail, opening hours, and address)
+        5. Contact submission form and Scalable Vector Graphic (SVG) of floating social media icons in a forest
+        6. Embedded Google Maps of physical store location
+    -->
+
+    <!-- "Contact Us" main banner section -->
+
+    <main aria-label="main content">
+        <header class="contact-header">
+            <!-- Subheader: introducing the banner -->
+            <h3>We are here to help</h3>
+            <!-- Page header, which informs the user of the current web page within the site structure -->
+            <h1>Contact Us</h1>
+            <!-- Decorative design with two lines on either side of a circle
+                 Separates the page header from the banner description-->
+            <aside>
+                <div class="decorative-line">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </aside>
+            <!-- Description below page header: informs the user of the different types of possible enquiries and
+                serivces. -->
+            <h3 class="contact-description">Your enquiries can range from suggesting next week's featured
+                news
+                topics to finding local
+                tournaments near you. We now offer services to connect you with local International and
+                Grandmasters near you.</h3>
+        </header>
+
+        <!-- Header and subheader introducing first overlapping card layout section ("Talk to a Human") -->
+        <section class="section-header center">
+            <!-- Introductory header -->
+            <h2>
+                Speak with one of our Representatives
+            </h2>
+            <!-- Introductory subheader -->
+            <h3>
+                Our Representatives Specialize in Customer Support
+            </h3>
+        </section>
+
+        <!-- First overlapping card layout section ("Talk to a Human"): discusses the transparency of customer
+            support and the prompt handling of enquiries on a personal level. -->
+
+        <article class="overlapping-design overlapping-container no-overflow">
+            <!-- Enable slide-in animation for the background component from the left -->
+            <section class="column-left primary-contact-background from-left slide-in-effect appear"></section>
+            <!-- Enable slide-in animation for the foreground component from the right -->
+            <section class="column-right from-right slide-in-effect appear">
+                <section class="content">
+                    <!-- Header for first overlapping card layout: "Talk to a Human" -->
+                    <h2>Talk to a Human</h2>
+                    <!-- Description for first overlapping card layout: human customer support without automation -->
+                    <p>At Chess News, we believe in transparency in how we handle our customer support. We have a
+                        specialized team that will respond promptly to your enquiries. None of our replies are
+                        automated, and will cater to your needs on a personal level.</p>
+                    <!-- CTA which links to the "Phone" icon in the "Contact Information" section near the bottom of
+                        the page -->
+                    <a href="https://sharedvwdbohhv.labs.coursera.org/contactus.html#phone-contact" style="text-decoration: none;">Talk to Us</a>
+                </section>
+            </section>
+        </article>
+
+        <!-- Divider between the first overlapping card layout and the second overlapping card layout -->
+        <aside>
+            <!-- Decorative design with two lines on either side of a circle -->
+            <div class="decorative-line center">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </aside>
+
+        <!-- Introductory header and subheader for second overlapping card layout section ("Ask us a Question") -->
+        <section class="section-header center">
+            <!-- Introductory header -->
+            <h2>
+                Send an Enquiry to our Team
+            </h2>
+            <!-- Introductory subheader -->
+            <h3>
+                Submit your Enquiries via our Contact Form
+            </h3>
+        </section>
+
+        <!-- Second overlapping card layout section ("Ask us a Question"): discusses a guaranteed enquiry response
+            time frame and 24/7 monitoring of enquiries.-->
+
+        <article class="overlapping-design overlapping-container no-overflow">
+            <!-- Enable slide-in animation for the background component from the left -->
+            <section class="column-left secondary-contact-background from-left slide-in-effect appear">
+            </section>
+            <!-- Enable slide-in animation for the other component from the right -->
+            <section class="column-right from-right slide-in-effect appear">
+                <section class="content">
+                    <!-- Header for second overlapping card layout: "Ask Us a Question" -->
+                    <h2>Ask Us a Question</h2>
+                    <!-- Description for first overlapping card layout: guaranteed response time and constant
+                        monitoring of enquiries -->
+                    <p>Our support team guarantees a thorough expert answer to your enquiries within a 12-hour time
+                        frame. Our submission mailbox is monitored 24 hours a day, 7 days a week to ensure a prompt
+                        response to our loyal customers.</p>
+                    <!-- CTA which links to the "Phone" icon in the "Contact Information" section near the bottom
+                        of the page -->
+                    <a href="https://sharedvwdbohhv.labs.coursera.org/contactus.html#contact-form" style="text-decoration: none;">Send an Enquiry</a>
+                </section>
+            </section>
+        </article>
+
+        <!-- Divider between the second overlapping card layout and the contact information below -->
+        <aside>
+            <!-- Decorative design with two lines on either side of a circle -->
+            <div class="decorative-line center">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </aside>
+
+        <!-- Header for contact information section -->
+        <section class="secondary-section-header">
+            <h2 class="center">
+                Contact Information
+            </h2>
+        </section>
+
+        <!-- Contact information section.
+            Composed of four icons and related contact information (phone number, e-mail address, opening hours,
+            address) -->
+
+        <article class="contact-body">
+
+            <!-- Contact information with icons -->
+
+            <section class="contact-information fade-in-effect">
+                <section>
+                    <!-- Ringing phone icon with circular border -->
+                    <span><i class="fa fa-phone-volume" id="phone-contact"></i></span>
+                    <!-- Phone number information -->
+                    <h2>Phone No.</h2>
+                    <p class="contact-description">(604) 971 - 0363</p>
+                </section>
+                <section>
+                    <!-- Closed envelope icon with circular border -->
+                    <span><i class="fa fa-envelope"></i></span>
+                    <!-- E-mail address information -->
+                    <h2>E-mail</h2>
+                    <p class="contact-description">ChessNews@gmail.com</p>
+                </section>
+                <section>
+                    <!-- Hourglass icon with circular border -->
+                    <span><i class="fa fa-hourglass-half"></i></span>
+                    <!-- Opening hour information -->
+                    <h2>Opening Hours</h2>
+                    <p class="contact-description">Mon. - Fri. | 6:30 AM - 4:30 PM</p>
+                </section>
+                <section>
+                    <!-- Pin icon with circular border -->
+                    <span><i class="fa fa-map-pin"></i></span>
+                    <!-- Location information -->
+                    <h2>Address</h2>
+                    <p class="contact-description">1525 Coal Harbour Quay, Van., BC</p>
+                </section>
+            </section>
+
+            <!-- Divider between the contact information above and the contact form and SVG graphic below -->
+            <aside>
+                <!-- Decorative design with two lines on either side of a circle -->
+                <div class="decorative-line center">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </aside>
+
+            <!-- Header for contact form and SVG -->
+            <section class="secondary-section-header">
+                <h2 class="center">
+                    Send an Enquiry to our Team
+                </h2>
+            </section>
+
+            <!-- Message submission form with blank placeholders to store the contact information of the user
+                Ensure that the fields are filled with appropriate content before the user is allowed to submit the form -->
+
+            <section class="submission-form fade-in-effect" id="contact-form">
+                <form>
+                    <!-- Introduce the contact form below -->
+                    <h3>Send Us a Message</h3>
+                    <section>
+                        <!-- Placeholder for the legal first name and surname of the user -->
+                        <input type="text" class="contact-form-content" placeholder="First Name" required="">
+                        <input type="text" class="contact-form-content" placeholder="Surname" required="">
+                    </section>
+                    <section>
+                        <!-- Placeholder for the contact information of the user: e-mail and telephone number -->
+                        <input type="email" class="contact-form-content" placeholder="E-mail Address" required="">
+                        <input type="tel" class="contact-form-content" placeholder="Phone #" required="">
+                    </section>
+                    <!-- Placeholder for the message to be submitted by the user -->
+                    <textarea rows="4" placeholder="Send Message" class="contact-form-content"></textarea>
+                    <!-- Submit button -->
+                    <input type="submit" class="submission-button" value="Submit">
+                </form>
+
+                <section>
+
+                    <!-- An SVG which occupies the same amount of space as the contact form:
+                        The SVG depicts two women in a forest surrounded by floating social media icons. -->
+
+                    <img src="./Chess News _ Contact Us_files/contact-us.svg" alt="Two women in a forest surrounded by floating social media icons.">
+                </section>
+            </section>
+        </article>
+
+        <!-- Divider between the contact form and SVG above and the embedded Google Maps below -->
+        <aside>
+            <!-- Decorative design with two lines on either side of a circle -->
+            <div class="decorative-line center">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </aside>
+
+        <!-- Header for Google Maps section: informs the user that the map depicts the physical location of
+            the company -->
+        <section class="secondary-section-header">
+            <h2 class="center">
+                Visit our In-Store Location
+            </h2>
+        </section>
+
+        <article>
+            <!-- Embedded Google Maps indicating store location
+                Saves user from the time required to open maps in another window and copying over the address. -->
+            <div class="map" id="store-location">
+                <iframe src="./Chess News _ Contact Us_files/embed.html" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </article>
+    </main>
+
+    <!-- Footer section
+        1. Four sections: Language, menu, resources, and social media platforms
+        2. Copyright information
+    -->
+
+    <footer>
+        <!-- Four column sections: each with a header and four links related to the header -->
+        <section class="footer-body">
+
+            <!-- First column: Language section
+                Provide language accessibility for popular languages used by the majority of users -->
+
+            <section class="footer-section">
+                <!-- Language section header -->
+                <h3>Languages</h3>
+                <ul>
+                    <li><a href="https://sharedvwdbohhv.labs.coursera.org/contactus.html#" style="text-decoration: none;">English</a></li>
+                    <li><a href="https://sharedvwdbohhv.labs.coursera.org/contactus.html#" style="text-decoration: none;">Français</a></li>
+                    <li><a href="https://sharedvwdbohhv.labs.coursera.org/contactus.html#" style="text-decoration: none;">Español</a></li>
+                    <li><a href="https://sharedvwdbohhv.labs.coursera.org/contactus.html#" style="text-decoration: none;">中文</a></li>
+                </ul>
+            </section>
+
+            <!-- Second column: Menu section
+                Provide information on legal and security related concerns -->
+
+            <section class="footer-section">
+                <!-- Menu section header -->
+                <h3>Menu</h3>
+                <ul>
+                    <li><a href="https://sharedvwdbohhv.labs.coursera.org/contactus.html#" style="text-decoration: none;">FAQ</a></li>
+                    <li><a href="https://sharedvwdbohhv.labs.coursera.org/contactus.html#" style="text-decoration: none;">Privacy Policy</a></li>
+                    <li><a href="https://sharedvwdbohhv.labs.coursera.org/contactus.html#" style="text-decoration: none;">Terms and Conditions</a></li>
+                    <li><a href="https://sharedvwdbohhv.labs.coursera.org/contactus.html#" style="text-decoration: none;">Support</a></li>
+                </ul>
+            </section>
+
+            <!-- Third column: Resources section
+                Provide an interface for users to interact with the chess database through an interactive board -->
+
+            <section class="footer-section">
+                <!-- Resources section header -->
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="https://sharedvwdbohhv.labs.coursera.org/contactus.html#" style="text-decoration: none;">Openings Explorer</a></li>
+                    <li><a href="https://sharedvwdbohhv.labs.coursera.org/contactus.html#" style="text-decoration: none;">Games Database</a></li>
+                    <li><a href="https://sharedvwdbohhv.labs.coursera.org/contactus.html#" style="text-decoration: none;">Board Editor</a></li>
+                    <li><a href="https://sharedvwdbohhv.labs.coursera.org/contactus.html#" style="text-decoration: none;">Analysis Board</a></li>
+                </ul>
+            </section>
+
+            <!-- Fourth column: Social media section
+                Provide an outlet for users to connect with the company through popular social media platforms -->
+
+            <section class="footer-section">
+                <!-- Social media section header -->
+                <h3>Connect with Us</h3>
+                <!-- Circular social media icons for Facebook, Twitter, LinkedIn and Instagram-->
+                <ul class="social-icons">
+                    <li><a href="https://sharedvwdbohhv.labs.coursera.org/contactus.html#" style="text-decoration: none;"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="https://sharedvwdbohhv.labs.coursera.org/contactus.html#" style="text-decoration: none;"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="https://sharedvwdbohhv.labs.coursera.org/contactus.html#" style="text-decoration: none;"><i class="fab fa-linkedin-in"></i></a></li>
+                    <li><a href="https://sharedvwdbohhv.labs.coursera.org/contactus.html#" style="text-decoration: none;"><i class="fab fa-instagram"></i></a></li>
+                </ul>
+            </section>
+            <!-- Copyright information -->
+            <section class="copyright-statement">
+                <h4>© 2021 Chess News | All Rights Reserved</h4>
+            </section>
+        </section>
+    </footer>
+
+
+</body></html>
