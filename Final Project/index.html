@@ -13,7 +13,7 @@
     <!-- Author of the web page -->
     <meta name="author" content="Chiuchiyin" />
     <!-- Keywords relevant to web page content -->
-    <meta name="keywords" content="chess, news, championship" />
+    <meta name="keywords" content="Pokémon, news, game" />
     <!-- Link external CSS file to style and format web page !-->
     <link rel="stylesheet" href="stylesheet/main.css">
     <!-- Link external JS file for user interactivity !-->
@@ -37,84 +37,393 @@
 
 <!-- This body section contains the structure for all the visble content -->
 <body>
- <div class = "container-fluid">
-     <div class = "row">
-            <header>
-                 <h1>Paldea Times - Homepage</h1>
-                 <object data="img/logo.svg"> 
-                 </object>    
-            </header>
-        
+    <header aria-label="navigation menu">
 
-          <div class = "row">
+        <!-- Main navigation area: composed of the company logo, a hamburger menu for tablet/mobile devices, and navigational
+            links to the five web pages within the site structure -->
 
+        <section class="nav-bar">
+            <!-- Company logo composed of Paldea official logo and company title, "Paldea Times" -->
+            <!-- Company title is fetched asynchronously from a JSON file on a web server and appended after the logo -->
+            <div class="company-name-JSON"><img src="img/logo.svg" alt="logo"> </div>
+            <!-- Company logo that appears when the navigation bar changes state from default to fixed -->
+            <div class="company-logo-scroll"><img src="img/logo_1.png" alt="logo"></div>
+            <!-- Hamburger menu for navigation on mobile and tablet devices.
+                Invisible on desktop devices. -->
+            <a href="#" class="toggle-button" aria-label="toggle-button">
+                <span class="bar" id="first-bar"></span>
+                <span class="bar" id="second-bar"></span>
+                <span class="bar" id="third-bar"></span>
+            </a>
+            <!-- Main navigation menu which contains links to every other web page within the site structure -->
+            <nav class="nav-bar-links">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="currentnews.html">Current News</a></li>
+                    <li><a href="topplayers.html">Raid Guide</a></li>
+                    <li><a href="contactus.html">About Paldea</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                </ul>
+            </nav>
 
-                <nav>
-                 
-                    <label for="toggle">&#9776;</label>
-                    <input type="checkbox" id= "toggle"/>
-                    <div id = "menu">
-                        <ol>
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="onlineRead.html">Online reads</a></li>
-                            <li><a href="localReadingGroups.html">Local reading groups</a></li>
-                            <li><a href="localBookShops.html">Local bookshops</a></li>
-                        </ol>
-                    </div>
-                </nav>
-                
-            </div>
+            <!-- Scroll to top button
+                Becomes visible once the user has scrolled down to a certain point on the page !-->
 
-          </div>
-         </div>
-         
-        </div>
-     </div>
+            <nav>
+                <!-- Up arrow icon from imported library !-->
+                <button class="back-to-top-button">
+                    <i class="fas fa-caret-up"></i>
+                </button>
+            </nav>
 
- 
-     <div class = "row">
-      <div class="col-lg-10 col-md-12 col-sm-12 col-xs-12 nopadding">
-            <div id="fplinkArea">
-                <div class="fplinkAreaContent">
-                    <h2>Books being read</h2>
-                    <p>There are a number of books being read online. You can join any one of the groups and read along with the other members</p>
-                    <p>To find out more, go to the <a href="onlineRead.html">online reads page</a>.</p>
-                </div>
-            
-            
-                <div class="fplinkAreaContent">
-                    <h2>Local reading groups</h2>
-                    <p>There are a variety of different reading groups in your area...</p>
-                    <p>To find out more, go to the <a href="localReadingGroups.html">local reading groups page</a>.</p>
-                </div>
-                    
-                <div class="fplinkAreaContent">
-                    <h2>Local bookshops</h2>
-                    <p>The South London Reading Club supports local bookshops, who often have special offers to coincide with the books being read.</p>
-                    <p>To find out more, go to the <a href="localBookShops.html">local bookshops page</a>.</p>
-                </div>    
-            </div>
-     
-      </div>
-     </div>
+            <!-- Contrast toggle button: high and low contrast options
+                Default mode is high contrast -->
 
+                <button class="low-contrast-toggle" id="low-contrast-toggle">Toggle Contrast</button>
 
-     <div class = "row">
-        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 nopadding">
-            <footer>
-                <div id="fpcontactInformation">
+                <!-- Fixed accessibility button: becomes dropdown menu when toggled
+                    Each menu item has a accessibility-tooltip on the right indicating its accessibility feature. -->
+    
+                <aside class="accessibility-menu">
+                    <section class="dropdown-menu">
+                        <!-- Main wheelchair icon which is visible by default. Dropdown menu options hidden by default -->
+                        <div class="accessibility-tooltip tooltip-right accessibility-toggle" title="Accessibility Menu">
+                            <a><i class="fa fa-wheelchair"></i></a>
+                        </div>
+                        <!-- Dropdown menu with accessibility options which becomes visible when clicked -->
+                        <aside class="sub-menu">
+                            <!-- Makes fonts more legible with Arial font -->
+                            <div class="accessibility-tooltip tooltip-right" title="Readable Font">
+                                <!-- Accessibility tooltip on the right indicating a "Readable Font" feature -->
+                                <a href="#" class="dropdown-item"><i class="fa fa-font"></i></a>
+                            </div>
+                            <!-- Underlines hyperlinks -->
+                            <div class="accessibility-tooltip tooltip-right" title="Underline Links">
+                                <!-- Accessibility tooltip on the right indicating an "Underline Links" feature -->
+                                <a href="#" class="dropdown-item"><i class="fa fa-link"></i></a>
+                            </div>
+                            <!-- Change site's color scheme to grayscale. Grayscale mode applies to images as well. -->
+                            <div class="accessibility-tooltip tooltip-right" title="Grayscale Mode">
+                                <!-- Accessibility tooltip on the right indicating a "Grayscale Mode" feature -->
+                                <a href="#" class="dropdown-item"><i class="fas fa-palette"></i></a>
+                            </div>
+                        </aside>
+                    </section>
+                </aside>
+            </section>
+        </header>
+    
+        <!-- Main section contains the unique content of the "Home" page
+            1. Featured section: "The Queen's Gambit" on Netflix
+            2. Breaking news carousel
+            3. Trending news section
+            4. Recent posts section
+        -->
+    
+        <main aria-label="main content" id="home-page-main-content">
+    
+            <!-- Trending News section on the left and Recent Posts section on the right -->
+    
+            <article class="news-posts">
+    
+                <!-- Trending News section: composed of one primary article above and two secondary articles below -->
+    
+                <!-- Primary article: Carlsen victorious over Nepomniachtchi in Game 8 of WCC -->
+    
+                <article class="trending-news">
+                    <!-- Header for trending news section -->
+                    <h2>Trending News</h2>
+                    <article class="trending-news-top-left">
+                        <section>
+                            <!-- Primary article image of Magnus Carlsen and Sergey Karjakin in formal attire. -->
+                            <div class="image-main-container">
+                                <!-- Image has zoom effect and alt text for accessibility -->
+                                <img src="images/karjakin-and-magnus.jpeg"
+                                    alt="Magnus attempts to give a fist bump to Karjakin, who responds with a high five.">
+                                <!-- Text overlay describing the historic rivalry between Karjakin and Carlsen which dates back to the World
+                                    Chess Championship of 2016.
+                                    This text becomes visible when a user hovers over the beige area behind the two left carets. -->
+                                <section class="small-text-overlay">
+                                    <header class="small-image-header">
+                                        <h3>Karjakin and Carlsen</h3>
+                                    </header>
+                                    <p>Karjakin and Carlsen's rivalry dates back to 2016. Karjakin was the challenger in the
+                                        World Chess Championship and was pitted against Carlsen, the reigning world
+                                        champion since 2013.</p>
+                                    <!-- Two animated left carets which grow and shrink to indicate an interactive element -->
+                                    <div class="double-left-caret">
+                                        <i class="fas fa-angle-double-left"></i>
+                                    </div>
+                                </section>
+                            </div>
+                            <section class="column-card-description">
+                                <!-- Primary article headline: Karjakin comments on Carlsen's mental state -->
+                                <h3>Karjakin makes a bold declaration, stating that Magnus can "psychologically crumble".
+                                </h3>
+                                <!-- Primary article meta data: author, date and time posted, and number of comments -->
+                                <section class="meta-data">
+                                    <h4>Gwen Moore <i class="fas fa-pen"></i></h4>
+                                    <p><i class="fas fa-calendar"></i> December. 1, 2021, 12:03 PM | <i
+                                            class="fas fa-comments"></i> 67 | Chess Event Coverage
+                                    </p>
+                                </section>
+                                <!-- Primary article description: Karjakin fails to defeat Carlsen in the 2016 World Chess Championship -->
+                                <p>In 2016, Karjakin lost the opportunity to acquire the World Chess Championship when he
+                                    lost
+                                    composure with only four games remaining. In spite of this setback, he states that
+                                    although
+                                    Magnus is strong tactically and positionally,
+                                    he can psychologically collapse if the game is not going as planned.</p>
+                                <!-- Arrow symbol indicates a CTA: allows users to jump to related article on the "Current News" page -->
+                                <a href="currentnews.html#karjakin-magnus">Read More Here <span>»</span></a>
+                            </section>
+                        </section>
+                    </article>
+    
+                    <!-- Supporting articles positioned next to one another -->
+    
+                    <section class="trending-news-bottom">
+    
+                        <!-- Left supporting article: Nepomniachtchi may have an advantage over Carlsen -->
+    
+                        <article class="fade-in-effect">
+                            <!-- Left supporting article image of Magnus Carlsen shaking hands with Ian Nepomniachtchi. -->
+                            <div class="image-main-container">
+                                <!-- Image has zoom effect and alt text for accessibility -->
+                                <img src="images/nepomniachtchi-and-magnus.jpeg"
+                                    alt="Magnus shakes Nepomniachtchi's hand with his head tilted downwards.">
+                            </div>
+    
+                            <section class="column-card-description">
+                                <!-- Left supporting article headline: discusses if Nepomniachtchi has an advantage over Carlsen -->
+                                <h3>Does Nepomniachtchi have the upperhand against Magnus?</h3>
+                                <!-- Left supporting article meta data: author, date and time posted, and number of comments -->
+                                <section class="meta-data">
+                                    <h4>Luke Lin <i class="fas fa-pen"></i></h4>
+                                    <p><i class="fas fa-calendar"></i> Dec. 3, 2021, 4:33 PM | <i
+                                            class="fas fa-comments"></i> 53
+                                    </p>
+                                </section>
+                                <!-- Left supporting article description: historical score between Carlsen and Nepomniachtchi in different
+                                    time controls -->
+                                <p>With an overall 4-1 score in classical time controls against Magnus, Nepomniachtchi is
+                                    possibly Magnus' Achilles heel. Taking into account blitz and rapid games yields a
+                                    different story, with Magnus leading 23-14 in wins, in
+                                    addition to 40 draws.
+                                </p>
+                                <!-- Arrow symbol indicates a CTA: allows users to jump to related article on "Current News" page -->
+                                <a href="currentnews.html#chess-championship-game-five">Read More Here <span>»</span></a>
+                            </section>
+                        </article>
+    
+                        <!-- Right supporting article: Caruana defeats Firouzja in the Grand Swiss -->
+    
+                        <article class="fade-in-effect">
+                            <!-- Right supporting article image of Caruana and Firouzja playing at a chess board. -->
+                            <div class="image-main-container">
+                                <!-- Image has zoom effect and alt text for accessibility -->
+                                <img src="images/caruana-and-firouzja.jpeg" alt="Caruana and Firouzja sit at the chess board, with both players pondering deeply about the chess
+                                    position.">
+                            </div>
+                            <section class="column-card-description">
+                                <!-- Right supporting article headline: Caruana defeats Firouzja -->
+                                <h3>Caruana defeats Firouzja in the Grand Swiss Tournament</h3>
+                                <!-- Right supporting article meta data: author, date and time posted, and number of comments -->
+                                <section class="meta-data">
+                                    <h4>Andy Doucette <i class="fas fa-pen"></i></h4>
+                                    <p><i class="fas fa-calendar"></i> Nov. 9, 2021, 3:09 PM | <i
+                                            class="fas fa-comments"></i> 37</p>
+                                </section>
+                                <!-- Right supporting article description: current leaders in the Grand Swiss tournament-->
+                                <p>Caruana's victory over Firouzja created a three-way tie for first. Anton Korobov lost out
+                                    on the opportunity to join the aforementioned players at the top with a failed attempt
+                                    at using the clock as a weapon against his opponent
+                                    in time trouble.</p>
+                                <!-- Right caret symbols indicate a CTA: allows users to jump to related article on "Current News" page -->
+                                <a href="currentnews.html#caruana-firouzja">Read More Here <span>»</span></a>
+                            </section>
+                        </article>
+                    </section>
+                </article>
+    
+                <!-- Recent posts section
+                    Composed of four article hooks that link to related articles on the "Current News" page
+                    The fifth article is composed of a soundtrack of the company's intro music as voted by the company's user base -->
+    
+                <!-- Each article has a uniform structure: date posted, article headline, article description, CTA with two right carets as
+                    an indicator, and a supporting image -->
+                <section class="recent-posts">
+                    <!-- Recent posts section header -->
+                    <h2>Most Recent Posts</h2>
+    
+                    <!-- First recent posts article: Aronian's performance in the Tata Steel Chess Tournament -->
+    
+                    <section class="fade-in-effect">
+                        <!-- Date posted -->
+                        <h4>Dec. 1, 2021</h4>
+                        <section class="recent-posts-body">
+                            <!-- Article headline: Aronian has a perfect performance -->
+                            <h3>Aronian has a perfect three win-streak in Tata Steel Chess Tournament in India</h3>
+                            <!-- Article description: current leaders in the Tata Steel Chess India Rapid -->
+                            <p>Levon Aronian defeats Shankland, Vidit, and Adhiban to begin the Tata Steel Chess India Rapid
+                                with a perfect score.</p>
+                            <!-- Right caret symbols indicate a CTA: links to related article on the "Current News" page -->
+                            <a href="currentnews.html#tata-steel">Read More Here <span>»</span></a>
+                        </section>
+                        <!-- Supporting image: Aronian at a chess board -->
+                        <img src="images/levon-aronian.jpeg"
+                            alt="Levon Aronian looking at his opponent with his hands together.">
+                    </section>
+    
+                    <!-- Second recent posts article: Firouzja becomes rank number three -->
+    
+                    <section class="fade-in-effect">
+                        <!-- Date posted -->
+                        <h4>Dec. 3, 2021</h4>
+                        <section class="recent-posts-body">
+                            <!-- Article headline: Firouzja overtakes Caruana and becomes rank number three -->
+                            <h3>Firouzja climbs to world no. 3 and overtakes Fabiano Caruana</h3>
+                            <!-- Article description: Firouzja dominates the European Team Championship and almost reaches a rating of 2800 -->
+                            <p>Following Rounds 4 and 5 of the European Team Championship, Firouzja manages to climb the
+                                rating ladder with a current rating of 2793.</p>
+                            <!-- Right caret symbols indicate a CTA: links to related article on the "Current News" page -->
+                            <a href="currentnews.html#firouzja-overtakes-caruana">Read More Here <span>»</span></a>
+                        </section>
+                        <!-- Supporting image: Caruana and Firouzja at the Grand Swiss tournament -->
+                        <img src="images/caruana-firouzja-grand-swiss.jpeg"
+                            alt="Caruana looks intensely at Firouzja during a round of the Grand Swiss Touranment.">
+                    </section>
+    
+                    <!-- Third recent posts article: Firouzja wins $70 000 after winning the Grand Swiss Tournament  -->
+    
+                    <section class="fade-in-effect">
+                        <!-- Date posted -->
+                        <h4>Dec. 1, 2021</h4>
+                        <section class="recent-posts-body">
+                            <!-- Article headline: Firouzja wins the Grand Swiss Tournament -->
+                            <h3>Firouzja takes home $70 000 after winning the FIDE Grand Swiss</h3>
+                            <!-- Article description: Firouzja ties his final game and qualifies for the Candidates Tournament -->
+                            <p>Firouzja tied his final game against Grigoriy Oparin and qualifies for his first ever
+                                Candidates Tournament.
+                            </p>
+                            <!-- Right caret symbols indicate a CTA: links to related article on the "Current News" page -->
+                            <a href="currentnews.html#grand-swiss">Read More Here <span>»</span></a>
+                        </section>
+                        <!-- Supporting image: split screen view of Firouzja and Caruana -->
+                        <img src="images/firouzja-caruana-thinking.jpg"
+                            alt="A split screen view of Firouzja and Caruana analyzing a chess position.">
+                    </section>
+    
+                    <!-- Fourth recent posts article: Carlsen ranks other chess players in a controversial video -->
+    
+                    <section class="fade-in-effect">
+                        <!-- Date posted -->
+                        <h4>Dec. 2, 2021</h4>
+                        <section class="recent-posts-body">
+                            <!-- Article headline: Carlsen ranks his predecessors -->
+                            <h3>Magnus ranks his predecessors in controversial video</h3>
+                            <!-- Article description: a list of famous historical players are ranked by Carlsen -->
+                            <p>Bobby Fischer, Garry Kasparov, Vishy Anand, Vladimir Kramnik, Anatoly Karpov, and himself are
+                                ranked. Carlsen even brings up old legends such as Capablanca and Tal.</p>
+                            <!-- Right caret symbols indicate a CTA: links to related article on the "Current News" page -->
+                            <a href="currentnews.html#magnus-ranking-players">Read More Here <span>»</span></a>
+                        </section>
+                        <!-- Supporting image: Magnus Carlsen sitting down in a formal attire -->
+                        <img src="images/magnus-formal.jpg" alt="Magnus wears a suit and looks at the camera sitting down.">
+                    </section>
+    
+                    <!-- Article containing an audio element of the company's intro music as voted by the company's user base -->
+    
+                    <article class="fade-in-effect">
+                        <!-- Company logo composed of two chess pieces followed by the company name -->
+                        <h2><i class="fas fa-chess"></i> Chess News</h2>
+                        <!-- Introduce the audio element below -->
+                        <h3><span>Our Most Popular Soundtrack</span></h3>
+                        <!-- Audio element: the most popular user-voted soundtrack for the company's intro music -->
+                        <div id="soundtrack"><audio controls autoplay>
+                                <source src="audio/background-audio.mp3" type="audio/mp3">
+                                <!-- Display an error message if the user's browser does not support the audio element -->
+                                The audio element is not supported by the current browser.
+                            </audio></div>
+                        <!-- Caption below the audio element: soundtrack is based on user votes -->
+                        <h3>Listen to our top user-voted company intro music</h3>
+                    </article>
+    
+                </section>
+            </article>
+        </main>
+    
+        <!-- Footer section
+            1. Four sections: Language, menu, resources, and social media platforms
+            2. Copyright information
+        -->
+    
+        <footer>
+            <!-- Four column sections: each with a header and four links related to the header -->
+            <section class="footer-body">
+    
+                <!-- First column: Language section
+                    Provide language accessibility for popular languages used by the majority of users -->
+    
+                <section class="footer-section">
+                    <!-- Language section header -->
+                    <h3>Languages</h3>
                     <ul>
-                        <li id = "contact">Contact Us:</li>
-                        <li id = "name">Mrs S Smith</li>
-                        <li id = "email"><a href="s.smithatemail.com">s.smithatemail.com</a></li>
-                        <li id = "charity">Charity number: 987654321RR0001</li>
+                        <li><a href="#">English</a></li>
+                        <li><a href="#">Français</a></li>
+                        <li><a href="#">Español</a></li>
+                        <li><a href="#">中文</a></li>
                     </ul>
-                </div>
-            </footer>
-        </div>
-
-     </div>
-
- </div>
-</body>
-</html>
+                </section>
+    
+                <!-- Second column: Menu section
+                    Provide information on legal and security related concerns -->
+    
+                <section class="footer-section">
+                    <!-- Menu section header -->
+                    <h3>Menu</h3>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms and Conditions</a></li>
+                        <li><a href="#">Support</a></li>
+                    </ul>
+                </section>
+    
+                <!-- Third column: Resources section
+                    Provide an interface for users to interact with the chess database through an interactive board -->
+    
+                <section class="footer-section">
+                    <!-- Resources section header -->
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="#">Openings Explorer</a></li>
+                        <li><a href="#">Games Database</a></li>
+                        <li><a href="#">Board Editor</a></li>
+                        <li><a href="#">Analysis Board</a></li>
+                    </ul>
+                </section>
+    
+                <!-- Fourth column: Social media section
+                    Provide an outlet for users to connect with the company through popular social media platforms -->
+    
+                <section class="footer-section">
+                    <!-- Social media section header -->
+                    <h3>Connect with Us</h3>
+                    <!-- Circular social media icons for Facebook, Twitter, LinkedIn and Instagram-->
+                    <ul class="social-icons">
+                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    </ul>
+                </section>
+                <!-- Copyright information -->
+                <section class="copyright-statement">
+                    <h4>© 2021 Chess News | All Rights Reserved</h4>
+                </section>
+            </section>
+        </footer>
+    </body>
+    
+    </html>
