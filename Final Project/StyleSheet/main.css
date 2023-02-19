@@ -400,7 +400,7 @@ toggle button)*/
     z-index: 99;
 }
 
-/*Emphasize the company logo, 'Chess News', and its corresponding icon composed of chess pieces*/
+/*Emphasize the company logo, and its corresponding icon*/
 .company-name-JSON {
     font-size: 2em;
     text-align: center;
@@ -492,14 +492,12 @@ toggle button)*/
     padding-bottom: 1.5em;
 }
 
-/*Reposition 'Toggle Constrast' button to be centered once the dimensions of the navigation bar changes from
-a standard state to a fixed state*/
+/*Reposition 'Toggle Constrast' button to be centered once the dimensions of the navigation bar changes from a standard state to a fixed state*/
 .sticky-adjust {
     margin-bottom: -.65em;
 }
 
-/*Company logo (composed of two chess pieces) in a white box that becomes visible when the navigation bar
-enters a fixed state*/
+/*Company logo in a white box that becomes visible when the navigation bar enters a fixed state*/
 .company-logo-scroll {
     /*Invisible by default, since the logo is only visible against the dark background of the fixed navigation
     menu*/
@@ -512,8 +510,7 @@ enters a fixed state*/
     padding: .2em;
 }
 
-/*Make the company logo visible when the fixed navigation menu is triggered by the user scrolling past a
-vertical scroll bar threshold*/
+/*Make the company logo visible when the fixed navigation menu is triggered by the user scrolling past a vertical scroll bar threshold*/
 .company-logo-scroll-active {
     display: inline;
 }
