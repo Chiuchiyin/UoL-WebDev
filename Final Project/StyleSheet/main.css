@@ -234,8 +234,8 @@ h4 {
     font-family: var(--main-header);
     font-weight: 400;
     font-size: 0.73em;
-    text-align: center;
-    align-self: center;
+    text-align: left;
+    align-self: left;
 }
 
 /*Lighter weight for paragraph text to emphasize the headers*/
@@ -244,7 +244,6 @@ p {
     line-height: 2em;
     font-family: var(--main-text);
 }
-
 /*---------------------------------------------------------------*/
 /*Footer with four column sections-------------------------------*/
 /*---------------------------------------------------------------*/
@@ -930,13 +929,8 @@ main wheelchair button*/
 /*Emphasize header which indicates the current web page and introduces the 'Featured' section*/
 #main-page-title {
     font-size: 1.6em;
-}
-/*Ensure that the main image occupies all of the available space to the right of the 'Featured' section*/
-.main-image img {
-    width: 100%;
-    /*Maintain the aspect ratio of image to prevent image distortion*/
-    object-fit: cover;
-    cursor: pointer;
+    padding-top: 180px;
+    padding-left: 50px;
 }
 /*Adjust header size to screen dimensions*/
 #main-page-title h1 {
@@ -949,6 +943,35 @@ main wheelchair button*/
     font-size: 1.6em;
     margin-top: .78em;
 }
+/*Adjust the 'Read More Here' link to behave as a button*/
+.news-posts a {
+    padding: 2em 0 0 0;
+    display: block;
+    transition: all 100ms;
+    text-decoration: none;
+    font-family: var(--main-header);
+    font-size: 0.8em;
+    font-weight: 600;
+    color: var(--dark-black);
+}
+
+/*Attract the user to the 'Read More' buttons by adding a smooth animation effect*/
+.news-posts span {
+    transition: 0.5s;
+    margin: 0 .5em;
+    font-size: 1.5em;
+}
+
+/*The two right carets moves towards the right to indicate interactivity*/
+.news-posts a:hover span {
+    padding-left: 0.4em;
+}
+
+/*'Read More' buttons show a selected indicator, emphasizing the CTA as an interactive element*/
+.news-posts a:hover {
+    color: var(--almost-white);
+    background-color: var(--light-medium-grey);
+}
 /*---------------------------------------------------------------*/
 /*'Featured News' main section-----------------------------------*/
 /*---------------------------------------------------------------*/
@@ -957,8 +980,9 @@ main wheelchair button*/
     display: grid;
     grid-template-columns: auto auto auto auto;
     gap: 10px;
-    margin-top: 12.5em;
-    padding: 50px;
+    margin-top: 1.5em;
+    padding-left: 50px;
+    padding-right: 50px;
     min-width: 0px;
 }
   
