@@ -148,6 +148,8 @@ corner*/
 
 /*Smooth the zoom in effect animation*/
 .image-main-container img {
+    width:100%;
+    height:100%;
     transition: all 0.4s ease-out;
 }
 
@@ -920,6 +922,55 @@ main wheelchair button*/
     .nav-bar.sticky .toggle-button {
         top: 2.37em;
     }
+}
+
+/*---------------------------------------------------------------*/
+/*'Home' page CSS------------------------------------------------*/
+/*---------------------------------------------------------------*/
+/*Emphasize header which indicates the current web page and introduces the 'Featured' section*/
+#main-page-title {
+    font-size: 1.6em;
+}
+/*Ensure that the main image occupies all of the available space to the right of the 'Featured' section*/
+.main-image img {
+    width: 100%;
+    /*Maintain the aspect ratio of image to prevent image distortion*/
+    object-fit: cover;
+    cursor: pointer;
+}
+/*Adjust header size to screen dimensions*/
+#main-page-title h1 {
+    font-size: 1.6em;
+    text-align: center;
+    margin-top: .78em;
+}
+/*Emphasize the page header*/
+#main-page-title h1 {
+    font-size: 1.6em;
+    margin-top: .78em;
+}
+/*---------------------------------------------------------------*/
+/*'Featured News' main section-----------------------------------*/
+/*---------------------------------------------------------------*/
+
+.featured-grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 10px;
+    margin-top: 12.5em;
+    padding: 50px;
+    min-width: 0px;
+}
+  
+.featured-grid-container > div {
+    text-align: left;
+    padding: 20px 0;
+    max-width: 100%;
+}
+
+.featured-item1 {
+    grid-column: 1 / span 2;
+    grid-row: 1/ span 2;
 }
 
 /*---------------------------------------------------------------*/
