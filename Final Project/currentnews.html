@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- This head section contains all the invisible information about the page -->
+
+<head>
+    <!-- Character encoding -->
+    <meta charset="UTF-8">
+    <!-- Informs device to set viewport to its own width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Summary of the web page as a news provider -->
+    <meta name="description" content="ninth generation Pokémon game, Paldea" />
+    <!-- Author of the web page -->
+    <meta name="author" content="Chiuchiyin" />
+    <!-- Keywords relevant to web page content -->
+    <meta name="keywords" content="Pokémon, news, game" />
+    <!-- Link external CSS file to style and format web page !-->
+    <link rel="stylesheet" href="stylesheet/main.css">
+    <!-- Link external JS file for user interactivity !-->
+    <!-- Defer ensures DOM is fully loaded before JS scripts are executed -->
+    <script src="scripts/scripts.js" defer></script>
+    <!-- Link third party library to provide different font families !-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Link jQuery's CDN used for accessibility dropdown menu -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Inform user of current page within site structure: shown on web page's tab -->
+    <title>Paldea Times | Home</title>
+</head>
+
+<!-- Body section contains the structure for all visible content
+    1. logo
+    2. Navigation menu
+    3. 'Contrast Toggle' button
+    4. Scroll to top button
+    5. Accessibility dropdown menu
+-->
+
+<!-- This body section contains the structure for all the visble content -->
+<body>
+    <header aria-label="navigation menu">
+
+        <!-- Main navigation area: composed of the company logo, a hamburger menu for tablet/mobile devices, and navigational
+            links to the five web pages within the site structure -->
+
+        <section class="nav-bar">
+            <!-- Company logo composed of Paldea official logo and company title, "Paldea Times" -->
+            <!-- Company title is fetched asynchronously from a JSON file on a web server and appended after the logo -->
+            <div class="company-name-JSON"><img src="images/logo.svg" alt="logo"> </div>
+            <!-- Company logo that appears when the navigation bar changes state from default to fixed -->
+            <div class="company-logo-scroll"><img src="images/logo_1.png" alt="logo"></div>
+            <!-- Hamburger menu for navigation on mobile and tablet devices.
+                Invisible on desktop devices. -->
+            <a href="#" class="toggle-button" aria-label="toggle-button">
+                <span class="bar" id="first-bar"></span>
+                <span class="bar" id="second-bar"></span>
+                <span class="bar" id="third-bar"></span>
+            </a>
+            <!-- Main navigation menu which contains links to every other web page within the site structure -->
+            <nav class="nav-bar-links">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="currentnews.html">Current News</a></li>
+                    <li><a href="topplayers.html">Raid Guide</a></li>
+                    <li><a href="contactus.html">About Paldea</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                </ul>
+            </nav>
+
+            <!-- Scroll to top button
+                Becomes visible once the user has scrolled down to a certain point on the page !-->
+
+            <nav>
+                <!-- Up arrow icon from imported library !-->
+                <button class="back-to-top-button">
+                    <i class="fas fa-caret-up"></i>
+                </button>
+            </nav>
+
+            <!-- Contrast toggle button: high and low contrast options
+                Default mode is high contrast -->
+
+                <button class="low-contrast-toggle" id="low-contrast-toggle">Toggle Contrast</button>
+
+            <!-- Fixed accessibility button: becomes dropdown menu when toggled
+                    Each menu item has a accessibility-tooltip on the right indicating its accessibility feature. -->
+    
+            <aside class="accessibility-menu">
+                <section class="dropdown-menu">
+                    <!-- Main wheelchair icon which is visible by default. Dropdown menu options hidden by default -->
+                    <div class="accessibility-tooltip tooltip-right accessibility-toggle" title="Accessibility Menu">
+                        <a><i class="fa fa-wheelchair"></i></a>
+                    </div>
+                    <!-- Dropdown menu with accessibility options which becomes visible when clicked -->
+                    <aside class="sub-menu">
+                        <!-- Makes fonts more legible with Arial font -->
+                        <div class="accessibility-tooltip tooltip-right" title="Readable Font">
+                            <!-- Accessibility tooltip on the right indicating a "Readable Font" feature -->
+                                <a href="#" class="dropdown-item"><i class="fa fa-font"></i></a>
+                        </div>
+                        <!-- Underlines hyperlinks -->
+                        <div class="accessibility-tooltip tooltip-right" title="Underline Links">
+                            <!-- Accessibility tooltip on the right indicating an "Underline Links" feature -->
+                            <a href="#" class="dropdown-item"><i class="fa fa-link"></i></a>
+                        </div>
+                        <!-- Change site's color scheme to grayscale. Grayscale mode applies to images as well. -->
+                        <div class="accessibility-tooltip tooltip-right" title="Grayscale Mode">
+                            <!-- Accessibility tooltip on the right indicating a "Grayscale Mode" feature -->
+                            <a href="#" class="dropdown-item"><i class="fas fa-palette"></i></a>
+                        </div>
+                    </aside>
+                </section>
+            </aside>
+        </section>
+    </header>
+
+    <!-- Main section contains the unique content of the "Current News" page
+        1. Main content composed of primary article followed by multiple supporting articles
+        2. Sidebar composed of featured news
+    -->
+
+    <!-- Current news section: composed of main content and sidebar -->
+    <main class="current-news" aria-lable="main content">
+        <article class="news post">
+            <h1 id="main-page-title">Current News | Daily</h1>
+           <div class="current-grid-container">
+                <div class="current-item1">
+                    <div class="current-item3">
+                        <!-- Indicate the date the web page was published on and the last time the web page was updated -->
+                        <h5>Date Published: February 13, 2023 · Last Updated: February 19, 2023</h5>
+                        <div class="image-main-container">
+                            <!-- Image has zoom effect and alt text for accessibility -->
+                            <img src="images/championship.png" alt="Championship banner with logo">
+                                <!-- Primary article headline-->
+                                <h3>2023 Oceania VGC International Championships Preview Roundtable</h3>
+                                <!-- Primary article meta data: author, date and time posted, and number of comments -->
+                                <section class="meta-data">
+                                    <h4>Pokémon Fan <i class="fas fa-pen"></i></h4>
+                                    <p><i class="fas fa-calendar"></i> February 17, 2023 <i
+                                        class="fas fa-comments"></i> 27 | Official Event
+                                    </p>
+                                </section>
+                                    <!-- Primary article description: Karjakin fails to defeat Carlsen in the 2016 World Chess Championship -->
+                                <p>The anticipation ahead of the 2023 Oceania International Championships (OCIC) is off the charts. 
+                                    It’s the first International of the 2023 Championship season, the first to feature the Pokémon Scarlet and Pokémon Violet games, 
+                                    and the first to showcase Paradox Pokémon on a competitive level. 
+                                    To say there’s a lot to look forward to when the matches begin in Melbourne, Australia on February 17, 2023, is a massive understatement.
+                                </p>
+                        </div>
+                    </div>
+                    <div class="current-item4">
+                        <div class="image-main-container">
+                            <!-- Image has zoom effect and alt text for accessibility -->
+                            <img src="images/catch-a-million.png"
+                                alt="St. Baldrick’s Foundation campaign banner">
+                                    <!-- Primary article headline-->
+                                    <h3>St. Baldrick’s Foundation's Catch a Million marathon returns for 2023</h3>
+                                    <!-- Primary article meta data: author, date and time posted, and number of comments -->
+                                    <section class="meta-data">
+                                        <h4>Archaic <i class="fas fa-pen"></i></h4>
+                                        <p><i class="fas fa-calendar"></i> February 18, 2023 <i
+                                            class="fas fa-comments"></i> 0 | Community Event
+                                        </p>
+                                    </section>
+                                    <!-- Primary article description: Karjakin fails to defeat Carlsen in the 2016 World Chess Championship -->
+                                    <p>Between April 23rd and April 30th, St Baldrick's Foundation will once again be challenging the Pokémon streaming community to collectively catch 1 million Pokémon, 
+                                        and in the process help them raise $100,000 in 7 days to fund childhood cancer research. 
+                                        Any and all streamers, big or small, with any appreciation whatsoever for Pokémon, are invited to participate in the event and help the foundation reach its fundraising goal.
+                                    </p>
+                        </div>
+                    </div>
+                    <div class="current-item5">
+                        <div class="image-main-container">
+                            <!-- Image has zoom effect and alt text for accessibility -->
+                            <img src="images/shiny-hunting.webp" alt="Player character with Miraidon">
+                                <!-- Primary article headline-->
+                                <h3>Shiny Hunting Is About To Get Harder In Pokémon Scarlet And Violet</h3>
+                                <!-- Primary article meta data: author, date and time posted, and number of comments -->
+                                <section class="meta-data">
+                                    <h4>Kenneth Shepard <i class="fas fa-pen"></i></h4>
+                                    <p><i class="fas fa-calendar"></i> February 17, 2023 <i
+                                        class="fas fa-comments"></i> 37 | Guide
+                                    </p>
+                                </section>
+                                    <!-- Primary article description: Karjakin fails to defeat Carlsen in the 2016 World Chess Championship -->
+                                <p>Game Freak is rolling out another big update to Pokémon Scarlet and Violet at the end of the month, and while there’s some attention being given to the games’ 
+                                    notorious performance issues, the solution the studio has gone with will fundamentally change certain aspects of the open-world RPG. 
+                                    Specifically, the team is looking to lower the amount of Pokémon it puts on screen at a time, which means that fewer will spawn at a time. 
+                                    This has big implications for shiny hunting.
+                                </p>
+                        </div>
+                    </div>   
+                </div>
+                <div class="current-item2">
+                    <h2>Hot news</h2>    
+                </div>
+
+            </div>            
+        </article>
+
+    </main>
+
+
+
+    <main class="current-news" aria-label="main content">
+
+        <!-- Main content section composed of a primary article and fourteen supporting articles -->
+
+        <article class="current-news-main-content">
+
+            <!-- Fixed social media icons aside that appears to the left of the primary and secondary news articles
+                Composed of Facebook, Twitter, Youtube, LinkedIn, and Google icons-->
+            <aside class="fixed-social-media-icons">
+                <a href="#" class="fixed-facebook-icon"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="fixed-twitter-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="fixed-youtube-icon"><i class="fab fa-youtube"></i></a>
+                <a href="#" class="fixed-linkedin-icon"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="fixed-google-icon"><i class="fab fa-google"></i></a>
+            </aside>
+
+            <!-- Primary article: Carlsen defeats Nepomniachtchi in Game 8 of the World Chess Championship -->
+
+            <article class="news-primary">
+                <!-- Page header which indicates the current web page within the web site structure -->
+                <h1>Current News | Daily</h1>
+                <!-- Indicate the date the web page was published on and the last time the web page was updated -->
+                <h5><span>Date Published:</span> December 3, 2021 · <span>Last Updated:</span> February 21, 2022</h5>
+                <!-- Image for main article: Nepomniachtchi offers a handshake to Carlsen
+                    Image has zoom effect and alt text for accessibility -->
+                <div class="image-main-container" id="current-news-main">
+                    <img src="images/carlsen-versus-nepomniachtchi.png"
+                        alt="Nepomniachtchi extends his hand to shake Carlsen's after losing game 8 in the World Chess Championship.">
+                    <!-- Text overlay describing the historic Game 6 of the World Chess Championship, and how this generated momentum for
+                        Game 8 for Carlsen.
+                        This text becomes visible when a user hovers over the beige area behind the two left carets. -->
+                    <section class="small-text-overlay" id="current-news-overlay">
+                        <header class="small-image-header">
+                            <h3>Carlsen Leads Confidently</h3>
+                        </header>
+                        <p>Magnus Carlsen won a historic 136-move game in Game 6 of the World Chess Championship, which
+                            was
+                            the longest game in world champsionhip history. This appeared to be a turning point in the
+                            event, and foreshadows the retainment of his title as reigning world champion. A popular
+                            prediction is a 7.5-3.5 final result in favour of Carlsen.</p>
+                        <!-- Two animated left carets which grow and shrink to indicate an interactive element -->
+                        <div class="double-left-caret">
+                            <i class="fas fa-angle-double-left"></i>
+                        </div>
+                    </section>
+                </div>
+                <!-- Main article image caption -->
+                <p class="image-caption">Nepomniachtchi extends his hand in resignation after blundering a pawn in the
+                    endgame.</p>
+                <!-- Main article header -->
+                <h2>Carlsen Victorious over Challenger Nepomniatchtchi in Game 8 of the FIDE World Chess
+                    Championship
+                </h2>
+                <!-- Meta data about main article: author name, date and time posted, and number of comments -->
+                <section class="meta-data">
+                    <h4>Naomi Smith <i class="fas fa-pen"></i></h4>
+                    <p><i class="fas fa-calendar"></i> December. 5, 2021, 3:03 PM | <i class="fas fa-comments"></i>
+                        96 |
+                        Chess Event
+                        Coverage</p>
+                </section>
+                <!-- Main article decription: Nepomniachtchi loses Game 8 of the World Chess Championship after blundering a pawn -->
+                <p>GM Ian Nepomniachtchi began game eight in the 2021 FIDE World Championship with a beautifully
+                    crafted
+                    defense against a Petroff opening. He faltered in the end game stage of the match after
+                    blundering a
+                    pawn and having his position collapse thereafter. Carlsen extends his lead 5-3 over his
+                    challenger,
+                    and seems to bring to fruition the prediction of GM Hans Niemann, who stated "I think if Nepo
+                    loses
+                    one game, the match is over, just from him, as a player."</p>
+            </article>
+
+            <!-- Supporting articles below main article. Seven rows, with each row composed of two equally sized supporting articles -->
+
+            <!-- Left supporting article: Longest World Chess Championship, Game 6 -->
+
+            <section class="news-secondary fade-in-effect" id="carlsen-handshake-nepomniachtchi">
+                <!-- Image for supporting article: Carlsen shakes Nepomniachtchi's hand -->
+                <div class="image-main-container">
+                    <!-- Image has zoom effect and alt text for accessibility -->
+                    <img src="images/carlsen-handshake.png"
+                        alt="Carlsen shakes Nepomniachtchi's hand after defeating him in Game 6 of the World Chess Championship.">
+                </div>
+                <!-- Supporting article image caption -->
+                <p class="image-caption">Carlsen shakes challenger Nepomniachtchi's hand during Game 6 of the World
+                    Chess Championship</p>
+                <!-- Supporting article header -->
+                <section class="column-card-description">
+                    <h2>Game 6 is the Longest World Chess Championship Game, Breaking the 1978 Record Set by
+                        Korchnoi-Karpov
+                    </h2>
+                    <!-- Meta data about supporting article: author name, date and time posted, and number of comments -->
+                    <section class="meta-data">
+                        <h4>Gloria Walsh <i class="fas fa-pen"></i></h4>
+                        <p><i class="fas fa-calendar"></i> December. 5, 2021, 1:23 AM | <i class="fas fa-comments"></i>
+                            81</p>
+                    </section>
+                    <!-- Supporting article decription: Game 6 broke the original longest game record which occured in the Philippines -->
+                    <p>The original record was a 124 move game played in Baguio City in the Philippines. This historic
+                        game
+                        required an astonishing 136 moves before Carlsen could gain an upperhand against Nepomniachtchi
+                        to
+                        win the first game in the WCC after 5 draws.</p>
+                </section>
+            </section>
+
+            <!-- Right supporting article: Nihal Sarin defeats Richard Rapport in the Speed Chess Championship -->
+
+            <section class="news-secondary fade-in-effect" id="sarin-rapport-speed-chess">
+                <!-- Image for supporting article: close-up picture of Richard Rapport and Nihal Sarin -->
+                <div class="image-main-container">
+                    <!-- Image has zoom effect and alt text for accessibility -->
+                    <img src="images/nihal-versus-rapport.png"
+                        alt="Infographic showing the score between Sarin and Rapport in the Speed Chess Championship.">
+                </div>
+                <!-- Supporting article image caption -->
+                <p class="image-caption">Sarin's determination in climbing the online blitz ladder manifests itself in
+                    the QF match</p>
+                <section class="column-card-description">
+                    <!-- Supporting article header -->
+                    <h2>Sarin defeats Rapport by a Margin of 18-9 to Advance to the Semi-finals of the Speed Chess
+                        Championship.</h2>
+                    <!-- Meta data about supporting article: author name, date and time posted, and number of comments -->
+                    <section class="meta-data">
+                        <h4>Byron West <i class="fas fa-pen"></i></h4>
+                        <p><i class="fas fa-calendar"></i> December. 4, 2021, 1:09 PM | <i class="fas fa-comments"></i>
+                            123</p>
+                    </section>
+                    <!-- Supporting article decription: young Sarin defeats top rated chess players to advance to the semi-finals of the
+                    Speed Chess Championship -->
+                    <p>At the meager age of 17, Sarin is the youngest participant in this year's Speed Chess
+                        Championship.
+                        Sarin managed to claw his way into the semifinals in convincing fashion by eliminating
+                        two players in the world's top 15, including Alexander Grischuk. </p>
+                </section>
+            </section>
+
+            <!-- Left supporting article: Death of British Grandmaster Jonathan Penrose -->
+
+            <section class="news-secondary fade-in-effect" id="jonathan-penrose">
+                <!-- Image for supporting article: black and white picture of Jonathan Penrose analyzing a position at a chess board -->
+                <div class="image-main-container">
+                    <!-- Image has zoom effect and alt text for accessibility -->
+                    <img src="images/jonathan-penrose.jpg"
+                        alt="Jonathan Penrose, a British Grandmaster, playing chess in a black and white photograph.">
+                </div>
+                <!-- Supporting article image caption -->
+                <p class="image-caption">Jonathan Penrose, born in October 7, 1933, in Colchester, in the east of
+                    England.</p>
+                <section class="column-card-description">
+                    <!-- Supporting article header -->
+                    <h2>Jonathan Penrose, a Legendary 10-time British Champion and Grandmaster, Passes Away at the Age
+                        of 88
+                        (1933-2021)</h2>
+                    <!-- Meta data about supporting article: author name, date and time posted, and number of comments -->
+                    <section class="meta-data">
+                        <h4>Isabelle Norton <i class="fas fa-pen"></i></h4>
+                        <p><i class="fas fa-calendar"></i> December. 3, 2021, 12:33 PM | <i class="fas fa-comments"></i>
+                            13</p>
+                    </section>
+                    <!-- Supporting article decription: Penrose's accomplishments including defeating Mikhail Tal and becoming the British
+                    U18 Champion -->
+                    <p>One of Penrose's most famed accomplishments was his victory over reigning world champion Mikhail
+                        Tal
+                        in the 1960 Leipzig Olympiad. His first breakthrough occurred at the age of 13, in which he
+                        became the British U18 Champion and continued on to win the championship of London.</p>
+                </section>
+            </section>
+
+            <!-- Right supporting article: World Chess Championship auditorium -->
+
+            <section class="news-secondary fade-in-effect" id="chess-auditorium">
+                <!-- Image for supporting article: World Chess Championship auditorium with general and VIP areas -->
+                <div class="image-main-container">
+                    <!-- Image has zoom effect and alt text for accessibility -->
+                    <img src="images/world-chess-championship-arena.jpeg"
+                        alt="The auditorium for the 2021 FIDE World Championship">
+                </div>
+                <!-- Supporting article image caption -->
+                <p class="image-caption">The spacious auditorium that offers an ambience as part of the Dubai Expo 2021.
+                </p>
+                <section class="column-card-description">
+                    <!-- Supporting article header -->
+                    <h2>The Spacious Auditorium Accompanying the WCC, with Spectator Areas including VIP Areas and
+                        General Areas.</h2>
+                    <!-- Meta data about supporting article: author name, date and time posted, and number of comments -->
+                    <section class="meta-data">
+                        <h4>Graham Martin <i class="fas fa-pen"></i></h4>
+                        <p><i class="fas fa-calendar"></i> December. 3, 2021, 4:38 PM | <i class="fas fa-comments"></i>
+                            42</p>
+                    </section>
+                    <!-- Supporting article decription: the World Chess Champinoship is part of the Dubai Expo 2020 -->
+                    <p>The World Chess Championship, in addition to the DP World Tour Golf Championship and the Cricket
+                        Twenty20 World Cup are integral to the "Dubai Expo 2020".
+                        This series of events is a six-month, 7 billion dollar event that has been ongoing for 9 years
+                        and
+                        involves 182 countries and 25 million
+                        visitors.</p>
+                </section>
+            </section>
+
+            <!-- Left supporting article: Game 5 of World Chess Championship -->
+
+            <section class="news-secondary fade-in-effect" id="chess-championship-game-five">
+                <!-- Image for supporting article: onlookers and a camera crew observe Game 5 from a distance -->
+                <div class="image-main-container">
+                    <!-- Image has zoom effect and alt text for accessibility -->
+                    <img src="images/world-chess-championship-game.png" alt="A crowd of photographers gather around a chess board as Carlsen plays Nepomniachtchi in Game 5 of the World
+                        Chess Championship.">
+                </div>
+                <!-- Supporting article image caption -->
+                <p class="image-caption">Preceding the second rest day, stakes remain high as both parties agree to a
+                    fifth draw.</p>
+                <section class="column-card-description">
+                    <!-- Supporting article header -->
+                    <h2>Carlsen vs. Nepomniachtchi Game 5 in the World Chess Championship results in Deadlock as yet
+                        another
+                        Game is Drawn</h2>
+                    <!-- Meta data about supporting article: author name, date and time posted, and number of comments -->
+                    <section class="meta-data">
+                        <h4>Luke Lin <i class="fas fa-pen"></i></h4>
+                        <p><i class="fas fa-calendar"></i> December. 3, 2021, 4:33 PM | <i class="fas fa-comments"></i>
+                            53</p>
+                    </section>
+                    <!-- Supporting article description: Game 5 ends in a draw. Influence of the Stockfish Chess Engine is discussed -->
+                    <p>Nepomniachtchi had a marginal endgame advantage according to the Stockfish Chess Engine in
+                        another
+                        Anti-Marshall opening. The world champion managed to use some resourceful endgame brilliancy to
+                        maintain a solid position to draw the game. This sheds light on the increasing influence of
+                        computer
+                        engines in defending tough positions.</p>
+                </section>
+            </section>
+
+            <!-- Right supporting article: Game 4 of World Chess Championship -->
+
+            <section class="news-secondary fade-in-effect">
+                <!-- Image for supporting article: Carlsen sits down analyzing the chess board while Nepomniachtchi stands up, aloof -->
+                <div class="image-main-container">
+                    <!-- Image has zoom effect and alt text for accessibility -->
+                    <img src="images/carlsen-nepo-game-four.png" alt="Nepomniachtchi stands up during Game 4 of the World Chess Championship as Carlsen ponders his next move at
+                        the chess baord.">
+                </div>
+                <!-- Supporting article image caption -->
+                <p class="image-caption">Nepomniachtchi achieves a draw from a passive position in Game 4 of the
+                    series.
+                </p>
+                <section class="column-card-description">
+                    <!-- Supporting article header -->
+                    <h2>Nepomniachtchi Fends Off Now 31 Year Old Carlsen's Petroff Attack in Game 4 of the World
+                        Chess
+                        Championship</h2>
+                    <!-- Meta data about supporting article: author name, date and time posted, and number of comments -->
+                    <section class="meta-data">
+                        <h4>Brian Harden <i class="fas fa-pen"></i></h4>
+                        <p><i class="fas fa-calendar"></i> December. 1, 2021, 7:33 PM | <i class="fas fa-comments"></i>
+                            193</p>
+                    </section>
+                    <!-- Supporting article description: discussion of Nepomniachtchi's opening choice in Game 4 of the World Chess
+                    Championship -->
+                    <p>It was a big surprise to see a Petroff opening on the board
+                        in Game 4. Contrary to Nepomniatchi's typical opening repertoire, which consists of the
+                        Grunfeld
+                        or
+                        the tactically sharp Najdorf, he opted for a less popular opening —
+                        the Petroff. Is the challenger taking inspiration from Caruana - who played this opening
+                        against
+                        Carlsen a few years ago?</p>
+                </section>
+            </section>
+
+            <!-- Left supporting article: Candidates Tournament to qualify for World Chess Championship -->
+
+            <section class="news-secondary fade-in-effect" id="candidates-tournament">
+                <!-- Image for supporting article: close-up pictures of the participants in the 2020 Candidates Tournament -->
+                <div class="image-main-container">
+                    <!-- Image has zoom effect and alt text for accessibility -->
+                    <img src="images/candidates-tournament.png"
+                        alt="A graphic of eight players who competed in the 2020 Candidates Tournament.">
+                </div>
+                <!-- Supporting article image caption -->
+                <p class="image-caption">An eight player double round-robin tournament preceding
+                    the World Chess Championship.</p>
+                <section class="column-card-description">
+                    <!-- Supporting article header -->
+                    <h2>Carlsen vs. Nepomniachtchi Game 5 in the World Chess Championship results in Deadlock as yet
+                        another
+                        Game is Drawn</h2>
+                    <!-- Meta data about supporting article: author name, date and time posted, and number of comments -->
+                    <section class="meta-data">
+                        <h4>Nyle Fallon <i class="fas fa-pen"></i></h4>
+                        <p><i class="fas fa-calendar"></i> November 24, 2021, 2:13 PM | <i class="fas fa-comments"></i>
+                            103</p>
+                    </section>
+                    <!-- Supporting article description: discussion of the 2020-21 tournament as being the longest to date, and
+                    Nepomniachtchi's slim victory over Maxime Vachier-Lagrave -->
+                    <p>The tournament was played in Yekaterinburg, Russia, before being cut short due to COVID-19.
+                        Lasting
+                        over 13 months, the Candidates Tournament 2020-21 is the longest over-the-board chess
+                        tournament
+                        to
+                        date. Ian Nepomniachtchi emerged victorious from the Candidates with an impressive score of
+                        8.5/14
+                        points. Maxime Vachier-Lagrave was edged out by half a point.</p>
+                </section>
+            </section>
+
+            <!-- Right supporting article: Firouzja wins game against David Howell -->
+
+            <section class="news-secondary fade-in-effect" id="firouzja-thinking">
+                <!-- Image for supporting article: Firouzja sits at a chess board dressed in formal attire -->
+                <div class="image-main-container">
+                    <!-- Image has zoom effect and alt text for accessibility -->
+                    <img src="images/firouzja-thinking.jpeg"
+                        alt="Alireza Firouzja ponders by himself over a chess board with one hand raised.">
+                </div>
+                <!-- Supporting article image caption -->
+                <p class="image-caption">Firouzja calmly ponders in front of a chess board in its default
+                    configuration.
+                </p>
+                <section class="column-card-description">
+                    <!-- Supporting article header -->
+                    <h2>Alireza Firouzja Inches Towards the 2021 Candidates Tournament after Winning a Dynamic Game
+                        against
+                        Howell</h2>
+                    <!-- Meta data about supporting article: author name, date and time posted, and number of comments -->
+                    <section class="meta-data">
+                        <h4>Brian Stewart <i class="fas fa-pen"></i></h4>
+                        <p><i class="fas fa-calendar"></i> November 8, 2021, 3:10 PM | <i class="fas fa-comments"></i>
+                            34</p>
+                    </section>
+                    <!-- Supporting article description: discussion of Howell's poor time management which led to Firouzja's victory -->
+                    <p>Firouzja had a dominating position versus GM Howell after Howell poorly managed his time on
+                        moves
+                        18
+                        and
+                        21 and proceeded to miss equalising opportunities in the middle game. Firouzja is not the
+                        only
+                        player in the driver's seat: Fabiano Caruana only needs to clinch a draw
+                        against competitor Alexandr Predke and Grigoriy Oparin only needs one more win.</p>
+                </section>
+            </section>
+
+            <!-- Left supporting article: Karjakin makes an insulting declaration about Magnus Carlsen-->
+
+            <section class="news-secondary fade-in-effect" id="karjakin-magnus">
+                <!-- Image for supporting article: Karjakin and Carlsen share a heartfelt moment over a chess board -->
+                <div class="image-main-container">
+                    <!-- Image has zoom effect and alt text for accessibility -->
+                    <img src="images/karjakin-and-magnus.jpeg"
+                        alt="Magnus gives attempts to give a fist bump to Karjakin, who replies with a high five.">
+                </div>
+                <!-- Supporting article image caption -->
+                <p class="image-caption">Carlsen offers a fist bump to Karjakin, who responds by extending his hand
+                    with
+                    a smile.
+                </p>
+                <section class="column-card-description">
+                    <!-- Supporting article header -->
+                    <h2>Karjakin makes a bold declaration, stating that Magnus can "psychologically crumble"</h2>
+                    <!-- Meta data about supporting article: author name, date and time posted, and number of comments -->
+                    <section class="meta-data">
+                        <h4>Gwen Moore<i class="fas fa-pen"></i></h4>
+                        <p><i class="fas fa-calendar"></i> December. 1, 2021, 12:03 PM | <i class="fas fa-comments"></i>
+                            67
+                        </p>
+                    </section>
+                    <!-- Supporting article description: Karjakin struggles to consistently perform in the Candidates Tournaments and
+                    provides mixed opinions on Carlsen -->
+                    <p>Karjakin has attempted to fortify his claim by citing his past performances. In 2016,
+                        Karjakin
+                        managed to win the Candidates Tournament. However, he could not reproduce this performance
+                        in
+                        the
+                        2018 Candidates Tournament, in which he placed second. Despite stating Carlsen's flaws, he
+                        claims
+                        that he is among the ranks of Karpov, Kasparov, and Fischer.</p>
+                </section>
+            </section>
+
+            <!-- Right supporting article: Caruana defeats Firouzja in Grand Swiss tournament -->
+
+            <section class="news-secondary fade-in-effect" id="caruana-firouzja">
+                <!-- Image for supporting article: Firouzja and Caruana play at a chess board, both dressed in formal attire -->
+                <div class="image-main-container">
+                    <!-- Image has zoom effect and alt text for accessibility -->
+                    <img src="images/caruana-and-firouzja.jpeg"
+                        alt="Caruana and Firouzja sit at the chess board, with both players pondering deeply about the chess position.">
+                </div>
+                <!-- Supporting article image caption -->
+                <p class="image-caption">Fabiano Caruana makes a bold statement by defeating the leader, Alireza
+                    Firouzja.</p>
+                <section class="column-card-description">
+                    <!-- Supporting article header -->
+                    <h2>Caruana defeats Firouzja in the Last Two Rounds of the Grand Swiss</h2>
+                    <!-- Meta data about supporting article: author name, date and time posted, and number of comments -->
+                    <section class="meta-data">
+                        <h4>Andy Doucette<i class="fas fa-pen"></i></h4>
+                        <p><i class="fas fa-calendar"></i> November 9, 2021, 3:09 PM | <i class="fas fa-comments"></i>
+                            37
+                        </p>
+                    </section>
+                    <!-- Supporting article description: Firouzja loses to Caruana by falling into his opening preparation -->
+                    <p>Firouzja was in an ideal position to win the Grand Swiss and secure a spot in the Candidates.
+                        However, he was paired with Caruana with the black pieces, and ran into his preparation
+                        after
+                        playing a Caro-Kann opening. GM David Howell also secured a lead in the Grand Swiss after
+                        winning a fourth consecutive game. There is a 3-way tie between Howell, Firouzja, and
+                        Caruana.
+                    </p>
+                </section>
+            </section>
+
+            <!-- Left supporting article: Levon Aronian scores 3/3 in the Tata Steel Chess India event -->
+
+            <section class="news-secondary fade-in-effect" id="tata-steel">
+                <!-- Image for supporting article: Levon Aronian stares at his opponent with his hands clasped together -->
+                <div class="image-main-container">
+                    <!-- Image has zoom effect and alt text for accessibility -->
+                    <img src="images/levon-aronian.jpeg"
+                        alt="Levon Aronian looking at his opponent with his hands together.">
+                </div>
+                <!-- Supporting article image caption -->
+                <p class="image-caption">Levon Aronian intimidates his opponent by looking at him with his hands clasped
+                    together.
+                </p>
+                <section class="column-card-description">
+                    <!-- Supporting article header -->
+                    <h2>Aronian makes a strong entrance with a 3/3 score in the Tata Steel Chess India event.</h2>
+                    <!-- Meta data about supporting article: author name, date and time posted, and number of comments -->
+                    <section class="meta-data">
+                        <h4>Garry Burns <i class="fas fa-pen"></i></h4>
+                        <p><i class="fas fa-calendar"></i> November 16, 2021, 4:12 PM | <i class="fas fa-comments"></i>
+                            84</p>
+                    </section>
+                    <!-- Supporting article description: history of the Tata Steel Chess India event and past winners -->
+                    <p>The Tata Steel Chess India event has its origins in Kolkata. In the event, four foreign
+                        players
+                        will
+                        be pitted against six Indian players. In the first rounds, Aronian acquired a 1-point lead
+                        over
+                        Praggnanandhaa and Erigaisi. Back in 2018, the winner of the event was Hikaru Nakamura.
+                        Viswanathan
+                        Anand also managed to represent his country with a formidable top finish in the blitz
+                        portion of
+                        the
+                        event.</p>
+                </section>
+            </section>
+
+            <!-- Right supporting article: Firouzja climbs to world no. 3, overtaking Fabiano Caruana -->
+
+            <section class="news-secondary fade-in-effect" id="firouzja-overtakes-caruana">
+                <!-- Image for supporting article: Caruana and Firouzja discuss the game in a post-game analysis over the board -->
+                <div class="image-main-container">
+                    <!-- Image has zoom effect and alt text for accessibility -->
+                    <img src="images/caruana-firouzja-grand-swiss.jpeg"
+                        alt="Caruana looks intensely at Firouzja during a round of the Grand Swiss Touranment.">
+                </div>
+                <!-- Supporting article image caption -->
+                <p class="image-caption">The promising 18-year-old overtakes Caruana to become world no. 3 in the
+                    FIDE
+                    live rating list.
+                </p>
+                <section class="column-card-description">
+                    <!-- Supporting article header -->
+                    <h2>Firouzja climbs to world no. 3 and overtakes Fabiano Caruana</h2>
+                    <!-- Meta data about supporting article: author name, date and time posted, and number of comments -->
+                    <section class="meta-data">
+                        <h4>Jerry Williams <i class="fas fa-pen"></i></h4>
+                        <p><i class="fas fa-calendar"></i> November 17, 2021, 3:13 PM | <i class="fas fa-comments"></i>
+                            44</p>
+                    </section>
+                    <!-- Supporting article description: discussion of Firouzja's performance in the European Team Championship and the
+                    Grand Swiss Tournament -->
+                    <p>Firouzja acquired a rating of 2793 after brilliant positional and tactical gameplay in Round 4
+                        and
+                        Round 5 of the European Team Championship. There are six teams with an 8/10 points score in the
+                        European Team Championship's Open event. In the Women's section, Russia attained a perfect 10/10
+                        score, outclassing the rival Georgian team. In the Grand Swiss, Firouzja continues to eclipse
+                        many
+                        strong
+                        2600+ FIDE rated opponents.</p>
+                </section>
+            </section>
+
+            <!-- Left supporting article: Firouzja takes home $70 000 after winning the FIDE Grand Swiss Tournament -->
+
+            <section class="news-secondary fade-in-effect" id="grand-swiss">
+                <!-- Image for supporting article: split-screen view of close-up pictures of Firouzja and Caruana -->
+                <div class="image-main-container">
+                    <!-- Image has zoom effect and alt text for accessibility -->
+                    <img src="images/firouzja-caruana-thinking.jpg"
+                        alt="A split screen view of Firouzja and Caruana analyzing a chess position.">
+                </div>
+                <!-- Supporting article image caption -->
+                <p class="image-caption">Firouzja wins the FIDE Grand Swiss Tournament in Riga, after several
+                    consecutive draws.</p>
+                <section class="column-card-description">
+                    <!-- Supporting article header -->
+                    <h2>Firouzja takes home $70 000 after winning the FIDE Grand Swiss</h2>
+                    <!-- Meta data about supporting article: author name, date and time posted, and number of comments -->
+                    <section class="meta-data">
+                        <h4>Sara Williams <i class="fas fa-pen"></i></h4>
+                        <p><i class="fas fa-calendar"></i> November 8, 2021, 1:02 AM | <i class="fas fa-comments"></i>
+                            39</p>
+                    </section>
+                    <!-- Supporting article description: discussion of Firouzja's performance in the Grand Swiss, and Firouzja and Caruana's
+                    qualification for the 2020 FIDE Candidates Tournament -->
+                    <p>Firouzja finished the tournament with a cumulative score of 8/11 points. The critical games
+                        ended
+                        in
+                        draws in the final rounds of the tournament, which enabled Firouzja to qualify for the 2022
+                        FIDE
+                        Candidates Tournament alongside fellow GM Fabiano Caruana, who placed second. In fact, all
+                        top
+                        13
+                        boards ended in draws, which brought the controversial Riga tournament during Latvia's
+                        lockdown
+                        period to a peaceful halt.</p>
+                </section>
+            </section>
+
+            <!-- Right supporting article: Magnus ranks his predecessors -->
+
+            <section class="news-secondary fade-in-effect" id="magnus-ranking-players">
+                <!-- Image for supporting article: Carlsen analyzes a chess position while sitting down in a suit -->
+                <div class="image-main-container">
+                    <!-- Image has zoom effect and alt text for accessibility -->
+                    <img src="images/magnus-formal.jpg" alt="Magnus wears a suit and looks at the camera sitting down.">
+                </div>
+                <!-- Supporting article image caption -->
+                <p class="image-caption">Carlsen ranks the historically best players in four categories: genius,
+                    entertainment, influence, and sanity.
+                </p>
+                <section class="column-card-description">
+                    <!-- Supporting article header -->
+                    <h2>Magnus ranks his predecessors in controversial video</h2>
+                    <!-- Meta data about supporting article: author name, date and time posted, and number of comments -->
+                    <section class="meta-data">
+                        <h4>Gabe Harden <i class="fas fa-pen"></i></h4>
+                        <p><i class="fas fa-calendar"></i> November 1, 2021, 6:13 PM | <i class="fas fa-comments"></i>
+                            129</p>
+                    </section>
+                    <!-- Supporting article description: Carlsen ranks the historically best players in terms of genius, entertainment,
+                    influence, and sanity -->
+                    <p>In terms of genius, Carlsen speculates that many people would say Fischer. Carlsen believes
+                        Capablanca outclassed Fischer in that respect. In terms of entertainment value, Carlsen
+                        believes
+                        Tal
+                        is the best by far. In terms of influence, he believes Kasporov deserves the title as an
+                        influential
+                        modern player. And finally in terms of sanity, Carlsen believes Anand is the most
+                        level-headed opponent he has played.</p>
+                </section>
+            </section>
+        </article>
+
+        <!-- Sidebar: positioned to the right of the main content -->
+
+        <!-- Sidebar composed of six sections:
+            "General News",
+            "Live Tournaments",
+            "Live Events",
+            "Current Feature",
+            "Past Feature", and
+            "More News" -->
+
+        <aside class="current-news-sidebar" id="bar-fixed">
+
+            <!-- First sidebar section: General News  -->
+
+            <!-- Section composed of four news headers -->
+            <aside>
+                <!-- General News header -->
+                <h2 id="general-news">General News</h2>
+                <!-- First news header: "The Queen's Gambits" awards and lawsuit -->
+                <p class="news-event"><span class="sidebar-bold">Queen's Gambit</span> awarded 11 Emmys but faces
+                    potential
+                    lawsuit
+                </p>
+                <!-- Second news header: Kasparov simul -->
+                <p class="news-event"><span class="sidebar-bold">Kasparov faces</span> 15 opponents in simul in
+                    Helsinki, Finland</p>
+                <!-- Third news header: Grand Swiss in Riga -->
+                <p class="news-event"><span class="sidebar-bold">Grand Swiss in Riga</span> continues after
+                    exemptions from Latvia's COVID-19 restrictions
+                </p>
+                <!-- Fourth news header: Carissa Yip U.S. female chess champion -->
+                <p class="news-event"><span class="sidebar-bold">Carissa Yip</span> delivers victory speech after
+                    winning U.S. female chess championship
+                </p>
+            </aside>
+
+            <!-- Second sidebar section: Live Tournaments  -->
+
+            <!-- Section composed of three news headers about ongoing championships
+                Structure of each news header: round number | tournament name | player names and ratings -->
+
+            <aside>
+                <!-- Live Tournaments header -->
+                <h2 class>Live Tournaments</h2>
+                <!-- First header about ongoing championships: FIDE World Championship -->
+                <p class="news-event"><span class="sidebar-bold">Round 8: Finished</span> | FIDE World Championship
+                    2021 | Carlsen 2855, Nepomniachtchi 2782</p>
+                <!-- Second header about ongoing championships: Sheikh Hamdan bin Rashid Cup -->
+                <p class="news-event"><span class="sidebar-bold">Round 1: Live</span> | Sheikh Hamdan bin Rashid
+                    Cup
+                    | Fedoseev 2704, Sargissian 2664</p>
+                <!-- Third header about ongoing championships: Serbian Men Championship -->
+                <p class="news-event"><span class="sidebar-bold">Round 1: Live</span> | Serbian Men Championship
+                    2021
+                    | Drazic 2305, Indjic 2623</p>
+            </aside>
+
+            <!-- Third sidebar section: Live Events -->
+
+            <!-- Section composed of three news headers about ongoing events
+                Structure of each news header: round number | tournament name | player names and ratings -->
+            <aside>
+                <!-- Live Events header -->
+                <h2>Live Events</h2>
+                <!-- First header about ongoing championships: Serbian Men Championship -->
+                <p class="news-event"><span class="sidebar-bold">Live Now</span> | Serbian Men Championship |
+                    Drazic, Indjic | Ivic, Kovacevic | Stankovic, Arsovic</p>
+                <!-- Second header about ongoing championships: Sheikh Hamdan bin Rashid Cup -->
+                <p class="news-event"><span class="sidebar-bold">Live Now</span> | Sheikh Hamdan bin Rashid Cup
+                    | Fedoseev, Sargissian | Sarin, Meier | Kovalev, Jumabayev</p>
+                <!-- Third header about ongoing championships: Italian Championship -->
+                <p class="news-event"><span class="sidebar-bold">Live Now</span> | 80th Italian Championship
+                    | Moroni, Genocchio | Barp, Bellia | Zimina, Sonis</p>
+            </aside>
+
+            <!-- Fourth sidebar section: Current Feature -->
+
+            <!-- Section composed of three statistics about the popular show "The Queens Gambit"
+                Structure of each news header: name of the show | statistic about the show -->
+            <aside>
+                <!-- Current Feature header -->
+                <h2 id="current-feature">Current Feature</h2>
+                <!-- The Queens Gambit first statistic: number of viewers -->
+                <p class="news-event"><span class="sidebar-bold">The Queens Gambit</span> | watched by 62 million
+                    in the first month.</p>
+                <!-- The Queens Gambit second statistic: chess set sales -->
+                <p class="news-event"><span class="sidebar-bold">The Queens Gambit</span> | sales of chess sets up
+                    87% in
+                    US
+                    within three weeks of debut.</p>
+                <!-- The Queens Gambit third statistic: chess-related searches -->
+                <p class="news-event"><span class="sidebar-bold">The Queens Gambit</span> | 364% increase in
+                    chess-related search
+                    on Esty.</p>
+            </aside>
+
+            <!-- Fifth sidebar section: Past Feature -->
+
+            <!-- Section composed of three of the best chess games of the past determined by user votes
+                Structure of each news header: user voted top game number | player names | year game was played -->
+            <aside>
+                <!-- Past Feature header -->
+                <h2 id="past-feature">Past Feature</h2>
+                <!-- Header for first user voted game: Steinitz-Zukertort -->
+                <p class="news-event"><span class="sidebar-bold">User Voted Top Game #1:</span>
+                    Steinitz-Zukertort
+                    | 1886
+                </p>
+                <!-- Header for second user voted game: Botvinnik-Bronstein -->
+                <p class="news-event"><span class="sidebar-bold">User Voted Top Game #2:</span> |
+                    Botvinnik-Bronstein
+                    | 1951
+                </p>
+                <!-- Header for third user voted game: Anand-Topalov -->
+                <p class="news-event"><span class="sidebar-bold">User Voted Top Game #3:</span> | Anand-Topalov
+                    | 2010</p>
+            </aside>
+
+            <!-- Sixth sidebar section: More News -->
+
+            <!-- Section composed of five news sections
+                Structure of each section: news description followed by related image (hidden on tablet/mobile)
+                Each section has a 'Show More' option to display hidden news and a 'Show Less' option to revert to the condensed news display -->
+
+            <aside>
+                <!-- More News header -->
+                <h2>More News</h2>
+                <!-- First news description followed by related image: Nigel Short recovers from COVID -->
+                <p class="news-event"><span class="sidebar-bold">Nigel Short recovers from COVID</span>
+                    and plays in Italian tournament.<span class="ellipsis">..</span><span class="show-more-text"> Short
+                        recently survived a lost position against a FIDE 1966
+                        rated
+                        player named Lorenzo Candian.</span>
+                </p>
+                <button class="text-display-toggle-button">Read More</button>
+                <!-- Image of Nigel Short -->
+                <img src="images/nigel-short.jpeg" alt="Nigel Short stares into the camera with a half smile.">
+                <!-- Second news description followed by related image: David Howell wins this week's Titled Tuesday event -->
+                <p class="news-event"><span class="sidebar-bold">David Howell, a Top 100 FIDE ranked player</span>
+                    emerges victorious in this week's Titled Tuesday event.<span class="ellipsis">..</span><span
+                        class="show-more-text"> Howell scored 10/11 points, with GM
+                        Alexey
+                        Sarana coming in second place at 9.5/11 points.</span></p>
+                <!-- Image of David Howell -->
+                <img src="images/david-howell.jfif" alt="A portrait of David Howell wearing a pair of glasses.">
+                <!-- Third news description followed by related image: Duda, Carlsen, and Jobava lead the World Rapid Championship
+                    after Day 1 -->
+                <p class="news-event"><span class="sidebar-bold">Duda, Carlsen, and Jobava take the lead in day
+                        1</span>
+                    of the World Rapid Chess Championship.<span class="ellipsis">..</span><span class="show-more-text">
+                        Each player achieved a score of 4.5/5 points after the first day. Duda began with a 4/4 score
+                        but
+                        drew
+                        against Jobava in the fifth round.</span></p>
+                <!-- Image of Jan Krysztof Duda -->
+                <img src="images/jan-krzysztof-duda.png"
+                    alt="Jan-Krzysztof Duda stares downwards with one hand on his chin.">
+                <!-- Fourth news description followed by related image: Carlsen leads the World Rapid Chess Championship after Day 2 -->
+                <p class="news-event"><span class="sidebar-bold">In day 2 of the World Rapid Chess
+                        Championship,</span>
+                    Carlsen begins to leave his opponents in the dust.<span class="ellipsis">..</span><span
+                        class="show-more-text"> Carlsen finishes day 2 with 7.5/9
+                        points, with three Grandmasters chasing him: Nodirbek Abdusattorov, Alexander Grischuk, and Ian
+                        Nepomniachtchi.</span>
+                </p>
+                <!-- Image of Magnus Carlsen -->
+                <img src="images/carlsen-focused.jpeg" alt="Carlsen gazes downwards while wearing a suit.">
+                <!-- Fifth news description followed by related image: Abdusattorov wins the World Rapid Chess Championship -->
+                <p class="news-event"><span class="sidebar-bold">Abdusattorov emerges victorious</span> in the World
+                    Rapid
+                    Chess
+                    Championship.<span class="ellipsis">..</span><span class="show-more-text"> GM Abdusattorov scored
+                        9.5/13 points in the Swiss tournament. With
+                        this
+                        performance, he became the youngest world rapid champion in history.</span>
+                </p>
+                <!-- Image of Magnus Carlsen and Nodirbek Abdusattorov at a chess board -->
+                <img src="images/carlsen-abdusattorov.jpeg"
+                    alt="Carlsen raises his hand in resignation after being defeated by Abdusattorov.">
+            </aside>
+        </aside>
+    </main>
+
+    <!-- Footer section
+        1. Four sections: Language, menu, resources, and social media platforms
+        2. Copyright information
+    -->
+
+    <footer>
+        <!-- Four column sections: each with a header and four links related to the header -->
+        <section class="footer-body">
+
+            <!-- First column: Language section
+                Provide language accessibility for popular languages used by the majority of users -->
+
+            <section class="footer-section">
+                <!-- Language section header -->
+                <h3>Languages</h3>
+                <ul>
+                    <li><a href="#">English</a></li>
+                    <li><a href="#">Français</a></li>
+                    <li><a href="#">Español</a></li>
+                    <li><a href="#">中文</a></li>
+                </ul>
+            </section>
+
+            <!-- Second column: Menu section
+                Provide information on legal and security related concerns -->
+
+            <section class="footer-section">
+                <!-- Menu section header -->
+                <h3>Menu</h3>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms and Conditions</a></li>
+                    <li><a href="#">Support</a></li>
+                </ul>
+            </section>
+
+            <!-- Third column: Resources section
+                Provide an interface for users to interact with the chess database through an interactive board -->
+
+            <section class="footer-section">
+                <!-- Resources section header -->
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="#">Openings Explorer</a></li>
+                    <li><a href="#">Games Database</a></li>
+                    <li><a href="#">Board Editor</a></li>
+                    <li><a href="#">Analysis Board</a></li>
+                </ul>
+            </section>
+
+            <!-- Fourth column: Social media section
+                Provide an outlet for users to connect with the company through popular social media platforms -->
+
+            <section class="footer-section">
+                <!-- Social media section header -->
+                <h3>Connect with Us</h3>
+                <!-- Circular social media icons for Facebook, Twitter, LinkedIn and Instagram-->
+                <ul class="social-icons">
+                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                </ul>
+            </section>
+            <!-- Copyright information -->
+            <section class="copyright-statement">
+                <h4>© 2021 Chess News | All Rights Reserved</h4>
+            </section>
+        </section>
+    </footer>
+</body>
+
+</html>
