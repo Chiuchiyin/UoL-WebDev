@@ -922,10 +922,6 @@ main wheelchair button*/
     }
 }
 
-/*---------------------------------------------------------------*/
-/*'Home' page CSS------------------------------------------------*/
-/*---------------------------------------------------------------*/
-/*Emphasize header which indicates the current web page and introduces the 'Featured' section*/
 #main-page-title {
     font-size: 1.6em;
     padding-top: 200px;
@@ -942,6 +938,23 @@ main wheelchair button*/
     font-size: 1.6em;
     margin-top: .78em;
 }
+#main-page-title-center {
+    font-size: 1.6em;
+    padding-top: 200px;
+    text-align: center;
+}
+/*Adjust header size to screen dimensions*/
+#main-page-title-center h1 {
+    font-size: 1.6em;
+    text-align: center;
+    margin-top: .78em;
+}
+/*Emphasize the page header*/
+#main-page-title-center h1 {
+    font-size: 1.6em;
+    margin-top: .78em;
+}
+
 /*---------------------------------------------------------------*/
 /*'Home' page: Desktop-------------------------------------------*/
 /*---------------------------------------------------------------*/
