@@ -955,6 +955,55 @@ main wheelchair button*/
     margin-top: .78em;
 }
 
+/*Provide whitespace around the meta data section*/
+.meta-data {
+    padding: 0.5em 0;
+}
+
+/*Emphasize the article author names more than the remaining meta data (publish date, number of comments, etc.)*/
+.meta-data h4 {
+    text-align: left;
+    font-weight: 800;
+    font-size: 0.8em;
+    color: var(--dark-grey);
+}
+
+/*De-emphasize the publish date and number of comments meta data compared to the author names*/
+.meta-data p {
+    font-family: var(--main-header);
+    text-align: left;
+    font-size: 0.73em;
+    font-weight: 400;
+    color: var(--dark-grey);
+}
+
+/*Emphasize Pokemon name more than the remaining data*/
+.build-data h4 {
+    text-align: left;
+    font-weight: 800;
+    font-size: 1.1em;
+    color: var(--dark-grey);
+}
+
+.build-data h5 {
+    font-family: var(--main-header);
+    text-align: left;
+    font-weight: 800;
+    font-size: 1.05em;
+    color: var(--dark-grey);
+}
+
+.build-data p {
+    font-family: var(--main-header);
+    text-align: left;
+    font-size: 1em;
+    font-weight: 400;
+    color: var(--dark-grey);
+}
+
+
+
+
 /*---------------------------------------------------------------*/
 /*'Home' page: Desktop-------------------------------------------*/
 /*---------------------------------------------------------------*/
@@ -1282,6 +1331,68 @@ main wheelchair button*/
         width:100%;
         height:100%;
         transition: all 0.4s ease-out;
+    }
+
+    
+}
+/*-------------------------------------------------------*/
+/*'Raid Guide' page CSS--------------------------------*/
+/*-------------------------------------------------------*/
+
+@media screen and (min-width: 1011px) {
+
+    /*---------------------------------------------------------------*/
+    /*'Raid' page main grid------------------------------------*/
+    /*---------------------------------------------------------------*/
+
+    /*split featured news section into 4 column grids*/
+    .raid-grid-container {
+        display: grid;
+        gap: 10px;
+        grid-template-columns: auto;
+        grid-row-gap: 50px;
+        margin-top: 1.5em;
+        padding-left: 500px;
+        padding-right: 500px;
+        min-width: 0px;
+    }
+    
+    /*border padding and grid width set up*/
+    .raid-grid-container > div {
+        text-align: left;
+        max-width: 100%;
+    }
+    
+    .raid-item {
+        padding: 20px;
+        border-top: 1px solid black;
+        border-left: 1px solid black;
+        border-bottom: 1px solid black;
+        border-right: 1px solid black;
+    }
+
+    /*-------------------------------------------------------------------------------*/
+    /*Style text to appear besides images--------------------------------------------*/
+    /*-------------------------------------------------------------------------------*/
+
+    /*Ensure that image does not overflow out of its designated space*/
+    .image-poke-container {
+        display: grid; 
+        grid-template-columns: 120px auto;
+        column-gap: 20px;
+        overflow: hidden;
+        border-top: 1px solid black;
+        border-left: 1px solid black;
+        border-bottom: 1px solid black;
+        border-right: 1px solid black;
+    }
+
+    /*Smooth the zoom in effect animation*/
+    .image-poke-container img {
+        width:100%;
+        height:100%;
+        object-fit: contain;
+        border-right: 1px solid black;
     }
 
     
