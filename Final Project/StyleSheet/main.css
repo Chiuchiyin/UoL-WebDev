@@ -1001,9 +1001,6 @@ main wheelchair button*/
     color: var(--dark-grey);
 }
 
-
-
-
 /*---------------------------------------------------------------*/
 /*'Home' page: Desktop-------------------------------------------*/
 /*---------------------------------------------------------------*/
@@ -1394,6 +1391,29 @@ main wheelchair button*/
         object-fit: contain;
         border-right: 1px solid black;
     }
-
+    /*-------------------------------------------------------------------------------*/
+    /*Content filter-----------------------------------------------------------------*/
+    /*-------------------------------------------------------------------------------*/
+    #filter-main-container {
+        display: grid; 
+        grid-template-columns: auto auto auto auto auto auto;
+        column-gap: 5x;
+        overflow: hidden;
+        object-fit: contain;
+    }
+    /* Style the buttons */
+    .filter-option {
+        opacity: 0.6;
+        transition: 0.3s;
+    }
+    .active, .filter-option:hover {
+        opacity: 1;
+    }
+    .Poke {
+        display: none; /* Hidden by default */
+    }
+    .show{
+        display:block;
+    }
     
 }

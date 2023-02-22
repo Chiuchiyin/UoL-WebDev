@@ -145,6 +145,7 @@
                     <a href="#battle">&#x2022; Tera Raid Battle Mechanics</a><br />
                     <a href="#start">&#x2022; Starting Tera Raid battle</a><br />
                     <a href="#build">&#x2022; Building Your Roster</a><br />
+                    <a href="#event">&#x2022; Tera Raid Battle Event</a><br />
                     <a href="#recommendation">&#x2022; Recommended Builds</a><br />
                 </div>
             </div>
@@ -227,6 +228,9 @@
                     <p>These objects can easily be located around the map as they emit pillars of light that can be seen from afar. Interacting with the Tera Crystal will allow you to start a Tera Raid Battle.
                     </p><br />
                     <p>Note that the Tera Type of the shining crystals will determine what kind of Tera Pokemon you'll encounter in the raid. For example, touching a Grass Tera Type crystal lets you battle Grass-type Terastallized Pokemon.
+                    </p><br />
+                    <img src="images/black-tera-crystal.jpg" alt="black tera crystal">
+                    <p>Black Tera crystal is a special Tera Crystal that house a 6 stars Tera raid and 7 stars event Tera raid. Approach with caution.
                     </p><br />
                     <img src="images/pokemon-terra-raid-pokemon-type.jpg.webp" alt="in game window to start raid">
                     <p>Approach a shining crystal and touch it to open the Tera Raid Battle menu. Players could host the raid online or solo it. This is also where player select the Pokemon for raid battle or the game will select first slot by default.
@@ -318,13 +322,471 @@
             </div>
             <div class="raid-item">
                 <div class="image-main-container">
+                    <h3  id="event">Tera Raid Battle Event</h3>
+                    <p>
+                    The next 7 star raid event has been announced for Pokémon Scarlet & Violet. Battle a Water Tera Type Pikachu. Runs from February 24th through February 27th.
+                    </p>
+                    <img src="images/tera-raid-event.png" alt="Pikachu Tera Raid">
+                    <p>
+                    We don't know yet what moves this Pikachu might have. Keep an eye as we update our guide.
+                    </p>
+                </div>
+            </div>
+            <div class="raid-item">
+                <div class="image-main-container">
                     <h3  id="recommendation">Recommended Builds</h3>
                     <p>
-                        This section will be updated as we learn more of the game.
+                    This section is build from community knowledge. It would be updated as we learn more of the game.
                     </p><br />
+                    <div class="raid-item">
+                        <div id="filter-main-container">
+                            <div class="filter-main-item">
+                                <button class="filter-option" onclick="filterPoke('normal')"><img src="images/normal.png"></button>
+                            </div>
+                            <div class="filter-main-item">
+                                <button class="filter-option" onclick="filterPoke('fire')"><img src="images/fire.png"></button>
+                            </div>
+                            <div class="filter-main-item">
+                                <button class="filter-option" onclick="filterPoke('water')"><img src="images/water.png"></button>
+                            </div>
+                            <div class="filter-main-item">
+                                <button class="filter-option" onclick="filterPoke('electric')"><img src="images/electric.png"></button>
+                            </div>
+                            <div class="filter-main-item">
+                                <button class="filter-option" onclick="filterPoke('grass')"><img src="images/grass.png"></button>
+                            </div>
+                            <div class="filter-main-item">
+                                <button class="filter-option" onclick="filterPoke('ice')"><img src="images/ice.png"></button>
+                            </div>
+                            <div class="filter-main-item">
+                                <button class="filter-option" onclick="filterPoke('fighting')"><img src="images/fighting.png"></button>
+                            </div>
+                            <div class="filter-main-item">
+                                <button class="filter-option" onclick="filterPoke('poison')"><img src="images/poison.png"></button>
+                            </div>
+                            <div class="filter-main-item">
+                                <button class="filter-option" onclick="filterPoke('ground')"><img src="images/ground.png"></button>
+                            </div>
+                            <div class="filter-main-item">
+                                <button class="filter-option" onclick="filterPoke('flying')"><img src="images/flying.png"></button>
+                            </div>
+                            <div class="filter-main-item">
+                                <button class="filter-option" onclick="filterPoke('psychic')"><img src="images/psychic.png"></button>
+                            </div>
+                            <div class="filter-main-item">
+                                <button class="filter-option" onclick="filterPoke('bug')"><img src="images/bug.png"></button>
+                            </div>
+                            <div class="filter-main-item">
+                                <button class="filter-option" onclick="filterPoke('rock')"><img src="images/rock.png"></button>
+                            </div>
+                            <div class="filter-main-item">
+                                <button class="filter-option" onclick="filterPoke('ghost')"><img src="images/ghost.png"></button>
+                            </div>
+                            <div class="filter-main-item">
+                                <button class="filter-option" onclick="filterPoke('dragon')"><img src="images/dragon.png"></button>
+                            </div>
+                            <div class="filter-main-item">
+                                <button class="filter-option" onclick="filterPoke('dark')"><img src="images/dark.png"></button>
+                            </div>
+                            <div class="filter-main-item">
+                                <button class="filter-option" onclick="filterPoke('steel')"><img src="images/steel.png"></button>
+                            </div>
+                            <div class="filter-main-item">
+                                <button class="filter-option" onclick="filterPoke('fairy')"><img src="images/fairy.png"></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list">
+                        <div class="Poke fire fighting ground rock dragon dark">
+                            <div class="image-poke-container">
+                                <div class = "image">
+                                    <!-- Image has zoom effect and alt text for accessibility -->
+                                    <img src="images/184.png"
+                                        alt="Azumarill">
+                                </div>
+                                <div class="text">
+                                    <section class="build-data">
+                                        <h4>Azumarill</h4>
+                                        <h5>Fairy or Water Tera Type</h5>
+                                        <h5>Huge Power</h5>
+                                        <h5>Belly Drum /Play Rough /Liquidation /Aqua Ring</h5>
+                                        <p>&#x2022; Use Belly Drum on the first turn</p>
+                                        <p>&#x2022; Doubles Power with Huge Power ability and Belly Drum move</p>
+                                        <p>&#x2022; Note that your HP will be reduced to half after Belly Drum</p>
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="Poke flying psychic bug ghost">
+                            <div class="image-poke-container">
+                                <div class = "image">
+                                    <!-- Image has zoom effect and alt text for accessibility -->
+                                    <img src="images/248.png"
+                                        alt="Tyranitar">
+                                </div>
+                                <div class="text">
+                                    <section class="build-data">
+                                        <h4>Tyranitar</h4>
+                                        <h5>Rock or Dark Tera Type</h5>
+                                        <h5>Sand Stream</h5>
+                                        <h5>Screech /Stone Edge /Crunch /Taunt</h5>
+                                        <p>&#x2022; Use Screech to lower the enemy's Defense on the first turn</p>
+                                        <p>&#x2022; Rock-type Sp. DEF is increased by 1.5 times during sandstorms, can be used as a tank against effective Pokemon</p>
+                                        <p>&#x2022; Can support with Taunt and Screech</p>
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="Poke electric fire poison rock">
+                            <div class="image-poke-container">
+                                <div class = "image">
+                                    <!-- Image has zoom effect and alt text for accessibility -->
+                                    <img src="images/445.png"
+                                        alt="Garchomp">
+                                </div>
+                                <div class="text">
+                                    <section class="build-data">
+                                        <h4>Garchomp</h4>
+                                        <h5>Ground Tera Type</h5>
+                                        <h5>Swords Dance /Earthquake /FLEXIBLE /FLEXIBLE</h5>
+                                        <p>&#x2022; A substitute for Azumarill</p>
+                                        <p>&#x2022; Use Swords Dance to boost firepower in the beginning</p>
+                                        <p>&#x2022; High Base Stats among Ground-type Pokemon</p>
+                                        <p>&#x2022; High Attack Stats makes Earthquake powerful</p>
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="Poke normal rock">
+                            <div class="image-poke-container">
+                                <div class = "image">
+                                    <!-- Image has zoom effect and alt text for accessibility -->
+                                    <img src="images/448.png"
+                                        alt="Lucario">
+                                </div>
+                                <div class="text">
+                                    <section class="build-data">
+                                        <h4>Lucario</h4>
+                                        <h5>Fighting Tera Type</h5>
+                                        <h5>Nasty Plot /Focus Blast /Screech /Metal Sound</h5>
+                                        <p>&#x2022; Super effective Attacker</p>
+                                        <p>&#x2022; Greatly increases firepower with Nasty Plot</p>
+                                        <p>&#x2022; Focus Blast is powerful, but beware of its low hit rate</p>
+                                   </section>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="Poke dragon dark">
+                            <div class="image-poke-container">
+                                <div class = "image">
+                                    <!-- Image has zoom effect and alt text for accessibility -->
+                                    <img src="images/700.png"
+                                        alt="Sylveon">
+                                </div>
+                                <div class="text">
+                                    <section class="build-data">
+                                        <h4>Sylveon</h4>
+                                        <h5>Fairy Tera Type</h5>
+                                        <h5>Pixilate(HA)</h5>
+                                        <h5>Fake Tears /Calm Mind /Draining Kiss /Hyper Voice</h5>
+                                        <p>&#x2022; Use Calm Mind to raise it's Sp. Atk and Sp. Def first turn</p>
+                                        <p>&#x2022; Hyper Voice is powerful with Pixilate ability</p>
+                                        <p>&#x2022; Attack with Draining Kiss to heal yourself</p>
+                                        <p>&#x2022; Use Fake Tears to lower the enemy's Sp. DEF</p>
+                                   </section>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="Poke fairy">
+                            <div class="image-poke-container">
+                                <div class = "image">
+                                    <!-- Image has zoom effect and alt text for accessibility -->
+                                    <img src="images/863.png"
+                                        alt="Perrserker">
+                                </div>
+                                <div class="text">
+                                    <section class="build-data">
+                                        <h4>Perrserker</h4>
+                                        <h5>Steel Tera Type</h5>
+                                        <h5>Screech /Swords Dance /Iron Head /Taunt</h5>
+                                        <p>&#x2022; High firepower only if all four players use Perrserker</p>
+                                        <p>&#x2022; Stack Screech and Swords Dance to the max, you may take down enemy with a single blow</p>
+                                   </section>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="Poke grass steel bug">
+                            <div class="image-poke-container">
+                                <div class = "image">
+                                    <!-- Image has zoom effect and alt text for accessibility -->
+                                    <img src="images/911.png"
+                                        alt="Skeledirge">
+                                </div>
+                                <div class="text">
+                                    <section class="build-data">
+                                        <h4>Skeledirge</h4>
+                                        <h5>Fire Tera Type</h5>
+                                        <h5>Unaware(HA)</h5>
+                                        <h5>Torch Song /Overheat /Will-O-Wisp /Slack Off</h5>
+                                        <p>&#x2022; Torch Song allows you to attack while increasing Sp. ATK, the other moves are optional</p>
+                                        <p>&#x2022; Hidden Ability Unaware allows you to attack after enemy's buff effects</p>
+                                        <p>&#x2022; Can recover with Slack Off and support with Will-O-Wisp</p>
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="Poke fighting poison">
+                            <div class="image-poke-container">
+                                <div class = "image">
+                                    <!-- Image has zoom effect and alt text for accessibility -->
+                                    <img src="images/927.png"
+                                    alt="Espathra">
+                                </div>
+                                <div class="text">
+                                    <section class="build-data">
+                                        <h4>Espathra</h4>
+                                        <h5>Psychic Tera Type</h5>
+                                        <h5>Opportunist</h5>
+                                        <h5>Lumina Crash /Reflect /Light Screen /Dazzling Gleam</h5>
+                                        <p>&#x2022; Lumina Crash can attack while lowering Sp. DEF by 2 levels.</p>
+                                        <p>&#x2022; Can lower enemy's Sp. DEF even after it put up a barrier</p>
+                                        <p>&#x2022; If the Ability is Opportunist, it can copy enemy's stat boosts</p>
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="Poke ice rock fairy">
+                            <div class="image-poke-container">
+                                <div class = "image">
+                                    <!-- Image has zoom effect and alt text for accessibility -->
+                                    <img src="images/1002.png"
+                                    alt="Tinkaton">
+                                </div>
+                                <div class="text">
+                                    <section class="build-data">
+                                        <h4>Tinkaton</h4>
+                                        <h5>Steel Tera Type</h5>
+                                        <h5>Mold Breaker</h5>
+                                        <h5>Gigaton Hammer /Play Rough /Swords Dance /Reflect</h5>
+                                        <p>&#x2022; Gigaton Hammer inflicts large damage</p>
+                                        <p>&#x2022; The Steel/Fairy combination has excellent resistance, and hard to be weak against the enemy</p>
+                                        <p>&#x2022; It is best to use Reflect or Light Screen depending on the enemy</p>
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="Poke fighting psychic ghost dark">
+                            <div class="image-poke-container">
+                                <div class = "image">
+                                    <!-- Image has zoom effect and alt text for accessibility -->
+                                    <img src="images/983.png"
+                                    alt="Flutter Mane">
+                                </div>
+                                <div class="text">
+                                    <section class="build-data">
+                                        <h4>Flutter Mane</h4>
+                                        <h5>Ghost or Fairy Tera Type</h5>
+                                        <h5>Protosynthesis</h5>
+                                        <h5>Fake Tears /Moonblast /Taunt /Shadow Ball</h5>
+                                        <p>&#x2022; Two Main weapons can trigger Same-type attack bonus</p>
+                                        <p>&#x2022; Can lower the enemy's Sp. DEF by 2 levels with Fake Tears</p>
+                                        <p>&#x2022; Taunt can interfere with the enemy's bothersome Status Move</p>
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="Poke normal ice flying">
+                            <div class="image-poke-container">
+                                <div class = "image">
+                                    <!-- Image has zoom effect and alt text for accessibility -->
+                                    <img src="images/989.png"
+                                    alt="Iron Hands">
+                                </div>
+                                <div class="text">
+                                    <section class="build-data">
+                                        <h4>Iron Hands</h4>
+                                        <h5>Fighting Tera Type</h5>
+                                        <h5>Quark Drive</h5>
+                                        <h5>Belly Drum /Drain Punch /Thunder Punch /Close Combat</h5>
+                                        <p>&#x2022; Use Belly Drum to raise ATK on the first turn</p>
+                                        <p>&#x2022; The combination of Belly Drum and Drain Punch allows you to keep fighting</p>
+                                        <p>&#x2022; Excellent Durability</p>
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="Poke grass fairy">
+                            <div class="image-poke-container">
+                                <div class = "image">
+                                    <!-- Image has zoom effect and alt text for accessibility -->
+                                    <img src="images/988.png"
+                                    alt="Iron Moth">
+                                </div>
+                                <div class="text">
+                                    <section class="build-data">
+                                        <h4>Iron Moth</h4>
+                                        <h5>Poison Tera Type</h5>
+                                        <h5>Quark Drive</h5>
+                                        <h5>Acid Spray /Sludge Wave /Fiery Dance /Morning Sun</h5>
+                                        <p>&#x2022; Acid Spray lowers enemy's Sp. DEF by 2 levels</p>
+                                        <p>&#x2022; A Super effective attacker due to the High Base Stats</p>
+                                        <p>&#x2022; Can recover HP with Morning Sun</p>
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="Poke grass">
+                            <div class="image-poke-container">
+                                <div class = "image">
+                                    <!-- Image has zoom effect and alt text for accessibility -->
+                                    <img src="images/951.png"
+                                    alt="Baxcalibur">
+                                </div>
+                                <div class="text">
+                                    <section class="build-data">
+                                        <h4>Baxcalibur</h4>
+                                        <h5>Ice Tera Type</h5>
+                                        <h5>Thermal Exchange</h5>
+                                        <h5>Swords Dance /Icicle Crash /Icicle Spear /Focus Energy</h5>
+                                        <p>&#x2022; The substitute for Fire-type Pokemon</p>
+                                        <p>&#x2022; Inflicts high damage by stacking Swords Dance</p>
+                                        <p>&#x2022; Increases Critical hit ratio with Focus Energy</p>
+                                        <p>&#x2022; The Thermal Exchange ability is immune to Burns and no risk of lowering ATK</p>
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="Poke grass ice psychic bug steel">
+                            <div class="image-poke-container">
+                                <div class = "image">
+                                    <!-- Image has zoom effect and alt text for accessibility -->
+                                    <img src="images/997.png"
+                                    alt="Chi-Yu">
+                                </div>
+                                <div class="text">
+                                    <section class="build-data">
+                                        <h4>Chi-Yu</h4>
+                                        <h5>Fire Tera Type</h5>
+                                        <h5>Beads of Ruin</h5>
+                                        <h5>Nasty Plot /Dark Pulse /Flamethrower /Taunt</h5>
+                                        <p>&#x2022; The Beads of Ruin ability can lower the enemy's Sp. DEF and increase firepower</p>
+                                        <p>&#x2022; Note that this Ability also lowers allies' Sp. DEF</p>
+                                        <p>&#x2022; High Base Stats</p>
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="Poke normal ice dark steel">
+                            <div class="image-poke-container">
+                                <div class = "image">
+                                    <!-- Image has zoom effect and alt text for accessibility -->
+                                    <img src="images/998.png"
+                                    alt="Koraidon">
+                                </div>
+                                <div class="text">
+                                    <section class="build-data">
+                                        <h4>Koraidon</h4>
+                                        <h5>Fighting Tera Type</h5>
+                                        <h5>Orichalcum Pulse</h5>
+                                        <h5>Screech /Collision Course /Drain Punch /Swords Dance</h5>
+                                        <p>&#x2022; High Attack Base Stats</p>
+                                        <p>&#x2022; Screech can lower the enemy's DEF by 2 levels</p>
+                                        <p>&#x2022; Can increase ATK by stacking Swords Dance</p>
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="Poke water flying">
+                            <div class="image-poke-container">
+                                <div class = "image">
+                                    <!-- Image has zoom effect and alt text for accessibility -->
+                                    <img src="images/999.png"
+                                    alt="Miraidon">
+                                </div>
+                                <div class="text">
+                                    <section class="build-data">
+                                        <h4>Miraidon</h4>
+                                        <h5>Electric Tera Type</h5>
+                                        <h5>Hadron Engine</h5>
+                                        <h5>Metal Sound /Electro Drift /Parabolic Charge /Taunt</h5>
+                                        <p>&#x2022; High Sp. ATK Base Stats</p>
+                                        <p>&#x2022; Metal Sound lowers the enemy's Sp. DEF by 2 levels</p>
+                                        <p>&#x2022; Taunt can interfere with the enemy's bothersome Status Move</p>
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </main>
+
+    <footer>
+        <!-- Four column sections: each with a header and four links related to the header -->
+        <section class="footer-body">
+
+            <!-- First column: Language section
+                Provide language accessibility for popular languages used by the majority of users -->
+
+            <section class="footer-section">
+                <!-- Language section header -->
+                <h3>Languages</h3>
+                <ul>
+                    <li><a href="#">English</a></li>
+                    <li><a href="#">Français</a></li>
+                    <li><a href="#">Español</a></li>
+                    <li><a href="#">中文</a></li>
+                </ul>
+            </section>
+
+            <!-- Second column: Menu section
+                Provide information on legal and security related concerns -->
+
+            <section class="footer-section">
+                <!-- Menu section header -->
+                <h3>Menu</h3>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms and Conditions</a></li>
+                    <li><a href="#">Support</a></li>
+                </ul>
+            </section>
+
+            <!-- Third column: Resources section
+                Provide an interface for users to interact with the chess database through an interactive board -->
+
+            <section class="footer-section">
+                <!-- Resources section header -->
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="#">Openings Explorer</a></li>
+                    <li><a href="#">Games Database</a></li>
+                    <li><a href="#">Board Editor</a></li>
+                    <li><a href="#">Analysis Board</a></li>
+                </ul>
+            </section>
+
+            <!-- Fourth column: Social media section
+                Provide an outlet for users to connect with the company through popular social media platforms -->
+
+            <section class="footer-section">
+                <!-- Social media section header -->
+                <h3>Connect with Us</h3>
+                <!-- Circular social media icons for Facebook, Twitter, LinkedIn and Instagram-->
+                <ul class="social-icons">
+                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                </ul>
+            </section>
+            <!-- Copyright information -->
+            <section class="copyright-statement">
+                <h4>© 2021 Chess News | All Rights Reserved</h4>
+            </section>
+        </section>
+    </footer>
 
 </body>
