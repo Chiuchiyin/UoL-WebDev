@@ -1055,6 +1055,7 @@ main wheelchair button*/
         margin-top: 1.5em;
         padding-left: 150px;
         padding-right: 150px;
+        padding-bottom: 50px;
         min-width: 0px;
     }
         
@@ -1268,6 +1269,7 @@ main wheelchair button*/
         margin-top: 1.5em;
         padding-left: 150px;
         padding-right: 150px;
+        padding-bottom: 50px;
         min-width: 0px;
     }
     
@@ -1351,6 +1353,7 @@ main wheelchair button*/
         margin-top: 1.5em;
         padding-left: 500px;
         padding-right: 500px;
+        padding-bottom: 50px;
         min-width: 0px;
     }
     
@@ -1397,7 +1400,6 @@ main wheelchair button*/
     #filter-main-container {
         display: grid; 
         grid-template-columns: auto auto auto auto auto auto;
-        column-gap: 5x;
         overflow: hidden;
         object-fit: contain;
     }
@@ -1416,4 +1418,50 @@ main wheelchair button*/
         display:block;
     }
     
+}
+/*-------------------------------------------------------*/
+/*'About Paldea' page CSS--------------------------------*/
+/*-------------------------------------------------------*/
+
+@media screen and (min-width: 1011px) {
+
+    /*---------------------------------------------------------------*/
+    /*'Raid' page main grid------------------------------------*/
+    /*---------------------------------------------------------------*/
+
+    /*split featured news section into 4 column grids*/
+    .paldea-grid-container {
+        display: grid;
+        gap: 10px;
+        grid-template-columns: auto;
+        grid-row-gap: 50px;
+        margin-top: 1.5em;
+        padding-left: 500px;
+        padding-right: 500px;
+        padding-bottom: 50px;
+        min-width: 0px;
+    }
+    
+    /*border padding and grid width set up*/
+    .paldea-grid-container > div {
+        text-align: left;
+        max-width: 100%;
+    }
+    
+    .paldea-item {
+        padding: 20px;
+        border-top: 1px solid black;
+        border-left: 1px solid black;
+        border-bottom: 1px solid black;
+        border-right: 1px solid black;
+    }
+
+    .videoInsert {
+        width: 100%; 
+        height: auto; 
+        z-index: -100;
+        background-size: cover;
+        overflow: hidden;
+    }
+
 }
