@@ -148,8 +148,8 @@ corner*/
 
 /*Smooth the zoom in effect animation*/
 .image-main-container img {
-    width:100%;
-    height:100%;
+    width: 100%;
+    height: 100%;
     transition: all 0.4s ease-out;
 }
 
@@ -181,7 +181,9 @@ main {
 }
 
 /*Style common headers to create a uniform font style*/
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-family: var(--main-header);
 }
 
@@ -224,7 +226,10 @@ h1 {
 }
 
 /*Uniform spacing for main headers and subheaders*/
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
     /*This spacing is important on mobile devices when text may wrap to multiple lines*/
     line-height: 1.8em;
 }
@@ -244,6 +249,7 @@ p {
     line-height: 2em;
     font-family: var(--main-text);
 }
+
 /*---------------------------------------------------------------*/
 /*Footer with four column sections-------------------------------*/
 /*---------------------------------------------------------------*/
@@ -386,7 +392,8 @@ toggle button)*/
 }
 
 /*Provide a uniform and readable font for the main navigation links*/
-.nav-bar, button {
+.nav-bar,
+button {
     font-family: 'Josefin Sans', sans-serif;
 }
 
@@ -642,7 +649,8 @@ main wheelchair button*/
 }
 
 /*Make the tooltip visible*/
-.accessibility-tooltip:hover::before, .accessibility-tooltip:hover::after {
+.accessibility-tooltip:hover::before,
+.accessibility-tooltip:hover::after {
     display: block;
 }
 
@@ -927,28 +935,33 @@ main wheelchair button*/
     padding-top: 200px;
     padding-left: 150px;
 }
+
 /*Adjust header size to screen dimensions*/
 #main-page-title h1 {
     font-size: 1.6em;
     text-align: center;
     margin-top: .78em;
 }
+
 /*Emphasize the page header*/
 #main-page-title h1 {
     font-size: 1.6em;
     margin-top: .78em;
 }
+
 #main-page-title-center {
     font-size: 1.6em;
     padding-top: 200px;
     text-align: center;
 }
+
 /*Adjust header size to screen dimensions*/
 #main-page-title-center h1 {
     font-size: 1.6em;
     text-align: center;
     margin-top: .78em;
 }
+
 /*Emphasize the page header*/
 #main-page-title-center h1 {
     font-size: 1.6em;
@@ -1001,6 +1014,97 @@ main wheelchair button*/
     color: var(--dark-grey);
 }
 
+/*-----------------------------------------------------------------*/
+/*"About Paldea" timeline -----------------------------------------*/
+/*-----------------------------------------------------------------*/
+
+.timeline ul li {
+    list-style-type: none;
+    position: relative;
+    width: 6px;
+    margin: 0 auto;
+    padding-top: 50px;
+    background: var(--background-light);
+}
+
+.timeline ul li::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%) rotate(45deg);
+    width: 20px;
+    height: 20px;
+    z-index: 2;
+    background: var(--background-dark);
+}
+
+.timeline ul li div {
+    position: relative;
+    bottom: 0;
+    width: 400px;
+    padding: 20px;
+    background: var(--background-light);
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.timeline ul li div time {
+    position: absolute;
+    background: #f5af19;
+    width: 80px;
+    height: 30px;
+    top: -15px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 2px;
+}
+
+.timeline ul li div div {
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.timeline ul li div div p {
+    text-align: center;
+}
+
+
+.timeline ul li:nth-of-type(odd)>div {
+    left: 45px;
+}
+
+.timeline ul li:nth-of-type(even)>div {
+    left: -439px;
+}
+
+.timeline ul li div {
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.timeline ul li:nth-of-type(odd) div {
+    transform: translate3d(100px, -10px, 0) rotate(10deg);
+}
+
+.timeline ul li:nth-of-type(even) div {
+    transform: translate3d(-100px, -10px, 0) rotate(10deg);
+}
+
+.timeline ul li.in-view div {
+    transform: none;
+    visibility: visible;
+    opacity: 1;
+}
+
 /*---------------------------------------------------------------*/
 /*'Home' page: Desktop-------------------------------------------*/
 /*---------------------------------------------------------------*/
@@ -1015,6 +1119,7 @@ main wheelchair button*/
     .nav-bar.sticky .company-name-JSON {
         display: none;
     }
+
     /*---------------------------------------------------------------*/
     /*'Featured News' grid-------------------------------------------*/
     /*---------------------------------------------------------------*/
@@ -1029,9 +1134,9 @@ main wheelchair button*/
         padding-right: 150px;
         min-width: 0px;
     }
-    
+
     /*border padding and grid width set up*/
-    .featured-grid-container > div {
+    .featured-grid-container>div {
         text-align: left;
         padding: 20px 0;
         max-width: 100%;
@@ -1058,9 +1163,9 @@ main wheelchair button*/
         padding-bottom: 50px;
         min-width: 0px;
     }
-        
+
     /*border padding and grid width set up*/
-    .home-page-bottom-grid-container > div {
+    .home-page-bottom-grid-container>div {
         text-align: left;
         padding: 20px 0;
         max-width: 100%;
@@ -1073,13 +1178,14 @@ main wheelchair button*/
         display: grid;
         grid-row-gap: 20px;
     }
+
     /*-------------------------------------------------------------------------------*/
     /*Style text to appear besides images--------------------------------------------*/
     /*-------------------------------------------------------------------------------*/
 
     /*Ensure that image does not overflow out of its designated space*/
     .image-side-container {
-        display: grid; 
+        display: grid;
         grid-template-columns: 1fr 1fr;
         column-gap: 20px;
         overflow: hidden;
@@ -1087,16 +1193,17 @@ main wheelchair button*/
 
     /*Smooth the zoom in effect animation*/
     .image-side-container img {
-        width:100%;
-        height:100%;
+        width: 100%;
+        height: 100%;
         transition: all 0.4s ease-out;
     }
 
     /*Emphasize the given image by scaling up the image to mirror a "zoom in" effect*/
     .image-side-container img:hover {
         transform: scale(1.02);
-    }    
+    }
 }
+
 /*---------------------------------------------------------------*/
 /*'Home' page: Mobile--------------------------------------------*/
 /*---------------------------------------------------------------*/
@@ -1116,13 +1223,14 @@ main wheelchair button*/
         padding-right: 50px;
         min-width: 0px;
     }
-        
+
     /*border padding and grid width set up*/
-    .featured-grid-container > div {
+    .featured-grid-container>div {
         text-align: left;
         padding: 20px 0;
         max-width: 100%;
     }
+
     /*---------------------------------------------------------------*/
     /*'Bottom' grid--------------------------------------------------*/
     /*---------------------------------------------------------------*/
@@ -1137,9 +1245,9 @@ main wheelchair button*/
         padding-right: 50px;
         min-width: 0px;
     }
-        
+
     /*border padding and grid width set up*/
-    .home-page-bottom-grid-container > div {
+    .home-page-bottom-grid-container>div {
         text-align: left;
         padding: 20px 0;
         max-width: 100%;
@@ -1151,7 +1259,7 @@ main wheelchair button*/
 
     /*Ensure that image does not overflow out of its designated space*/
     .image-side-container {
-        display: grid; 
+        display: grid;
         grid-template-columns: 1fr;
         column-gap: 20px;
         overflow: hidden;
@@ -1159,18 +1267,19 @@ main wheelchair button*/
 
     /*Smooth the zoom in effect animation*/
     .image-side-container img {
-        width:100%;
-        height:100%;
+        width: 100%;
+        height: 100%;
         transition: all 0.4s ease-out;
     }
 
     /*Emphasize the given image by scaling up the image to mirror a "zoom in" effect*/
     .image-side-container img:hover {
         transform: scale(1.02);
-    }    
+    }
 
 
 }
+
 /*-------------------------------------------*/
 /*'Home' page: Tablet------------------------*/
 /*-------------------------------------------*/
@@ -1191,19 +1300,20 @@ main wheelchair button*/
         padding-right: 100px;
         min-width: 0px;
     }
-        
+
     /*border padding and grid width set up*/
-    .featured-grid-container > div {
-    text-align: left;
-    padding: 20px 0;
-    max-width: 100%;
+    .featured-grid-container>div {
+        text-align: left;
+        padding: 20px 0;
+        max-width: 100%;
     }
-    
+
     /*setting up the first item to occupy 2 by 2 times the space of other items*/
     .featured-item1 {
         grid-column: 1 / span 2;
         grid-row: 1/ span 2;
     }
+
     /*---------------------------------------------------------------*/
     /*'Bottom' grid--------------------------------------------------*/
     /*---------------------------------------------------------------*/
@@ -1218,9 +1328,9 @@ main wheelchair button*/
         padding-right: 100px;
         min-width: 0px;
     }
-        
+
     /*border padding and grid width set up*/
-    .home-page-bottom-grid-container > div {
+    .home-page-bottom-grid-container>div {
         text-align: left;
         padding: 20px 0;
         max-width: 100%;
@@ -1232,7 +1342,7 @@ main wheelchair button*/
 
     /*Ensure that image does not overflow out of its designated space*/
     .image-side-container {
-        display: grid; 
+        display: grid;
         grid-template-columns: 1fr;
         column-gap: 20px;
         overflow: hidden;
@@ -1240,16 +1350,17 @@ main wheelchair button*/
 
     /*Smooth the zoom in effect animation*/
     .image-side-container img {
-        width:100%;
-        height:100%;
+        width: 100%;
+        height: 100%;
         transition: all 0.4s ease-out;
     }
 
     /*Emphasize the given image by scaling up the image to mirror a "zoom in" effect*/
     .image-side-container img:hover {
         transform: scale(1.02);
-    }    
+    }
 }
+
 /*-------------------------------------------------------*/
 /*'Current News' page CSS--------------------------------*/
 /*-------------------------------------------------------*/
@@ -1272,54 +1383,63 @@ main wheelchair button*/
         padding-bottom: 50px;
         min-width: 0px;
     }
-    
+
     /*border padding and grid width set up*/
-    .current-grid-container > div {
+    .current-grid-container>div {
         text-align: left;
         max-width: 100%;
     }
-    
+
     .current-item1 {
         display: grid;
         grid-gap: 20px;
         grid-template-columns: 1fr 1fr;
     }
+
     .current-item2 {
         display: grid;
         grid-gap: 50px;
     }
+
     .current-item3 {
         grid-column: 1 / span 2;
         grid-row: 1/ span 2;
     }
+
     .current-item10 {
         padding: 20px;
+        box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
         border-top: 1px solid black;
         border-left: 1px solid black;
         border-bottom: 1px solid black;
         border-right: 1px solid black;
     }
+
     .current-item11 {
         padding: 20px;
+        box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
         border-top: 1px solid black;
         border-left: 1px solid black;
         border-bottom: 1px solid black;
         border-right: 1px solid black;
     }
+
     .current-item12 {
         padding: 20px;
+        box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
         border-top: 1px solid black;
         border-left: 1px solid black;
         border-bottom: 1px solid black;
         border-right: 1px solid black;
     }
+
     /*-------------------------------------------------------------------------------*/
     /*Style text to appear besides images--------------------------------------------*/
     /*-------------------------------------------------------------------------------*/
 
     /*Ensure that image does not overflow out of its designated space*/
     .image-text-container {
-        display: grid; 
+        display: grid;
         grid-template-columns: 30px auto;
         column-gap: 20px;
         overflow: hidden;
@@ -1327,13 +1447,14 @@ main wheelchair button*/
 
     /*Smooth the zoom in effect animation*/
     .image-tex-container img {
-        width:100%;
-        height:100%;
+        width: 100%;
+        height: 100%;
         transition: all 0.4s ease-out;
     }
 
-    
+
 }
+
 /*-------------------------------------------------------*/
 /*'Raid Guide' page CSS--------------------------------*/
 /*-------------------------------------------------------*/
@@ -1355,14 +1476,15 @@ main wheelchair button*/
         padding-right: 500px;
         padding-bottom: 50px;
         min-width: 0px;
+
     }
-    
+
     /*border padding and grid width set up*/
-    .raid-grid-container > div {
+    .raid-grid-container>div {
         text-align: left;
         max-width: 100%;
     }
-    
+
     .raid-item {
         padding: 20px;
         border-top: 1px solid black;
@@ -1377,7 +1499,7 @@ main wheelchair button*/
 
     /*Ensure that image does not overflow out of its designated space*/
     .image-poke-container {
-        display: grid; 
+        display: grid;
         grid-template-columns: 120px auto;
         column-gap: 20px;
         overflow: hidden;
@@ -1389,36 +1511,44 @@ main wheelchair button*/
 
     /*Smooth the zoom in effect animation*/
     .image-poke-container img {
-        width:100%;
-        height:100%;
+        width: 100%;
+        height: 100%;
         object-fit: contain;
         border-right: 1px solid black;
     }
+
     /*-------------------------------------------------------------------------------*/
     /*Content filter-----------------------------------------------------------------*/
     /*-------------------------------------------------------------------------------*/
     #filter-main-container {
-        display: grid; 
+        display: grid;
         grid-template-columns: auto auto auto auto auto auto;
         overflow: hidden;
         object-fit: contain;
     }
+
     /* Style the buttons */
     .filter-option {
         opacity: 0.6;
         transition: 0.3s;
     }
-    .active, .filter-option:hover {
+
+    .active,
+    .filter-option:hover {
         opacity: 1;
     }
+
     .Poke {
-        display: none; /* Hidden by default */
+        display: none;
+        /* Hidden by default */
     }
-    .show{
-        display:block;
+
+    .show {
+        display: block;
     }
-    
+
 }
+
 /*-------------------------------------------------------*/
 /*'About Paldea' page CSS--------------------------------*/
 /*-------------------------------------------------------*/
@@ -1426,10 +1556,10 @@ main wheelchair button*/
 @media screen and (min-width: 1011px) {
 
     /*---------------------------------------------------------------*/
-    /*'Raid' page main grid------------------------------------*/
+    /*main grid------------------------------------------------------*/
     /*---------------------------------------------------------------*/
 
-    /*split featured news section into 4 column grids*/
+    /*main page grid*/
     .paldea-grid-container {
         display: grid;
         gap: 10px;
@@ -1441,14 +1571,14 @@ main wheelchair button*/
         padding-bottom: 50px;
         min-width: 0px;
     }
-    
+
     /*border padding and grid width set up*/
-    .paldea-grid-container > div {
+    .paldea-grid-container>div {
         text-align: left;
         max-width: 100%;
     }
-    
-    .paldea-item {
+
+    .paldea-item1 {
         padding: 20px;
         border-top: 1px solid black;
         border-left: 1px solid black;
@@ -1456,12 +1586,51 @@ main wheelchair button*/
         border-right: 1px solid black;
     }
 
+    .paldea-item2 {
+        padding: 20px;
+    }
+
     .videoInsert {
-        width: 100%; 
-        height: auto; 
+        width: 100%;
+        height: auto;
         z-index: -100;
         background-size: cover;
         overflow: hidden;
     }
 
+}
+
+
+
+@media screen and (max-width: 900px) {
+    .timeline ul li div {
+        width: 250px;
+        flex-direction: column;
+    }
+
+    .timeline ul li div div {
+        width: 80%;
+        margin: 10px;
+    }
+
+    .timeline ul li:nth-of-type(even)>div {
+        left: -289px;
+    }
+}
+
+@media screen and (max-width:600px) {
+
+
+    .timeline ul li {
+        margin-left: 20px;
+
+    }
+
+    .timeline ul li div {
+        width: calc(100vw - 91px);
+    }
+
+    .timeline ul li:nth-of-type(even)>div {
+        left: 45px;
+    }
 }

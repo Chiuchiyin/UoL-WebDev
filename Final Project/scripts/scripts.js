@@ -1,32 +1,3 @@
-/*------------------------------------------------------------------------------------------------------*/
-/*Enable buttons to rotate through the 'Breaking News' slides on the carousel of the Home Page----------*/
-/*------------------------------------------------------------------------------------------------------*/
-
-// Retrieve the two carousel scrollers from the DOM
-const scrollers = document.querySelectorAll('[data-scroller]');
-
-// For each carousel scroller, move to the next or previous slide
-scrollers.forEach(scroller => {
-    scroller.addEventListener('click', () => {
-        // Select all of the carousel slides
-        const slides = document.querySelector('[data-slides]');
-        // Record the number of carousel slides
-        const numSlides = slides.children.length;
-        // Determine whether or not to move to next or previous slide
-        const offset = scroller.dataset.carouselScroller === 'previous' ? -1 : 1;
-        // Retrieve currently visible slide from the DOM
-        const visibleSlide = slides.querySelector('[data-visible]');
-        // Determine which slide to display by moving forwards or backwards from the currently visible slide
-        let newSlide = offset + [...slides.children].indexOf(visibleSlide);
-        // Allow carousel to loop through the slides continuously
-        newSlide = newSlide < 0 ? numSlides - 1 : newSlide % numSlides;
-        // Make new slide visible
-        slides.children[newSlide].dataset.visible = true;
-        // Hide the old slide so that a maximum of one slide is displayed at any one instance
-        delete visibleSlide.dataset.visible;
-    })
-})
-
 /*-----------------------------------------------------------------------------------------------------------*/
 /*Add an effect that fades in and slides in elements once they are sufficiently visible in the viewport------*/
 /*-----------------------------------------------------------------------------------------------------------*/
@@ -452,3 +423,33 @@ function removeClass(element, name){
     }
     element.className = arr1.join(" ");
 }
+
+// Timeline
+const items = document.querySelectorAll(".timeline ul li");
+
+function isElementInViewport(el){
+    var rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
+
+function callbackFunc() {
+    for(var i = 0; i < items.length; i++){
+        if (isElementInViewport(items[i])){
+            if(!items[i].classList.contains("in-view")){
+                items[i].classList.add("in-view");
+            }
+        } 
+        else if(items[i].classList.contains("in-view")){
+            items[i].classList.remove("in-view");
+        }
+    }
+}
+
+window.addEventListener("load", callbackFunc);
+window.addEventListener("scroll", callbackFunc);
+window.addEventListener("resize", callbackFunc);
