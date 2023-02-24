@@ -61,7 +61,7 @@ fetch('https://json.extendsclass.com/bin/74233677221e')
     .then(function (dataJSON) {
         // Retrieve all of the company name templates from the DOM
         let companyName = document.querySelectorAll('.company-name-JSON');
-        // Fill in the company name templates with 'Chess News' for each web page within the site structure
+        // Fill in the company name templates with 'Paldea Times' for each web page within the site structure
         for (var index = 0; index < companyName.length; ++index) {
             companyName[index].insertAdjacentHTML("beforeend",dataJSON.company)
         }

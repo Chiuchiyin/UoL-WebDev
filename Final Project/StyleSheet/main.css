@@ -841,6 +841,10 @@ main wheelchair button*/
     .nav-bar.sticky .toggle-button {
         top: 2.4em;
     }
+
+    .nav-bar.sticky .company-name-JSON img{
+        content: url("../images/logo_1.png");
+    }
 }
 
 /*---------------------------------------------------------------*/
