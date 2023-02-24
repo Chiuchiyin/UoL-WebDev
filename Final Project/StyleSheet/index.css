@@ -1,0 +1,255 @@
+/*---------------------------------------------------------------*/
+/*'Home' page: Desktop-------------------------------------------*/
+/*---------------------------------------------------------------*/
+
+@media screen and (min-width: 1011px) {
+
+    /*--------------------------------------------------------------------*/
+    /*Sticky navigation bar on desktop------------------------------------*/
+    /*--------------------------------------------------------------------*/
+
+    /*Remove the page header to increase the main content viewport space when the navigation bar becomes sticky*/
+    .nav-bar.sticky .company-name-JSON {
+        display: none;
+    }
+
+    /*---------------------------------------------------------------*/
+    /*'Featured News' grid-------------------------------------------*/
+    /*---------------------------------------------------------------*/
+
+    /*split featured news section into 4 column grids*/
+    .featured-grid-container {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        gap: 20px;
+        margin-top: 1.5em;
+        padding-left: 150px;
+        padding-right: 150px;
+        min-width: 0px;
+    }
+
+    /*border padding and grid width set up*/
+    .featured-grid-container>div {
+        text-align: left;
+        padding: 20px 0;
+        max-width: 100%;
+    }
+
+    /*setting up the first item to occupy 2 by 2 times the space of other items*/
+    .featured-item1 {
+        grid-column: 1 / span 2;
+        grid-row: 1/ span 2;
+    }
+
+    /*---------------------------------------------------------------*/
+    /*'Bottom' grid--------------------------------------------------*/
+    /*---------------------------------------------------------------*/
+
+    /*Split screen to 2:1 ratio*/
+    .home-page-bottom-grid-container {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        gap: 20px;
+        margin-top: 1.5em;
+        padding-left: 150px;
+        padding-right: 150px;
+        padding-bottom: 50px;
+        min-width: 0px;
+    }
+
+    /*border padding and grid width set up*/
+    .home-page-bottom-grid-container>div {
+        text-align: left;
+        padding: 20px 0;
+        max-width: 100%;
+    }
+
+    /*setting up the first item to occupy 2 by 2 times the space of other items*/
+    .home-page-bottom-item1 {
+        grid-column: 1 / span 2;
+        grid-row: 1/ span 2;
+        display: grid;
+        grid-row-gap: 20px;
+    }
+
+    /*-------------------------------------------------------------------------------*/
+    /*Style text to appear besides images--------------------------------------------*/
+    /*-------------------------------------------------------------------------------*/
+
+    /*Ensure that image does not overflow out of its designated space*/
+    .image-side-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 20px;
+        overflow: hidden;
+    }
+
+    /*Smooth the zoom in effect animation*/
+    .image-side-container img {
+        width: 100%;
+        height: 100%;
+        transition: all 0.4s ease-out;
+    }
+
+    /*Emphasize the given image by scaling up the image to mirror a "zoom in" effect*/
+    .image-side-container img:hover {
+        transform: scale(1.02);
+    }
+}
+
+/*---------------------------------------------------------------*/
+/*'Home' page: Mobile--------------------------------------------*/
+/*---------------------------------------------------------------*/
+@media screen and (max-width: 570px) {
+
+    /*---------------------------------------------------------------*/
+    /*'Featured News' grid-------------------------------------------*/
+    /*---------------------------------------------------------------*/
+
+    /*rearrange grid so it no longer split content into columns------*/
+    .featured-grid-container {
+        display: grid;
+        grid-template-columns: auto;
+        gap: 20px;
+        margin-top: 1.5em;
+        padding-left: 50px;
+        padding-right: 50px;
+        min-width: 0px;
+    }
+
+    /*border padding and grid width set up*/
+    .featured-grid-container>div {
+        text-align: left;
+        padding: 20px 0;
+        max-width: 100%;
+    }
+
+    /*---------------------------------------------------------------*/
+    /*'Bottom' grid--------------------------------------------------*/
+    /*---------------------------------------------------------------*/
+
+    /*rearrange grid so it no longer split content into columns------*/
+    .home-page-bottom-grid-container {
+        display: grid;
+        grid-template-columns: auto;
+        gap: 20px;
+        margin-top: 1.5em;
+        padding-left: 50px;
+        padding-right: 50px;
+        min-width: 0px;
+    }
+
+    /*border padding and grid width set up*/
+    .home-page-bottom-grid-container>div {
+        text-align: left;
+        padding: 20px 0;
+        max-width: 100%;
+    }
+
+    /*-------------------------------------------------------------------------------*/
+    /*Style text to appear besides images--------------------------------------------*/
+    /*-------------------------------------------------------------------------------*/
+
+    /*Ensure that image does not overflow out of its designated space*/
+    .image-side-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        column-gap: 20px;
+        overflow: hidden;
+    }
+
+    /*Smooth the zoom in effect animation*/
+    .image-side-container img {
+        width: 100%;
+        height: 100%;
+        transition: all 0.4s ease-out;
+    }
+
+    /*Emphasize the given image by scaling up the image to mirror a "zoom in" effect*/
+    .image-side-container img:hover {
+        transform: scale(1.02);
+    }
+
+
+}
+
+/*-------------------------------------------*/
+/*'Home' page: Tablet------------------------*/
+/*-------------------------------------------*/
+
+@media screen and (min-width: 570px) and (max-width: 1010px) {
+
+    /*---------------------------------------------------------------*/
+    /*'Featured News' grid-------------------------------------------*/
+    /*---------------------------------------------------------------*/
+
+    /*split featured news section into 4 column grids*/
+    .featured-grid-container {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        gap: 20px;
+        margin-top: 1.5em;
+        padding-left: 100px;
+        padding-right: 100px;
+        min-width: 0px;
+    }
+
+    /*border padding and grid width set up*/
+    .featured-grid-container>div {
+        text-align: left;
+        padding: 20px 0;
+        max-width: 100%;
+    }
+
+    /*setting up the first item to occupy 2 by 2 times the space of other items*/
+    .featured-item1 {
+        grid-column: 1 / span 2;
+        grid-row: 1/ span 2;
+    }
+
+    /*---------------------------------------------------------------*/
+    /*'Bottom' grid--------------------------------------------------*/
+    /*---------------------------------------------------------------*/
+
+    /*grid spearate content to equal size columns--------------------*/
+    .home-page-bottom-grid-container {
+        display: grid;
+        grid-template-columns: 50% auto;
+        gap: 20px;
+        margin-top: 1.5em;
+        padding-left: 100px;
+        padding-right: 100px;
+        min-width: 0px;
+    }
+
+    /*border padding and grid width set up*/
+    .home-page-bottom-grid-container>div {
+        text-align: left;
+        padding: 20px 0;
+        max-width: 100%;
+    }
+
+    /*-------------------------------------------------------------------------------*/
+    /*Style text to appear besides images--------------------------------------------*/
+    /*-------------------------------------------------------------------------------*/
+
+    /*Ensure that image does not overflow out of its designated space*/
+    .image-side-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        column-gap: 20px;
+        overflow: hidden;
+    }
+
+    /*Smooth the zoom in effect animation*/
+    .image-side-container img {
+        width: 100%;
+        height: 100%;
+        transition: all 0.4s ease-out;
+    }
+
+    /*Emphasize the given image by scaling up the image to mirror a "zoom in" effect*/
+    .image-side-container img:hover {
+        transform: scale(1.02);
+    }
+}

@@ -1,0 +1,131 @@
+/*-------------------------------------------------------*/
+/*'Raid Guide' page CSS----------------------------------*/
+/*-------------------------------------------------------*/
+
+/*---------------------------------------------------------------*/
+/*'Raid Guide' page: Desktop-------------------------------------*/
+/*---------------------------------------------------------------*/
+
+@media screen and (min-width: 1011px) {
+
+    /*--------------------------------------------------------------------*/
+    /*Sticky navigation bar on desktop------------------------------------*/
+    /*--------------------------------------------------------------------*/
+
+    /*Remove the page header to increase the main content viewport space when the navigation bar becomes sticky*/
+    .nav-bar.sticky .company-name-JSON {
+        display: none;
+    }
+
+    /*---------------------------------------------------------------*/
+    /*'Raid' page main grid------------------------------------------*/
+    /*---------------------------------------------------------------*/
+
+    /*split featured news section into 4 column grids*/
+    .raid-grid-container {
+        display: grid;
+        gap: 10px;
+        grid-template-columns: auto;
+        grid-row-gap: 50px;
+        margin-top: 1.5em;
+        padding-left: 25%;
+        padding-right: 25%;
+        padding-bottom: 50px;
+        min-width: 0px;
+
+    }
+
+    /*border padding and grid width set up*/
+    .raid-grid-container>div {
+        text-align: left;
+        max-width: 100%;
+    }
+
+    .raid-item {
+        padding: 20px;
+        border-top: 1px solid black;
+        border-left: 1px solid black;
+        border-bottom: 1px solid black;
+        border-right: 1px solid black;
+    }
+
+    /*-------------------------------------------------------------------------------*/
+    /*Style text to appear besides images--------------------------------------------*/
+    /*-------------------------------------------------------------------------------*/
+
+    /*Ensure that image does not overflow out of its designated space*/
+    .image-poke-container {
+        display: grid;
+        grid-template-columns: 120px auto;
+        column-gap: 20px;
+        overflow: hidden;
+        border-top: 1px solid black;
+        border-left: 1px solid black;
+        border-bottom: 1px solid black;
+        border-right: 1px solid black;
+    }
+
+    /*Smooth the zoom in effect animation*/
+    .image-poke-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        border-right: 1px solid black;
+    }
+
+    /*-------------------------------------------------------------------------------*/
+    /*Content filter-----------------------------------------------------------------*/
+    /*-------------------------------------------------------------------------------*/
+    #filter-main-container {
+        display: grid;
+        grid-template-columns: auto auto auto auto auto auto;
+        overflow: hidden;
+        object-fit: contain;
+    }
+
+    /* Style the buttons */
+    .filter-option {
+        opacity: 0.6;
+        transition: 0.3s;
+    }
+
+    .active,
+    .filter-option:hover {
+        opacity: 1;
+    }
+
+    .Poke {
+        display: none;
+        /* Hidden by default */
+    }
+
+    .show {
+        display: block;
+    }
+
+}
+
+/*---------------------------------------------------------------*/
+/*'Raid Guide' page: Mobile--------------------------------------*/
+/*---------------------------------------------------------------*/
+@media screen and (max-width: 570px) {
+}
+
+/*-------------------------------------------*/
+/*'Raid Guide' page: Tablet------------------*/
+/*-------------------------------------------*/
+
+@media screen and (min-width: 570px) and (max-width: 1010px) {
+    .raid-grid-container {
+        display: grid;
+        gap: 10px;
+        grid-template-columns: auto;
+        grid-row-gap: 50px;
+        margin-top: 1.5em;
+        padding-left: 25%;
+        padding-right: 25%;
+        padding-bottom: 50px;
+        min-width: 0px;
+
+    }
+}

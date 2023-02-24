@@ -1,0 +1,11 @@
+@media screen and (min-width: 1011px) {
+
+    /*--------------------------------------------------------------------*/
+    /*Sticky navigation bar on desktop------------------------------------*/
+    /*--------------------------------------------------------------------*/
+
+    /*Remove the page header to increase the main content viewport space when the navigation bar becomes sticky*/
+    .nav-bar.sticky .company-name-JSON {
+        display: none;
+    }
+}
