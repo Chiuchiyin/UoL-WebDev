@@ -1054,7 +1054,7 @@ main wheelchair button*/
 .timeline ul li div time {
     position: absolute;
     background: #f5af19;
-    width: 80px;
+    width: fit-content;
     height: 30px;
     top: -15px;
     border-radius: 5px;
@@ -1062,18 +1062,6 @@ main wheelchair button*/
     justify-content: center;
     align-items: center;
     letter-spacing: 2px;
-}
-
-.timeline ul li div div {
-    height: 100px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.timeline ul li div div p {
-    text-align: center;
 }
 
 

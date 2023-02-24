@@ -201,52 +201,6 @@ $('.dropdown-item').eq(2).click(function () {
     $('.single-background').toggleClass('gray');
 })
 
-/*--------------------------------------------------------------------------------------------------------------------------*/
-/*Enable the button in the 'More News' sidebar section of the 'Current News' page to toggle the amount of text displayed----*/
-/*--------------------------------------------------------------------------------------------------------------------------*/
-
-// Retrieve the button in the 'More News' sidebar section from the DOM
-let showMoreTextButton = document.getElementsByClassName('text-display-toggle-button')[0];
-// This text display toggling functionality is only appled to the 'Current News' page
-if (showMoreTextButton != null) {
-    // Toggle the amount of text displayed within each of the articles in the 'More News' sidebar section*/
-    showMoreTextButton.addEventListener('click', function () { toggleTextDisplay() });
-}
-
-/* When the button in the 'More News' section is clicked, the amount of text displayed in the sidebar section either
-increases or decreases */
-function toggleTextDisplay() {
-    // Retrieve the ellipsis (three-dots) from the DOM
-    let ellipsis = document.getElementsByClassName('ellipsis');
-    // Retrieve the text that will be displayed or hidden based on the state of a button from the DOM
-    let showMoreText = document.getElementsByClassName('show-more-text');
-    // Retrieve the button that determines the amount of textual content displayed from the DOM
-    let showMoreTextButton = document.getElementsByClassName('text-display-toggle-button')[0];
-
-    // Provide the option for the user to toggle a button that displays more detailed text
-    if (ellipsis[0].style.display === 'none') {
-        showMoreTextButton.innerHTML = 'Show More';
-    }
-    // Provide the option for the user to toggle a button that reduces the amount of text in the 'More News' section
-    else {
-        showMoreTextButton.innerHTML = 'Show Less';
-    }
-
-    // Iterate through each ellipsis and text section and either show or hide the elements*/
-    for (let index = 0, len = ellipsis.length; index < len; ++index) {
-        // Reduce the amount of text displayed and display the ellipsis
-        if (ellipsis[index].style.display === 'none') {
-            showMoreText[index].style.display = 'none';
-            ellipsis[index].style.display = 'inline';
-        }
-        // Increase the amount of text displayed and hide the ellipsis
-        else {
-            showMoreText[index].style.display = 'inline';
-            ellipsis[index].style.display = 'none';
-        }
-    }
-}
-
 /*----------------------------------------------------------------------------------------------------------*/
 /*Enable the accordion windows on the 'About Us' page to expand and collapse when toggled by the user-------*/
 /*----------------------------------------------------------------------------------------------------------*/
@@ -317,7 +271,7 @@ window.addEventListener('scroll', () => {
     const navBar = document.querySelector('.nav-bar');
     // Retrieve the 'Toggle Contrast' button from the DOM
     const contrastToggle = document.querySelector('.low-contrast-toggle');
-    // Retrieve the company logo (composed of two chess pieces) from the DOM
+    // Retrieve the company logo from the DOM
     const companyLogo = document.querySelector('.company-logo-scroll');
     // Compute the distance from the top of the page
     let offsetTop = navBar.offsetTop;
@@ -349,32 +303,39 @@ searchButton.addEventListener('click', (event) => {
     event.preventDefault();
 })
 
-/*-----------------------------------------------------------------------------------------------------*/
-/*Prevent the social media icons aside on the 'Current News' page from colliding with the footer-------*/
-/*-----------------------------------------------------------------------------------------------------*/
+// Timeline
+const items = document.querySelectorAll(".timeline ul li");
 
-//  Retrieve the social media icons aside from the DOM
-const fixedSocialMediaAside = document.querySelector('.fixed-social-media-icons');
-/*  Record the starting vertical scroll position (position of 0 is not used or else unexpected behaviour occurs when the
-    page is scrolled to the top */
-let pastScrollPosition = -1;
-// Show or hide the aside based on changes in the user's scroll position for the 'Current News' page only
-if (fixedSocialMediaAside != null) {
-    document.addEventListener('scroll', (event) => {
-        let currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop;
-        // Hide the social media icons aside to prevent collision with the footer
-        if (currentScrollPosition > pastScrollPosition && window.pageYOffset > 5200) {
-            fixedSocialMediaAside.style.display = 'none';
-        }
-        else {
-            // Make the aside visible once collision with the footer will not occur
-            fixedSocialMediaAside.style.display = 'block';
-        }
-    })
+function isElementInViewport(el){
+    var rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
 }
 
+function callbackFunc() {
+    for(var i = 0; i < items.length; i++){
+        if (isElementInViewport(items[i])){
+            if(!items[i].classList.contains("in-view")){
+                items[i].classList.add("in-view");
+            }
+        } 
+        else if(items[i].classList.contains("in-view")){
+            items[i].classList.remove("in-view");
+        }
+    }
+}
 
-// Filter function for "Raid Guide" page
+window.addEventListener("load", callbackFunc);
+window.addEventListener("scroll", callbackFunc);
+window.addEventListener("resize", callbackFunc);
+
+/*-----------------------------------------------------------------------------------------------------*/
+/*Filter function for "Raid Guide" page----------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
 
 // Add active class to the current button
 var header = document.getElementById("filter-main-container");
@@ -423,33 +384,3 @@ function removeClass(element, name){
     }
     element.className = arr1.join(" ");
 }
-
-// Timeline
-const items = document.querySelectorAll(".timeline ul li");
-
-function isElementInViewport(el){
-    var rect = el.getBoundingClientRect();
-  return (
-    rect.top >= 0 &&
-    rect.left >= 0 &&
-    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-  );
-}
-
-function callbackFunc() {
-    for(var i = 0; i < items.length; i++){
-        if (isElementInViewport(items[i])){
-            if(!items[i].classList.contains("in-view")){
-                items[i].classList.add("in-view");
-            }
-        } 
-        else if(items[i].classList.contains("in-view")){
-            items[i].classList.remove("in-view");
-        }
-    }
-}
-
-window.addEventListener("load", callbackFunc);
-window.addEventListener("scroll", callbackFunc);
-window.addEventListener("resize", callbackFunc);
