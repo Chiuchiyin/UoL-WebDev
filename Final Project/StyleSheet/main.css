@@ -1044,7 +1044,7 @@ main wheelchair button*/
     bottom: 0;
     width: 400px;
     padding: 20px;
-    background: var(--background-light);
+    background: var(--almost-white);
     box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
     border-radius: 5px;
     display: flex;
@@ -1584,6 +1584,19 @@ main wheelchair button*/
         z-index: -100;
         background-size: cover;
         overflow: hidden;
+    }
+
+    .paldea-item3 {
+        margin: auto;
+        justify-content: center;
+        bottom: 0;
+        width: 400px;
+        padding: 20px;
+        background: var(--almost-white);
+        box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
     }
 
 }

@@ -304,6 +304,7 @@ searchButton.addEventListener('click', (event) => {
 })
 
 // Timeline
+
 const items = document.querySelectorAll(".timeline ul li");
 
 function isElementInViewport(el){
