@@ -934,42 +934,10 @@ main wheelchair button*/
     }
 }
 
-#main-page-title {
-    font-size: 1.6em;
-    padding-top: 200px;
-    padding-left: 150px;
-}
-
-/*Adjust header size to screen dimensions*/
-#main-page-title h1 {
-    font-size: 1.6em;
-    text-align: center;
-    margin-top: .78em;
-}
-
-/*Emphasize the page header*/
-#main-page-title h1 {
-    font-size: 1.6em;
-    margin-top: .78em;
-}
-
 #main-page-title-center {
     font-size: 1.6em;
     padding-top: 200px;
     text-align: center;
-}
-
-/*Adjust header size to screen dimensions*/
-#main-page-title-center h1 {
-    font-size: 1.6em;
-    text-align: center;
-    margin-top: .78em;
-}
-
-/*Emphasize the page header*/
-#main-page-title-center h1 {
-    font-size: 1.6em;
-    margin-top: .78em;
 }
 
 /*Provide whitespace around the meta data section*/

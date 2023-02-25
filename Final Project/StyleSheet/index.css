@@ -4,6 +4,12 @@
 
 @media screen and (min-width: 1011px) {
 
+    #main-page-title {
+        font-size: 1.6em;
+        padding-top: 200px;
+        padding-left: 150px;
+    }
+
     /*--------------------------------------------------------------------*/
     /*Sticky navigation bar on desktop------------------------------------*/
     /*--------------------------------------------------------------------*/
@@ -31,8 +37,9 @@
     /*border padding and grid width set up*/
     .featured-grid-container>div {
         text-align: left;
-        padding: 20px 0;
+        padding: 20px;
         max-width: 100%;
+        box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
     }
 
     /*setting up the first item to occupy 2 by 2 times the space of other items*/
@@ -60,7 +67,6 @@
     /*border padding and grid width set up*/
     .home-page-bottom-grid-container>div {
         text-align: left;
-        padding: 20px 0;
         max-width: 100%;
     }
 
@@ -72,6 +78,20 @@
         grid-row-gap: 20px;
     }
 
+    .home-page-bottom-item2 {
+        display: grid;
+        grid-row-gap: 50px;
+    }
+
+    .home-page-bottom-item4 {
+        padding: 20px;
+        box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    }
+    .home-page-bottom-item7 {
+        padding: 20px;
+        box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    }
+
     /*-------------------------------------------------------------------------------*/
     /*Style text to appear besides images--------------------------------------------*/
     /*-------------------------------------------------------------------------------*/
@@ -80,7 +100,9 @@
     .image-side-container {
         display: grid;
         grid-template-columns: 1fr 1fr;
+        padding: 20px;
         column-gap: 20px;
+        box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
         overflow: hidden;
     }
 
@@ -102,6 +124,12 @@
 /*---------------------------------------------------------------*/
 @media screen and (max-width: 570px) {
 
+    #main-page-title {
+        font-size: 1.6em;
+        padding-top: 200px;
+        padding-left: 50px;
+    }
+
     /*---------------------------------------------------------------*/
     /*'Featured News' grid-------------------------------------------*/
     /*---------------------------------------------------------------*/
@@ -120,8 +148,9 @@
     /*border padding and grid width set up*/
     .featured-grid-container>div {
         text-align: left;
-        padding: 20px 0;
+        padding: 20px;
         max-width: 100%;
+        box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
     }
 
     /*---------------------------------------------------------------*/
@@ -136,14 +165,33 @@
         margin-top: 1.5em;
         padding-left: 50px;
         padding-right: 50px;
+        padding-bottom: 50px;
         min-width: 0px;
     }
 
     /*border padding and grid width set up*/
     .home-page-bottom-grid-container>div {
         text-align: left;
-        padding: 20px 0;
         max-width: 100%;
+    }
+
+    .home-page-bottom-item1 {
+        display: grid;
+        grid-row-gap: 20px;
+    }
+
+    .home-page-bottom-item2 {
+        display: grid;
+        grid-row-gap: 20px;
+    }
+
+    .home-page-bottom-item4 {
+        padding: 20px;
+        box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    }
+    .home-page-bottom-item7 {
+        padding: 20px;
+        box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
     }
 
     /*-------------------------------------------------------------------------------*/
@@ -154,7 +202,9 @@
     .image-side-container {
         display: grid;
         grid-template-columns: 1fr;
+        padding: 20px;
         column-gap: 20px;
+        box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
         overflow: hidden;
     }
 
@@ -179,6 +229,12 @@
 
 @media screen and (min-width: 570px) and (max-width: 1010px) {
 
+    #main-page-title {
+        font-size: 1.6em;
+        padding-top: 200px;
+        padding-left: 100px;
+    }
+
     /*---------------------------------------------------------------*/
     /*'Featured News' grid-------------------------------------------*/
     /*---------------------------------------------------------------*/
@@ -197,8 +253,9 @@
     /*border padding and grid width set up*/
     .featured-grid-container>div {
         text-align: left;
-        padding: 20px 0;
+        padding: 20px;
         max-width: 100%;
+        box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
     }
 
     /*setting up the first item to occupy 2 by 2 times the space of other items*/
@@ -219,14 +276,33 @@
         margin-top: 1.5em;
         padding-left: 100px;
         padding-right: 100px;
+        padding-bottom: 50px;
         min-width: 0px;
     }
 
     /*border padding and grid width set up*/
     .home-page-bottom-grid-container>div {
         text-align: left;
-        padding: 20px 0;
         max-width: 100%;
+    }
+
+    .home-page-bottom-item1 {
+        display: grid;
+        grid-row-gap: 20px;
+    }
+
+    .home-page-bottom-item2 {
+        display: grid;
+        grid-row-gap: 20px;
+    }
+
+    .home-page-bottom-item4 {
+        padding: 20px;
+        box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    }
+    .home-page-bottom-item7 {
+        padding: 20px;
+        box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
     }
 
     /*-------------------------------------------------------------------------------*/
@@ -237,7 +313,9 @@
     .image-side-container {
         display: grid;
         grid-template-columns: 1fr;
+        padding: 20px;
         column-gap: 20px;
+        box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
         overflow: hidden;
     }
 
