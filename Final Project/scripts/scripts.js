@@ -52,7 +52,7 @@ slideInElements.forEach(element => {
 /*-------------------------------------------------------------------------------------------------------------*/
 
 // Fetch the JSON file from a web server
-fetch('https://json.extendsclass.com/bin/74233677221e')
+fetch('https://api.npoint.io/21f53a237005a58f70b3')
     // Convert the JSON file into a Javascript object
     .then(function (response) {
         return response.json()

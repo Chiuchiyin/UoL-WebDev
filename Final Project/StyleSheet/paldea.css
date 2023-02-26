@@ -41,7 +41,7 @@
 
 .timeline ul li div time {
     position: absolute;
-    background: #f5af19;
+    background: var(--light-blue);
     width: fit-content;
     height: 30px;
     top: -15px;
