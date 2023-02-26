@@ -1,3 +1,102 @@
+h2 {
+    text-align: center;
+}
+
+/*--------------------------------------------------------------------*/
+/*Top grid------------------------------------------------------------*/
+/*--------------------------------------------------------------------*/
+
+/*Separate grid into equal columns*/
+.about-us-top {
+    margin-top: 2em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0.8em 5em;
+    row-gap: 20px;
+}
+
+/*Decorate the main header with a dark grey vertical bar to its left for emphasis*/
+.about-us-top h2 {
+    text-align: left;
+    border-left: 4px solid var(--dark-grey);
+    padding-left: .4em;
+}
+
+/*Distinguish the subheader from the main header by applying a red vertical bar to its left*/
+.about-us-top h3 {
+    color: var(--dark-grey);
+    border-left: 4px solid var(--title-red);
+    /*Align the decorative line to the left of the subheader with the main header decorative vertical bar*/
+    padding-left: .52em;
+    /*Reduce clutter by providing whitespace between the top of the text description and the red vertical bar
+        and subheader above*/
+    margin-bottom: .5em;
+}
+
+/*Reduce the emphasis on the paragraph text relative to the headers and subheaders*/
+.about-us-top p {
+    font-size: 0.82em;
+}
+
+/*Give a fixed size to the image*/
+.about-us-top img {
+    height: 20em;
+    width: 100%;
+    /*Preserve image aspect ratio to prevent distortion*/
+    object-fit: cover;
+}
+
+.about-us-top-item1 {
+    margin-right: 2em;
+}
+
+.about-us-top-item2 {
+    margin-left: 2em;
+}
+
+/*---------------------------------------------------------------*/
+/*Contact form---------------------------------------------------*/
+/*---------------------------------------------------------------*/
+
+input[type=text],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+input[type=submit] {
+    background-color: var(--dark-grey);
+    color: var(--white);
+    ;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: var(--light-grey);
+}
+
+.contact-form {
+    border-radius: 25px;
+    width: 500px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin: auto;
+}
+
+/*---------------------------------------------------------------*/
+/*'About Us' page: Desktop---------------------------------------*/
+/*---------------------------------------------------------------*/
+
 @media screen and (min-width: 1011px) {
 
     /*--------------------------------------------------------------------*/
@@ -8,4 +107,15 @@
     .nav-bar.sticky .company-name-JSON {
         display: none;
     }
+
+    /*--------------------------------------------------------------------*/
+    /*"Our Journey" timeline----------------------------------------------*/
+    /*--------------------------------------------------------------------*/
+
+
+
+    /*--------------------------------------------------------------------*/
+    /*"Join Us"-----------------------------------------------------------*/
+    /*--------------------------------------------------------------------*/
+
 }

@@ -37,6 +37,7 @@
 -->
 
 <!-- This body section contains the structure for all the visble content -->
+
 <body>
     <header aria-label="navigation menu">
 
@@ -81,11 +82,11 @@
             <!-- Contrast toggle button: high and low contrast options
                 Default mode is high contrast -->
 
-                <button class="low-contrast-toggle" id="low-contrast-toggle">Toggle Contrast</button>
+            <button class="low-contrast-toggle" id="low-contrast-toggle">Toggle Contrast</button>
 
             <!-- Fixed accessibility button: becomes dropdown menu when toggled
                     Each menu item has a accessibility-tooltip on the right indicating its accessibility feature. -->
-    
+
             <aside class="accessibility-menu">
                 <section class="dropdown-menu">
                     <!-- Main wheelchair icon which is visible by default. Dropdown menu options hidden by default -->
@@ -97,7 +98,7 @@
                         <!-- Makes fonts more legible with Arial font -->
                         <div class="accessibility-tooltip tooltip-right" title="Readable Font">
                             <!-- Accessibility tooltip on the right indicating a "Readable Font" feature -->
-                                <a href="#" class="dropdown-item"><i class="fa fa-font"></i></a>
+                            <a href="#" class="dropdown-item"><i class="fa fa-font"></i></a>
                         </div>
                         <!-- Underlines hyperlinks -->
                         <div class="accessibility-tooltip tooltip-right" title="Underline Links">
@@ -116,6 +117,65 @@
     </header>
     <main>
         <h1 id="main-page-title-center">About Us | Our Story</h1>
+        <section class="about-us-top">
+            <section class="about-us-top-item1">
+                <h2>Small Beginnings</h2>
+                <h3>Our Roots at Stanford University</h3>
+                <!-- Discussion of the origins of Chess News, how the company was founded, and the motivation for creating the company -->
+                <p>Chess News was not once a popular and internationally renowned brand. The company has its roots as a
+                    small startup that originated at Stanford University. The president of the Stanford chess club and
+                    an avid chess player came together to create what is now known as Chess News. It was the passion,
+                    curiosity, and desire to unite chess players across the world and provide a safe and pleasant
+                    environment to access up to date and accurate news.</p>
+            </section>
+            <section class="about-us-top-item">
+                <img src="images/academy.jpg" alt="Stanford University building." class="grid-image">
+            </section>
+            <section class="about-us-top-item">
+                <img src="images/academy.jpg" alt="Stanford University building." class="grid-image">
+            </section>
+            <section class="about-us-top-item2">
+                <h2>Small Beginnings</h2>
+                <h3>Our Roots at Stanford University</h3>
+                <!-- Discussion of the origins of Chess News, how the company was founded, and the motivation for creating the company -->
+                <p>Chess News was not once a popular and internationally renowned brand. The company has its roots as a
+                    small startup that originated at Stanford University. The president of the Stanford chess club and
+                    an avid chess player came together to create what is now known as Chess News. It was the passion,
+                    curiosity, and desire to unite chess players across the world and provide a safe and pleasant
+                    environment to access up to date and accurate news.</p>
+            </section>
+        </section>
+
+        <h2>Our Journey</h2>
+        <section class="org-timeline"></section>
+
+        <h2>Join Us</h2>
+        <section class="Discord-Guilded"></section>
+
+        <h2>Contact Us</h2>
+            <section class="contact-us">
+                <div class="contact-form">
+                    <form>
+                        <label for="fname">First Name</label>
+                        <input type="text" id="fname" name="firstname" placeholder="Doesn't have to be your real name">
+
+                        <label for="lname">Last Name</label>
+                        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+                        <label for="email">E-mail Address</label>
+                        <input type="text" id="email" name="e-mail" placeholder="Enter your email">
+
+                        <label for="subject">Subject</label>
+                        <textarea id="subject" name="subject" placeholder="Write something to us.."
+                            style="height:200px"></textarea>
+
+                        <input type="submit" value="Submit">
+                    </form>
+                </div>
+            </section>
+
+
+
     </main>
     <footer>
         <!-- Four column sections: each with a header and four links related to the header -->
