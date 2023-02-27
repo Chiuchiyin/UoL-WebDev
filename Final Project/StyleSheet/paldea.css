@@ -80,6 +80,12 @@
     visibility: visible;
     opacity: 1;
 }
+
+/*---------------------------------------------------------------*/
+/*'About Paldea': Desktop----------------------------------------*/
+/*---------------------------------------------------------------*/
+
+
 @media screen and (min-width: 1011px) {
 
     /*--------------------------------------------------------------------*/
@@ -149,26 +155,66 @@
 
 }
 
+/*---------------------------------------------------------------*/
+/*'About Paldea': Mobile-----------------------------------------*/
+/*---------------------------------------------------------------*/
+@media screen and (max-width: 700px) {
 
+    /*---------------------------------------------------------------*/
+    /*main grid------------------------------------------------------*/
+    /*---------------------------------------------------------------*/
 
-@media screen and (max-width: 900px) {
-    .timeline ul li div {
-        width: 250px;
-        flex-direction: column;
+    /*main page grid*/
+    .paldea-grid-container {
+        display: grid;
+        gap: 10px;
+        grid-template-columns: auto;
+        grid-row-gap: 50px;
+        margin-top: 1.5em;
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-bottom: 50px;
+        min-width: 0px;
     }
 
-    .timeline ul li div div {
-        width: 80%;
-        margin: 10px;
+    /*border padding and grid width set up*/
+    .paldea-grid-container>div {
+        text-align: left;
+        max-width: 100%;
     }
 
-    .timeline ul li:nth-of-type(even)>div {
-        left: -289px;
+    .paldea-item1 {
+        padding: 20px;
+        border-top: 1px solid black;
+        border-left: 1px solid black;
+        border-bottom: 1px solid black;
+        border-right: 1px solid black;
     }
-}
 
-@media screen and (max-width:600px) {
+    .paldea-item2 {
+        padding: 20px;
+    }
 
+    .videoInsert {
+        width: 100%;
+        height: auto;
+        z-index: -100;
+        background-size: cover;
+        overflow: hidden;
+    }
+
+    .paldea-item3 {
+        margin: auto;
+        justify-content: center;
+        bottom: 0;
+        width: 400px;
+        padding: 20px;
+        background: var(--almost-white);
+        box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+    }
 
     .timeline ul li {
         margin-left: 20px;
@@ -176,10 +222,89 @@
     }
 
     .timeline ul li div {
-        width: calc(100vw - 91px);
+        width: calc(75vw - 150px);
     }
 
     .timeline ul li:nth-of-type(even)>div {
         left: 45px;
     }
+}
+
+/*-------------------------------------------*/
+/*'About Paldea': Tablet---------------------*/
+/*-------------------------------------------*/
+
+@media screen and (min-width: 700px) and (max-width: 1010px) {
+
+    /*---------------------------------------------------------------*/
+    /*main grid------------------------------------------------------*/
+    /*---------------------------------------------------------------*/
+
+    /*main page grid*/
+    .paldea-grid-container {
+        display: grid;
+        gap: 10px;
+        grid-template-columns: auto;
+        grid-row-gap: 50px;
+        margin-top: 1.5em;
+        padding-left: 10%;
+        padding-right: 10%;
+        padding-bottom: 50px;
+        min-width: 0px;
+    }
+
+    /*border padding and grid width set up*/
+    .paldea-grid-container>div {
+        text-align: left;
+        max-width: 100%;
+    }
+
+    .paldea-item1 {
+        padding: 20px;
+        border-top: 1px solid black;
+        border-left: 1px solid black;
+        border-bottom: 1px solid black;
+        border-right: 1px solid black;
+    }
+
+    .paldea-item2 {
+        padding: 20px;
+    }
+
+    .videoInsert {
+        width: 100%;
+        height: auto;
+        z-index: -100;
+        background-size: cover;
+        overflow: hidden;
+    }
+
+    .paldea-item3 {
+        margin: auto;
+        justify-content: center;
+        bottom: 0;
+        width: 400px;
+        padding: 20px;
+        background: var(--almost-white);
+        box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+    }
+
+
+    .timeline ul li div {
+        width: 250px;
+        flex-direction: column;
+    }
+
+    .timeline ul li div div {
+        width: 70%;
+        margin: 10px;
+    }
+
+    .timeline ul li:nth-of-type(even)>div {
+        left: -289px;
+    }
+
 }
