@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- This head section contains all the invisible information about the page -->
+
+<head>
+    <!-- Character encoding -->
+    <meta charset="UTF-8">
+    <!-- Informs device to set viewport to its own width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Summary of the web page as a news provider -->
+    <meta name="description" content="ninth generation Pokemon game, Paldea" />
+    <!-- Author of the web page -->
+    <meta name="author" content="Chiuchiyin" />
+    <!-- Keywords relevant to web page content -->
+    <meta name="keywords" content="Pokemon, news, game" />
+    <!-- Link external CSS file to style and format web page !-->
+    <link rel="stylesheet" href="stylesheet/main.css">
+    <!-- Link external JS file for user interactivity !-->
+    <!-- Defer ensures DOM is fully loaded before JS scripts are executed -->
+    <script src="scripts/scripts.js" defer></script>
+    <!-- Link third party library to provide different font families !-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Link jQuery's CDN used for accessibility dropdown menu -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Inform user of current page within site structure: shown on web page's tab -->
+    <title>Paldea Times | Current News</title>
+</head>
+
+<!-- Body section contains the structure for all visible content
+    1. logo
+    2. Navigation menu
+    3. 'Contrast Toggle' button
+    4. Scroll to top button
+    5. Accessibility dropdown menu
+-->
+
+<!-- This body section contains the structure for all the visble content -->
+
+<body>
+    <header aria-label="navigation menu">
+
+        <!-- Main navigation area: composed of the company logo, a hamburger menu for tablet/mobile devices, and navigational
+            links to the five web pages within the site structure -->
+
+        <section class="nav-bar">
+            <!-- Company logo composed of Paldea official logo and company title, "Paldea Times" -->
+            <!-- Company title is fetched asynchronously from a JSON file on a web server and appended after the logo -->
+            <div class="company-name-JSON"><img src="images/logo.svg" alt="logo"> </div>
+            <!-- Company logo that appears when the navigation bar changes state from default to fixed -->
+            <div class="company-logo-scroll"><img src="images/logo_1.png" alt="logo"></div>
+            <!-- Hamburger menu for navigation on mobile and tablet devices.
+                Invisible on desktop devices. -->
+            <a href="#" class="toggle-button" aria-label="toggle-button">
+                <span class="bar" id="first-bar"></span>
+                <span class="bar" id="second-bar"></span>
+                <span class="bar" id="third-bar"></span>
+            </a>
+            <!-- Main navigation menu which contains links to every other web page within the site structure -->
+            <nav class="nav-bar-links">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="currentnews.html">Current News</a></li>
+                    <li><a href="raidguide.html">Raid Guide</a></li>
+                    <li><a href="aboutpaldea.html">About Paldea</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="report.html">Report</a></li>
+                </ul>
+            </nav>
+
+            <!-- Scroll to top button
+                Becomes visible once the user has scrolled down to a certain point on the page !-->
+
+            <nav>
+                <!-- Up arrow icon from imported library !-->
+                <button class="back-to-top-button">
+                    <i class="fas fa-caret-up"></i>
+                </button>
+            </nav>
+
+            <!-- Contrast toggle button: high and low contrast options
+                Default mode is high contrast -->
+
+            <button class="low-contrast-toggle" id="low-contrast-toggle">Toggle Contrast</button>
+
+            <!-- Fixed accessibility button: becomes dropdown menu when toggled
+                    Each menu item has a accessibility-tooltip on the right indicating its accessibility feature. -->
+
+            <aside class="accessibility-menu">
+                <section class="dropdown-menu">
+                    <!-- Main wheelchair icon which is visible by default. Dropdown menu options hidden by default -->
+                    <div class="accessibility-tooltip tooltip-right accessibility-toggle" title="Accessibility Menu">
+                        <a><i class="fa fa-wheelchair"></i></a>
+                    </div>
+                    <!-- Dropdown menu with accessibility options which becomes visible when clicked -->
+                    <aside class="sub-menu">
+                        <!-- Makes fonts more legible with Arial font -->
+                        <div class="accessibility-tooltip tooltip-right" title="Readable Font">
+                            <!-- Accessibility tooltip on the right indicating a "Readable Font" feature -->
+                            <a href="#" class="dropdown-item"><i class="fa fa-font"></i></a>
+                        </div>
+                        <!-- Underlines hyperlinks -->
+                        <div class="accessibility-tooltip tooltip-right" title="Underline Links">
+                            <!-- Accessibility tooltip on the right indicating an "Underline Links" feature -->
+                            <a href="#" class="dropdown-item"><i class="fa fa-link"></i></a>
+                        </div>
+                        <!-- Change site's color scheme to grayscale. Grayscale mode applies to images as well. -->
+                        <div class="accessibility-tooltip tooltip-right" title="Grayscale Mode">
+                            <!-- Accessibility tooltip on the right indicating a "Grayscale Mode" feature -->
+                            <a href="#" class="dropdown-item"><i class="fas fa-palette"></i></a>
+                        </div>
+                    </aside>
+                </section>
+            </aside>
+        </section>
+    </header>
+
+    <main>
+
+    </main>
+
+    <!-- Footer section
+        1. Four sections: Language, menu, resources, and social media platforms
+        2. Copyright information
+    -->
+
+    <footer>
+        <!-- Four column sections: each with a header and four links related to the header -->
+        <section class="footer-body">
+
+            <!-- First column: Language section
+                Provide language accessibility for popular languages used by the majority of users -->
+
+            <section class="footer-section">
+                <!-- Language section header -->
+                <h3>Languages</h3>
+                <ul>
+                    <li><a href="#">English</a></li>
+                    <li><a href="#">Français</a></li>
+                    <li><a href="#">Español</a></li>
+                    <li><a href="#">中文</a></li>
+                </ul>
+            </section>
+
+            <!-- Second column: Menu section
+                Provide information on legal and security related concerns -->
+
+            <section class="footer-section">
+                <!-- Menu section header -->
+                <h3>Menu</h3>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms and Conditions</a></li>
+                    <li><a href="#">Support</a></li>
+                </ul>
+            </section>
+
+            <!-- Third column: Resources section
+                Provide link to most commonly used resources -->
+
+            <section class="footer-section">
+                <!-- Resources section header -->
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="https://www.smogon.com/">Smogon</a></li>
+                    <li><a href="https://bulbapedia.bulbagarden.net/">Bulbapedia</a></li>
+                    <li><a href="https://www.serebii.net/">Serebii</a></li>
+                    <li><a href="raidguide.html#recommendation">Recommended Raid Build</a></li>
+                </ul>
+            </section>
+
+            <!-- Fourth column: Social media section
+                Provide an outlet for users to connect with the company through popular social media platforms -->
+
+            <section class="footer-section">
+                <!-- Social media section header -->
+                <h3>Connect with Us</h3>
+                <!-- Circular social media icons for Facebook, Twitter, Instagram, Discord and Guilded-->
+                <ul class="social-icons">
+                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-discord"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-guilded"></i></a></li>
+                </ul>
+            </section>
+            <!-- Copyright information -->
+            <section class="copyright-statement">
+                <h4>© 2023 Paldea Times | All Rights Reserved <br />Pokémon and All Respective Names are Trademark & ©
+                    of Nintendo 1996-2023</h4>
+            </section>
+        </section>
+    </footer>
+</body>
+
+</html>

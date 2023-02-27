@@ -1,52 +1,3 @@
-/*-----------------------------------------------------------------------------------------------------------*/
-/*Add an effect that fades in and slides in elements once they are sufficiently visible in the viewport------*/
-/*-----------------------------------------------------------------------------------------------------------*/
-
-//Retrieve all fade-in elements from the DOM
-const fadeInElements = document.querySelectorAll('.fade-in-effect');
-
-const appearOptions = {
-    /* The visibility of an element is determined relative to viewport
-    This will be used to determine when the element should be faded in */
-    root: null,
-    // Fade in occurs once the element has been scrolled into view
-    rootMargin: '0px 0px -165px 0px',
-    threshold: 0
-};
-
-// Observer starts to fade in elements that intersect with the viewport
-const intersectionObserver = new IntersectionObserver((entries, intersectionObserver) => {
-    entries.forEach(entry => {
-        // Apply effect only to elements that overlap with the viewport on page load
-        if (entry.isIntersecting) {
-            // Make the element visible
-            entry.target.classList.add('appear');
-            // Ignore the target element after it has been faded in to avoid repeated fade in effects
-            intersectionObserver.unobserve(entry.target);
-        }
-        // Ignore element do not intersect with the viewport on page load
-        else {
-            return;
-        }
-    });
-},
-    appearOptions);
-
-/* Intersection observer determines the relationship of each element to the viewport to determine if it should be
-faded in or not */
-fadeInElements.forEach(element => {
-    intersectionObserver.observe(element);
-});
-
-// Add a smooth slide in effect to elements once they are sufficiently visible in the viewport
-// Retrieve all slide in elements from the DOM
-const slideInElements = document.querySelectorAll('.slide-in-effect');
-
-// Apply a slide in effect to each element
-slideInElements.forEach(element => {
-    intersectionObserver.observe(element);
-})
-
 /*-------------------------------------------------------------------------------------------------------------*/
 /*Asynchronously fetch a JSON file hosted on a web server to append the company name to the company logo-------*/
 /*-------------------------------------------------------------------------------------------------------------*/
@@ -202,35 +153,6 @@ $('.dropdown-item').eq(2).click(function () {
 })
 
 /*----------------------------------------------------------------------------------------------------------*/
-/*Enable the accordion windows on the 'About Us' page to expand and collapse when toggled by the user-------*/
-/*----------------------------------------------------------------------------------------------------------*/
-
-// Retrieve the accordion headers from the DOM
-let accordionHeader = document.querySelectorAll(".accordion-header");;
-
-// Expand/collapse the accordion window toggled by the user
-for (index = 0; index < accordionHeader.length; index++) {
-    accordionHeader[index].addEventListener("click", function () {
-        var accordion = this.nextElementSibling;
-        // Toggle the selected indicator to either indicate an expanded window, or a collapsed window
-        this.classList.toggle('active-accordion-header');
-        // Toggle the display of the clicked accordion window. Collapse if originally expanded, and vice versa.
-        if (accordion.style.display != 'block') {
-            accordion.style.display = 'block';
-        } else {
-            accordion.style.display = 'none';
-        }
-        // Accordion window is collapsed. Remove space allocated to the accordion window
-        if (accordion.style.display === 'none') {
-            accordion.style.maxHeight = null;
-            // Allocate the proper amount of space for the text in the expanded accordion window
-        } else {
-            accordion.style.maxHeight = accordion.scrollHeight + 'px';
-        }
-    });
-}
-
-/*----------------------------------------------------------------------------------------------------------*/
 /*Prevent accessibility buttons from scrolling back to top on user click by removing default behaviour------*/
 /*----------------------------------------------------------------------------------------------------------*/
 
@@ -303,10 +225,14 @@ searchButton.addEventListener('click', (event) => {
     event.preventDefault();
 })
 
-// Timeline
+/*-----------------------------------------------------------------------------------------------------*/
+/*Timeline---------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
 
+// Retrieve timeline element from the DOM
 const items = document.querySelectorAll(".timeline ul li");
 
+// Check if timeline item is in view
 function isElementInViewport(el){
     var rect = el.getBoundingClientRect();
   return (
@@ -317,6 +243,7 @@ function isElementInViewport(el){
   );
 }
 
+//This function would make timeline items appear by giving it in-view attribute
 function callbackFunc() {
     for(var i = 0; i < items.length; i++){
         if (isElementInViewport(items[i])){
@@ -330,6 +257,7 @@ function callbackFunc() {
     }
 }
 
+//Event Listeners
 window.addEventListener("load", callbackFunc);
 window.addEventListener("scroll", callbackFunc);
 window.addEventListener("resize", callbackFunc);
@@ -338,7 +266,7 @@ window.addEventListener("resize", callbackFunc);
 /*Filter function for "Raid Guide" page----------------------------------------------------------------*/
 /*-----------------------------------------------------------------------------------------------------*/
 
-// Add active class to the current button
+// Retrieve filter button from the DOM
 var header = document.getElementById("filter-main-container");
 var btns = header.getElementsByClassName("filter-option");
 for (var i = 0; i < btns.length; i++) {
@@ -353,7 +281,7 @@ for (var i = 0; i < btns.length; i++) {
 
 
 // Setting up our first filter function
-filterPoke("all")
+filterPoke("all") //otherwise every "Poke" class wouldn't show
 function filterPoke(c){
     var x, i;
     x = document.getElementsByClassName("Poke");

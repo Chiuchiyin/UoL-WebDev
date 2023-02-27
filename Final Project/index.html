@@ -14,8 +14,10 @@
     <meta name="author" content="Chiuchiyin" />
     <!-- Keywords relevant to web page content -->
     <meta name="keywords" content="Pokemon, news, game" />
-    <!-- Link external CSS file to style and format web page !-->
+    <!-- Link external CSS files to style and format web page !-->
+    <!-- Link to primary stylesheet !-->
     <link rel="stylesheet" href="stylesheet/main.css">
+    <!-- Link to page specific stylesheet !-->
     <link rel="stylesheet" href="stylesheet/index.css">
     <!-- Link external JS file for user interactivity !-->
     <!-- Defer ensures DOM is fully loaded before JS scripts are executed -->
@@ -123,9 +125,10 @@
 
     <main aria-label="main content" id="home-page-main-content">
         <article class="news-posts">
+            <!-- Main page title-->
             <h1 id="main-page-title">Home | Featured</h1>
             <div class="featured-grid-container">
-                <!-- Featured section:  "Pokemon" Elden Ring Mod -->
+                <!-- Featured section:  Shiny Hunting Is About To Get Harder In Pokemon Scarlet And Violet: sourced from Kotaku -->
                 <div class="featured-item1">
                     <div class="image-main-container">
                         <!-- Image has zoom effect and alt text for accessibility -->
@@ -147,6 +150,7 @@
                             </p>
                     </div>
                 </div>
+                <!-- Second article:  Pokemon Elden Ring Mod: sourced from Kotaku -->
                 <div class="featured-item2">
                     <div class="image-main-container">
                         <!-- Image has zoom effect and alt text for accessibility -->
@@ -165,6 +169,7 @@
                             </section>
                     </div>
                 </div>
+                <!-- Third article:  /Pokemon Moderator: sourced from Kotaku -->
                 <div class="featured-item3">
                     <div class="image-main-container">
                         <!-- Image has zoom effect and alt text for accessibility -->
@@ -183,6 +188,7 @@
                             </section>
                     </div>
                 </div>
+                <!-- Forth article:  leaked unused content: sourced from comicbook.com -->
                 <div class="featured-item4">
                     <div class="image-main-container">
                         <!-- Image has zoom effect and alt text for accessibility -->
@@ -201,6 +207,7 @@
                             </section>
                     </div>
                 </div>
+                <!-- Fifth article:  St. Baldrick's campaign: sourced from bulbagarden.net -->
                 <div class="featured-item5">
                     <div class="image-main-container">
                         <!-- Image has zoom effect and alt text for accessibility -->
@@ -220,7 +227,7 @@
             </div>
 
 
-            <!--This part is split between latest news and community section-->
+            <!--This part is split between latest news and community section some are recycled from featured section-->
             <div class="home-page-bottom-grid-container">
                 <!--Latest news section-->
                 <div class="home-page-bottom-item1">
@@ -266,6 +273,7 @@
                         </div>
                     </div>
                     <div class="home-page-bottom-item6">
+                        <!-- sourced from bulbagarden.net -->
                         <div class="image-side-container">
                             <div class = "image">
                                 <!-- Image has zoom effect and alt text for accessibility -->
@@ -293,7 +301,7 @@
                     <div class="home-page-bottom-item4">
                         <div class="image-main-container">
                             <h3>Artwork of the Day</h3>
-                            <!-- Image has zoom effect and alt text for accessibility -->
+                            <!-- link is where the picture downloaded from, QM96554101 is the name the artist used as twitter handler -->
                             <img src="images/community_choice.jpg"
                                 alt="Rika carrying rose">
                             <p> Celebrate Valentine's with this beautifully drawn Rika from talented artist <a href="https://www.pixiv.net/en/users/64185111">QM96554101</a>
@@ -303,7 +311,7 @@
                     <div class="home-page-bottom-item7">
                         <!-- Introduce the audio element below -->
                         <h3><span>Our Most Popular Soundtrack</span></h3>
-                        <!-- Audio element: the most popular user-voted soundtrack for the company's intro music -->
+                        <!-- Audio element: taken from official soundtrack. It was freely available for download for a while -->
                          <div id="soundtrack"><audio controls>
                             <source src="audio/theme.mp3" type="audio/mp3">
                             <!-- Display an error message if the user's browser does not support the audio element -->
@@ -358,16 +366,16 @@
             </section>
 
             <!-- Third column: Resources section
-                Provide an interface for users to interact with the chess database through an interactive board -->
+                Provide link to most commonly used resources -->
 
             <section class="footer-section">
                 <!-- Resources section header -->
                 <h3>Resources</h3>
                 <ul>
-                    <li><a href="#">Openings Explorer</a></li>
-                    <li><a href="#">Games Database</a></li>
-                    <li><a href="#">Board Editor</a></li>
-                    <li><a href="#">Analysis Board</a></li>
+                    <li><a href="https://www.smogon.com/">Smogon</a></li>
+                    <li><a href="https://bulbapedia.bulbagarden.net/">Bulbapedia</a></li>
+                    <li><a href="https://www.serebii.net/">Serebii</a></li>
+                    <li><a href="raidguide.html#recommendation">Recommended Raid Build</a></li>
                 </ul>
             </section>
 
@@ -377,17 +385,18 @@
             <section class="footer-section">
                 <!-- Social media section header -->
                 <h3>Connect with Us</h3>
-                <!-- Circular social media icons for Facebook, Twitter, LinkedIn and Instagram-->
+                <!-- Circular social media icons for Facebook, Twitter, Instagram, Discord and Guilded-->
                 <ul class="social-icons">
                     <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
                     <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
                     <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-discord"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-guilded"></i></a></li>
                 </ul>
             </section>
             <!-- Copyright information -->
             <section class="copyright-statement">
-                <h4>© 2021 Chess News | All Rights Reserved</h4>
+                <h4>© 2023 Paldea Times | All Rights Reserved <br/>Pokémon and All Respective Names are Trademark & © of Nintendo 1996-2023</h4>
             </section>
         </section>
     </footer>

@@ -73,6 +73,8 @@
     /*-------------------------------------------------------------------------------*/
     /*Content filter-----------------------------------------------------------------*/
     /*-------------------------------------------------------------------------------*/
+    
+    /*container for filter buttons, arranged in rows of 6 as we have 18 buttons*/
     #filter-main-container {
         display: grid;
         grid-template-columns: auto auto auto auto auto auto;
@@ -81,22 +83,24 @@
         padding-bottom: 20px;
     }
 
-    /* Style the buttons */
+    /* Style the buttons to fade when left alone*/
     .filter-option {
         opacity: 0.6;
         transition: 0.3s;
     }
 
+    /* Style the buttons to appear clearer on mouse hover or when it is active*/
     .active,
     .filter-option:hover {
         opacity: 1;
     }
 
+    /* Hide pokemon in list by default */
     .Poke {
         display: none;
-        /* Hidden by default */
     }
 
+    /*display as block element*/
     .show {
         display: block;
     }
@@ -160,7 +164,7 @@
     /*-------------------------------------------------------------------------------*/
     #filter-main-container {
         display: grid;
-        grid-template-columns: auto auto auto auto auto auto;
+        grid-template-columns: auto auto auto;
         overflow: hidden;
         object-fit: contain;
         padding-bottom: 20px;

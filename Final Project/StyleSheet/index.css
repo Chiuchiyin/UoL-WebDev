@@ -42,7 +42,7 @@
         box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.5);
     }
 
-    /*setting up the first item to occupy 2 by 2 times the space of other items*/
+    /*setting up the first item (featured section) to occupy 2 by 2 times the space of other items*/
     .featured-item1 {
         grid-column: 1 / span 2;
         grid-row: 1/ span 2;
@@ -52,7 +52,7 @@
     /*'Bottom' grid--------------------------------------------------*/
     /*---------------------------------------------------------------*/
 
-    /*Split screen to 2:1 ratio*/
+    /*Split screen to 3 parts*/
     .home-page-bottom-grid-container {
         display: grid;
         grid-template-columns: auto auto auto;
@@ -70,7 +70,7 @@
         max-width: 100%;
     }
 
-    /*setting up the first item to occupy 2 by 2 times the space of other items*/
+    /*setting up the first item (left grid) to occupy 2 by 2 times the space of other items*/
     .home-page-bottom-item1 {
         grid-column: 1 / span 2;
         grid-row: 1/ span 2;
@@ -78,15 +78,18 @@
         grid-row-gap: 20px;
     }
 
+    /*setting up the right grid*/
     .home-page-bottom-item2 {
         display: grid;
         grid-row-gap: 50px;
     }
 
+    /*grid item for fanart section*/
     .home-page-bottom-item4 {
         padding: 20px;
         box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.5);
     }
+    /*grid item for music section*/
     .home-page-bottom-item7 {
         padding: 20px;
         box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.5);
@@ -123,7 +126,8 @@
 /*'Home' page: Mobile--------------------------------------------*/
 /*---------------------------------------------------------------*/
 @media screen and (max-width: 570px) {
-
+    
+    /*adjusting the position of title for mobile devices*/
     #main-page-title {
         font-size: 1.6em;
         padding-top: 200px;
@@ -219,8 +223,6 @@
     .image-side-container img:hover {
         transform: scale(1.02);
     }
-
-
 }
 
 /*-------------------------------------------*/
@@ -242,7 +244,7 @@
     /*split featured news section into 4 column grids*/
     .featured-grid-container {
         display: grid;
-        grid-template-columns: auto auto auto;
+        grid-template-columns: auto auto;
         gap: 20px;
         margin-top: 1.5em;
         padding-left: 100px;
@@ -271,7 +273,7 @@
     /*grid spearate content to equal size columns--------------------*/
     .home-page-bottom-grid-container {
         display: grid;
-        grid-template-columns: 50% auto;
+        grid-template-columns: auto auto;
         gap: 20px;
         margin-top: 1.5em;
         padding-left: 100px;
@@ -299,6 +301,7 @@
     .home-page-bottom-item4 {
         padding: 20px;
         box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.5);
+        
     }
     .home-page-bottom-item7 {
         padding: 20px;

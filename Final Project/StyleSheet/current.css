@@ -42,17 +42,20 @@
         max-width: 100%;
     }
 
+    /*left grid*/    
     .current-item1 {
         display: grid;
         grid-gap: 20px;
         grid-template-columns: 1fr 1fr;
     }
 
+    /*right grid*/
     .current-item2 {
         display: grid;
         grid-gap: 50px;
     }
 
+    /*featured item*/
     .current-item3 {
         grid-column: 1 / span 2;
         grid-row: 1/ span 2;
@@ -60,11 +63,13 @@
         box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.5);
     }
 
+    /*CSS for non-featured item*/
     .current-item4 {
         padding: 20px;
         box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.5);
     }
 
+    /*CSS for breaking news card*/
     .current-item10 {
         padding: 20px;
         box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
@@ -74,6 +79,7 @@
         border-right: 1px solid black;
     }
 
+    /*CSS for game event card*/
     .current-item11 {
         padding: 20px;
         box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
@@ -83,6 +89,7 @@
         border-right: 1px solid black;
     }
 
+    /*CSS for community event card*/
     .current-item12 {
         padding: 20px;
         box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
@@ -92,6 +99,7 @@
         border-right: 1px solid black;
     }
 
+    /*CSS for twitter*/
     .current-item13 {
         overflow: auto
     }
