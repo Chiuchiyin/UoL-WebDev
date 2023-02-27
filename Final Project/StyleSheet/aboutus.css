@@ -150,6 +150,7 @@ input[type=submit]:hover {
         row-gap: 20px;
     }
 
+    /*swap the position of about us item (vision) to the top of the image*/
     .about-us-top-item2 {
         margin-left: 0;
         grid-row: 3
