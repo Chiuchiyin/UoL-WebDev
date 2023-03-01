@@ -1,0 +1,32 @@
+/*-------------------------------------------------------------------*/
+/*CSS styles for the report------------------------------------------*/
+/*-------------------------------------------------------------------*/
+
+* {
+    text-align: justify;
+}
+
+h1, h2, h3, h4 {
+    line-height: 1.5;
+}
+
+p {
+    line-height: 2;
+    font-size: 0.9em;
+}
+
+.report {
+    width: 40em;
+    margin: auto;
+}
+
+@media screen and (min-width: 1011px) {
+
+    /*--------------------------------------------------------------------*/
+    /*Sticky navigation bar on desktop------------------------------------*/
+    /*--------------------------------------------------------------------*/
+
+    /*Remove the page header to increase the main content viewport space when the navigation bar becomes sticky*/
+    .nav-bar.sticky .company-name-JSON {
+        display: none;
+    }
