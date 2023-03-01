@@ -39,9 +39,6 @@
     --dropdown-selected: rgba(0, 0, 0, .2);
     /*Font used for company logo, page headers, and section headers with sans-serif fallback fonts*/
     --main-header: 'Josefin Sans', 'Futura', sans-serif;
-    /*Cursive font used for text overlay headers that appear when some images are hovered over
-        All images on the 'About Us' page use this cursive font*/
-    --fancy-header: 'Kaushan Script', 'Helvetica', sans-serif;
     /*Font used for news article content with serif fallback fonts*/
     --main-text: 'Lora', 'Garamond', serif;
 }
@@ -131,7 +128,6 @@ corner*/
     /*All fonts changed to a legible font
     Fallback font ensures that the font will render*/
     --main-header: 'Arial', sans-serif;
-    --fancy-header: 'Arial', sans-serif;
     --main-text: 'Arial', sans-serif;
 }
 
