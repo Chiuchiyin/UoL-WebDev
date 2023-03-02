@@ -234,7 +234,7 @@
     #main-page-title {
         font-size: 1.6em;
         padding-top: 200px;
-        padding-left: 100px;
+        padding-left: 50px;
     }
 
     /*---------------------------------------------------------------*/
@@ -244,11 +244,11 @@
     /*split featured news section into 4 column grids*/
     .featured-grid-container {
         display: grid;
-        grid-template-columns: auto auto;
+        grid-template-columns: 1fr 1fr;
         gap: 20px;
         margin-top: 1.5em;
-        padding-left: 100px;
-        padding-right: 100px;
+        padding-left: 50px;
+        padding-right: 50px;
         min-width: 0px;
     }
 
@@ -273,7 +273,7 @@
     /*grid spearate content to equal size columns--------------------*/
     .home-page-bottom-grid-container {
         display: grid;
-        grid-template-columns: auto auto;
+        grid-template-columns: 1fr 1fr;
         gap: 20px;
         margin-top: 1.5em;
         padding-left: 100px;

@@ -837,7 +837,7 @@ main wheelchair button*/
     .nav-bar.sticky .toggle-button {
         top: 2.4em;
     }
-
+    /*change the image used for company logo to dark background version on sticky navigation bar*/
     .nav-bar.sticky .company-name-JSON img{
         content: url("../images/logo_1.png");
     }
@@ -927,6 +927,11 @@ main wheelchair button*/
     /*Vertically align hamburger icon relative to company logo position for the fixed navigation bar*/
     .nav-bar.sticky .toggle-button {
         top: 2.37em;
+    }
+
+    /*change the image used for company logo to dark background version on sticky navigation bar*/
+    .nav-bar.sticky .company-name-JSON img{
+        content: url("../images/logo_1.png");
     }
 }
 

@@ -2,10 +2,6 @@
 /*CSS styles for the report------------------------------------------*/
 /*-------------------------------------------------------------------*/
 
-* {
-    text-align: justify;
-}
-
 h1, h2, h3, h4 {
     line-height: 1.5;
 }
@@ -21,7 +17,7 @@ p {
 }
 
 figcaption {
-    color: var(--light-grey);
+    color: var(--dark-grey);
     padding: 2px;
     font-size: 0.8em;
     text-align: center;
@@ -45,4 +41,11 @@ img{
     .nav-bar.sticky .company-name-JSON {
         display: none;
     }
+}
+
+@media screen and (max-width: 700px) {
+    .report {
+        width: auto;
+        margin: 2em;
+    }    
 }
