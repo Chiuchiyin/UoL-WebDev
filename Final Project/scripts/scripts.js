@@ -241,8 +241,8 @@ window.addEventListener("resize", callbackFunc);
 /*-----------------------------------------------------------------------------------------------------*/
 
 // Retrieve filter button from the DOM
-const header = document.querySelectorAll("filter-main-container");
-const btns = document.querySelectorAll("filter-option");
+const filter = document.getElementById("filter-main-container");
+const btns = filter.getElementsByClassName("filter-option");
 for (var i = 0; i < btns.length; i++) {
   btns[i].addEventListener("click", function() {
   var current = document.getElementsByClassName("active");
