@@ -15,17 +15,17 @@ h2 {
     row-gap: 20px;
 }
 
-/*Decorate the main header with a dark grey vertical bar to its left for emphasis*/
+/*Decorate the main header with a vertical bar to its left for emphasis*/
 .about-us-top h2 {
     text-align: left;
-    border-left: 4px solid var(--dark-grey);
+    border-left: 4px solid var(--light-grey);
     padding-left: .4em;
 }
 
 /*Distinguish the subheader from the main header by applying a red vertical bar to its left*/
 .about-us-top h3 {
     color: var(--dark-grey);
-    border-left: 4px solid var(--title-red);
+    border-left: 4px solid var(--dark-grey);
     /*Align the decorative line to the left of the subheader with the main header decorative vertical bar*/
     padding-left: .52em;
     /*Reduce clutter by providing whitespace between the top of the text description and the red vertical bar
@@ -90,12 +90,12 @@ input[type=text],
 select,
 textarea {
     width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    padding: 15px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
     box-sizing: border-box;
-    margin-top: 6px;
-    margin-bottom: 16px;
+    margin-top: 7px;
+    margin-bottom: 18px;
     resize: vertical;
 }
 
@@ -103,9 +103,9 @@ textarea {
 input[type=submit] {
     background-color: var(--dark-grey);
     color: var(--white);
-    padding: 12px 20px;
+    padding: 15px 20px;
     border: none;
-    border-radius: 4px;
+    border-radius: 5px;
     cursor: pointer;
 }
 
@@ -127,7 +127,7 @@ input[type=submit]:hover {
 /*'About Us' page: Desktop---------------------------------------*/
 /*---------------------------------------------------------------*/
 
-@media screen and (min-width: 1011px) {
+@media screen and (min-width: 1080px) {
 
     /*--------------------------------------------------------------------*/
     /*Sticky navigation bar on desktop------------------------------------*/
@@ -144,7 +144,7 @@ input[type=submit]:hover {
 /*'About Us' page: Mobile----------------------------------------*/
 /*---------------------------------------------------------------*/
 
-@media screen and (max-width: 570px) {
+@media screen and (max-width: 700px) {
 
     .about-us-top {
         grid-template-columns: 1fr;

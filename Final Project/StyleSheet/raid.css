@@ -6,7 +6,7 @@
 /*'Raid Guide' page: Desktop-------------------------------------*/
 /*---------------------------------------------------------------*/
 
-@media screen and (min-width: 1011px) {
+@media screen and (min-width: 1080px) {
 
     /*--------------------------------------------------------------------*/
     /*Sticky navigation bar on desktop------------------------------------*/
@@ -50,7 +50,7 @@
     /*Style text to appear besides images--------------------------------------------*/
     /*-------------------------------------------------------------------------------*/
 
-    /*Ensure that image does not overflow out of its designated space*/
+    /*Style text to appear besides image*/
     .image-poke-container {
         display: grid;
         grid-template-columns: 120px auto;
@@ -62,7 +62,7 @@
         border-right: 1px solid black;
     }
 
-    /*Smooth the zoom in effect animation*/
+    /*keep image for overflowing from it's place*/
     .image-poke-container img {
         width: 100%;
         height: 100%;
@@ -110,7 +110,7 @@
 /*---------------------------------------------------------------*/
 /*'Raid Guide' page: Mobile--------------------------------------*/
 /*---------------------------------------------------------------*/
-@media screen and (max-width: 570px) {
+@media screen and (max-width: 700px) {
     .raid-grid-container {
         display: grid;
         gap: 10px;
@@ -139,7 +139,7 @@
     /*Style text to appear besides images--------------------------------------------*/
     /*-------------------------------------------------------------------------------*/
 
-    /*Ensure that image does not overflow out of its designated space*/
+    /*Style text to appear besides image*/
     .image-poke-container {
         display: grid;
         grid-template-columns: 60px auto;
@@ -151,7 +151,7 @@
         border-right: 1px solid black;
     }
 
-    /*Smooth the zoom in effect animation*/
+    /*keep image for overflowing from it's place*/
     .image-poke-container img {
         width: 100%;
         height: 100%;
@@ -197,7 +197,7 @@
 /*'Raid Guide' page: Tablet------------------*/
 /*-------------------------------------------*/
 
-@media screen and (min-width: 570px) and (max-width: 1010px) {
+@media screen and (min-width: 700px) and (max-width: 1080px) {
     .raid-grid-container {
         display: grid;
         gap: 10px;
@@ -228,7 +228,7 @@
     /*Style text to appear besides images--------------------------------------------*/
     /*-------------------------------------------------------------------------------*/
 
-    /*Ensure that image does not overflow out of its designated space*/
+    /*Style text to appear besides image*/
     .image-poke-container {
         display: grid;
         grid-template-columns: 80px auto;
@@ -240,7 +240,7 @@
         border-right: 1px solid black;
     }
 
-    /*Smooth the zoom in effect animation*/
+    /*keep image for overflowing from it's place*/
     .image-poke-container img {
         width: 100%;
         height: 100%;

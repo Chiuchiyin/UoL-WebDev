@@ -17,12 +17,7 @@ fetch('https://api.npoint.io/21f53a237005a58f70b3')
             companyName[index].insertAdjacentHTML("beforeend",dataJSON.company)
         }
     })
-    // Display an error message if the JSON file cannot be parsed or if there is a network error
-    .catch(function (error) {
-        console.error('Error: JSON file could not be parsed or network error encountered.')
-        console.error(error);
-    });
-
+    // Script would return undefined when it fails to catch the JSON
 /*---------------------------------------------------------------------------------------------------*/
 /*Enable a smooth scroll for the back to top button to reduce manual vertical scrolling--------------*/
 /*---------------------------------------------------------------------------------------------------*/
@@ -42,7 +37,7 @@ scrollTopButton.addEventListener('click', () => {
 // Display the scroll button only when the page has been scrolled down past a fixed threshold
 document.addEventListener('scroll', (event) => {
     // Display the scroll button only when the manual scrolling is considered less efficient
-    if (window.pageYOffset < 400) {
+    if (window.pageYOffset < 500) {
         scrollTopButton.style.display = 'none';
     }
     else {
@@ -51,105 +46,88 @@ document.addEventListener('scroll', (event) => {
     }
 })
 
-/*----------------------------------------------------------------------------------------------------------------------------------*/
-/*Enable the user to toggle low contrast mode from the default high contrast mode and preserve settings between browser sessions----*/
-/*----------------------------------------------------------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------------------------------------------*/
+/*Toggle contrast button and preserve the settings---------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------------------------------------------*/
 
-// User settings are stored, meaning that the user's contrast preferences are preserved across browser sessions
+// storing user settings
 let lowContrastMode = localStorage.getItem('lowContrastMode');
 
-// Retrieve the low contrast mode toggle button from the DOM*/
-const lowContrastToggle = document.getElementById('low-contrast-toggle');
+// look for 'toggle contrast' button from the DOM*/
+const ContrastToggle = document.getElementById('low-contrast-toggle');
 
 const enableLowContrastMode = () => {
-    // Apply a low contrast color scheme to each web page within the site structure
+    // Apply lower contrast colour-scheme to each page within the website
     document.body.classList.add('low-contrast-mode');
-    // Keep track of the state of the contrast preference: low contrast mode
+    // Keep track if lower contrast mode is selected
     localStorage.setItem('lowContrastMode', 'enabled');
 }
 
 const disableLowContrastMode = () => {
-    // Revert to the default high contrast color scheme to each web page within the site structure
+    // Revert to the default higher contrast colour-scheme to each web page within the website and keep track of the contrast preference
     document.body.classList.remove('low-contrast-mode');
-    // Keep track of the state of the contrast preference: high contrast mode
     localStorage.setItem('lowContrastMode', 'disabled');
 }
 
-// Preserve low contrast mode from last user session if it was enabled before the page was closed
+// Keep lower contrast mode from last session if it was activated before the page was closed
 if (lowContrastMode === 'enabled') {
     enableLowContrastMode();
 }
 
-/* When the user clicks on the 'Contrast Toggle' button, the website will shift from high contrast to low contrast
-mode and vice versa */
-lowContrastToggle.addEventListener('click', () => {
+/* After 'Contrast Toggle' button is clicked, the site will change from higher contrast to lower contrast mode and vice versa */
+ContrastToggle.addEventListener('click', () => {
 
-    /* The state of the contrast preferences has to be updated, since by default, the preferenaces are only checked
-    when the page is loaded
-    Without this update, the page could not be toggled back to the default high contrast mode after the user
-    toggled low contrast mode to be on */
     lowContrastMode = localStorage.getItem('lowContrastMode');
 
-    // Enable low contrast mode
+    // Set to lower contrast mode
     if (lowContrastMode === 'disabled') {
         enableLowContrastMode();
     }
-    // Revert to the high contrast default mode
+    // Change back to the default higher contrast
     else {
         disableLowContrastMode();
     }
 })
 
 /*----------------------------------------------------------------------------------------------------------------*/
-/*Allow the wheelchair icon to toggle dropdown menu to provide accessibility features using the jQuery library----*/
+/*Toggle "wheelchair" button drop-down menu for accessibility features with the jQuery library--------------------*/
 /*----------------------------------------------------------------------------------------------------------------*/
 
-// Executes when the DOM is registered by the browser
+// Executes on button click
 $(document).ready(function () {
-    // Enable the dropdown menu to appear
+    //dropdown menu to appear on click
     $('.accessibility-toggle').click(function () {
-        // Smoothly open and close dropdown menu when the wheelchair icon is toggled
-        $(this).next('.sub-menu').slideToggle(300);
+       $(this).next('.sub-menu').slideToggle(300);
     })
 });
 
-// Apply text readibility improvements to the current page
+// Text legibility button
 $('.dropdown-item').eq(0).click(function () {
-    // Change the body section font to a legible font (Arial)
+    // Change the body section font to a more legible font (Arial)
     $('body').toggleClass('readability-mode');
 })
 
-/* This prevents the first user click from removing all underlines
+/* This part of the code prevents the first user click remove all the already underlined links
 Without this, the user would have to click the dropdown menu item twice to underline links*/
 $('a').css('text-decoration', 'none');
 
-// Add underlines to all hyperlinks on the current page
+// Underlines all links on the page
 $('.dropdown-item').eq(1).click(function () {
     if ($('a').css('text-decoration-line') != 'underline') {
         $('a').css('text-decoration', 'underline');
     }
-    // Revert to default state by removing underlines to all links on the current page
+    // remove underlines on all links on the current page and revert to default state
     else {
         $('a').css('text-decoration', 'none');
     }
 })
 
-// Make all colors shades of grey
+// apply grayscale filter on the webpage
 $('.dropdown-item').eq(2).click(function () {
-    // Change the current web page's body to a grayscale color scheme
+    // Change the current web page body to a grayscale colour scheme
     $('body').toggleClass('grayscale');
     // Apply a grayscale filter to every image within the current web page
     $('img').toggleClass('gray');
-    /* Apply a grayscale filter to the background images for the containers with overlapping columns on the
-    'Contact Us' page */
-    $('section').toggleClass('gray');
-    // Apply a grayscale filter to the embedded Google Maps at the bottom of the 'Contact Us' page
-    $('iframe').toggleClass('gray');
-    // Apply a grayscale filter to the main banner above the fold of the 'Contact Us' page
-    $('.contact-header').toggleClass('gray');
-    /* Apply a grayscale filter on the two background images for the grid layout with white text and icon overlay on
-    the 'About Us' Page*/
-    $('.single-background').toggleClass('gray');
 })
 
 /*----------------------------------------------------------------------------------------------------------*/
@@ -164,7 +142,7 @@ accessibilityIcons.forEach((icon) => {
     // Click events will no longer scroll back to the top of the page
     icon.addEventListener('click', (event) => {
         event.preventDefault();
-        /* Toggle the background color of the dropdown menu icon to indicate a whether an accessibility feature
+        /* Toggle the background colour of the dropdown menu icon to indicate a whether an accessibility feature
         is currently selected or not*/
         icon.classList.toggle('changeOpacity');
     });
@@ -183,27 +161,23 @@ button.addEventListener('click', () => {
     navBarLinks.classList.toggle('active')
 })
 
-/*--------------------------------------------------------------------*/
-/*Create a sticky navigation bar for accessible navigation------------*/
-/*--------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------*/
+/*Stick the navigation bar on the top for accessible navigation---------------------------------------*/
+/*----------------------------------------------------------------------------------------------------*/
 
-// Sticky navigation bar allows accessible page navigation without the user having to scroll to the top
+// Sticky navigation bar permanently at the top of the webpage
 window.addEventListener('scroll', () => {
-    // Retrieve the navigation menu from the DOM
+    // Retrieve navigation menu from the DOM
     const navBar = document.querySelector('.nav-bar');
-    // Retrieve the 'Toggle Contrast' button from the DOM
+    // Retrieve 'Toggle Contrast' button from the DOM
     const contrastToggle = document.querySelector('.low-contrast-toggle');
-    // Retrieve the company logo from the DOM
+    // Retrieve company logo from the DOM
     const companyLogo = document.querySelector('.company-logo-scroll');
-    // Compute the distance from the top of the page
-    let offsetTop = navBar.offsetTop;
-    // Make navigation menu fixed to the top of the screen when a certain vertical scroll threshold is reached
+    // Fix navigation menu to the top of the screen when a certain vertical scroll threshold is reached
     navBar.classList.toggle('sticky', window.scrollY > navBar.offsetTop);
-    /* Position the 'Contrast Toggle' button relative to the dimensions of the fixed navigation menu when the
-    the vertical scroll bar passes a threshold */
+    /* Position the 'Contrast Toggle' button */
     contrastToggle.classList.toggle('sticky-adjust', window.scrollY > navBar.offsetTop);
-    /* Display the company logo in a white box in the top left corner of the fixed navigation menu when a
-    vertical scroll threshold is reached */
+    /* Display the company logo in a white box in the top left corner of the fixed navigation menu*/
     companyLogo.classList.toggle('company-logo-scroll-active', window.scrollY > navBar.offsetTop);
 })
 
@@ -233,7 +207,7 @@ searchButton.addEventListener('click', (event) => {
 const items = document.querySelectorAll(".timeline ul li");
 
 // Check if timeline item is in view
-function isElementInViewport(el){
+function isElementInView(el){
     var rect = el.getBoundingClientRect();
   return (
     rect.top >= 0 &&
@@ -246,7 +220,7 @@ function isElementInViewport(el){
 //This function would make timeline items appear by giving it in-view attribute
 function callbackFunc() {
     for(var i = 0; i < items.length; i++){
-        if (isElementInViewport(items[i])){
+        if (isElementInView(items[i])){
             if(!items[i].classList.contains("in-view")){
                 items[i].classList.add("in-view");
             }
@@ -267,8 +241,8 @@ window.addEventListener("resize", callbackFunc);
 /*-----------------------------------------------------------------------------------------------------*/
 
 // Retrieve filter button from the DOM
-var header = document.getElementById("filter-main-container");
-var btns = header.getElementsByClassName("filter-option");
+const header = document.querySelectorAll("filter-main-container");
+const btns = document.querySelectorAll("filter-option");
 for (var i = 0; i < btns.length; i++) {
   btns[i].addEventListener("click", function() {
   var current = document.getElementsByClassName("active");
@@ -287,29 +261,29 @@ function filterPoke(c){
     x = document.getElementsByClassName("Poke");
     if (c == 'all') c = "";
     for (i = 0; i< x.length; i++){
-        removeClass(x[i], "show");
-        if(x[i].className.indexOf(c) >-1) addClass(x[i], "show");
+        removeItem(x[i], "show");
+        if(x[i].className.indexOf(c) >-1) addItem(x[i], "show");
     }
 }
 // Creating the Add and Remove functions
-function addClass(element, name){
-    var i, arr1, arr2;
-    arr1 = element.className.split(" ");
-    arr2 = name.split(" ");
-    for (i = 0; i < arr2.length; i++){
-        if (arr1.indexOf(arr2[i]) == -1){
-            element.className += " " +arr2[i];
+function addItem(element, name){
+    var i, var1, var2;
+    var1 = element.className.split(" ");
+    var2 = name.split(" ");
+    for (i = 0; i < var2.length; i++){
+        if (var1.indexOf(var2[i]) == -1){
+            element.className += " " +var2[i];
         }
     }
 }
-function removeClass(element, name){
-    var i, arr1, arr2;
-    arr1 = element.className.split(" ");
-    arr2 = name.split(" ");
-    for (i = 0; i < arr2.length; i++){
-        while (arr1.indexOf(arr2[i]) > -1){
-            arr1.splice(arr1.indexOf(arr2[i]), 1);
+function removeItem(element, name){
+    var i, var1, var2;
+    var1 = element.className.split(" ");
+    var2 = name.split(" ");
+    for (i = 0; i < var2.length; i++){
+        while (var1.indexOf(var2[i]) > -1){
+            var1.splice(var1.indexOf(var2[i]), 1);
         }
     }
-    element.className = arr1.join(" ");
+    element.className = var1.join(" ");
 }

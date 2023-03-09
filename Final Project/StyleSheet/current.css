@@ -2,7 +2,7 @@
 /*'Current News' page CSS--------------------------------*/
 /*-------------------------------------------------------*/
 
-@media screen and (min-width: 1011px) {
+@media screen and (min-width: 1080px) {
 
     #main-page-title {
         font-size: 1.6em;
@@ -108,7 +108,7 @@
     /*Style text to appear besides images--------------------------------------------*/
     /*-------------------------------------------------------------------------------*/
 
-    /*Ensure that image does not overflow out of its designated space*/
+    /*Style text to appear besides image*/
     .image-text-container {
         display: grid;
         grid-template-columns: 20px auto;
@@ -116,7 +116,7 @@
         overflow: hidden;
     }
 
-    /*Smooth the zoom in effect animation*/
+    /*keep image for overflowing from it's place*/
     .image-tex-container img {
         width: 100%;
         height: 100%;
@@ -128,7 +128,7 @@
 /*---------------------------------------------------------------*/
 /*'Current News' page: Mobile------------------------------------*/
 /*---------------------------------------------------------------*/
-@media screen and (max-width: 570px) {
+@media screen and (max-width: 700px) {
 
     #main-page-title {
         font-size: 1.6em;
@@ -158,27 +158,32 @@
         max-width: 100%;
     }
 
+    /*left grid*/    
     .current-item1 {
         display: grid;
         grid-gap: 20px;
         grid-template-columns: 1fr;
     }
 
+    /*right grid*/
     .current-item2 {
         display: grid;
         grid-gap: 50px;
     }
 
+    /*featured item*/
     .current-item3 {
         padding: 20px;
         box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.5);
     }
 
+    /*CSS for non-featured item*/
     .current-item4 {
         padding: 20px;
         box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.5);
     }
 
+    /*CSS for breaking news card*/
     .current-item10 {
         padding: 20px;
         box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
@@ -188,6 +193,7 @@
         border-right: 1px solid black;
     }
 
+    /*CSS for game event card*/
     .current-item11 {
         padding: 20px;
         box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
@@ -197,6 +203,7 @@
         border-right: 1px solid black;
     }
 
+    /*CSS for community event card*/
     .current-item12 {
         padding: 20px;
         box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
@@ -206,7 +213,8 @@
         border-right: 1px solid black;
     }
 
-    .current-item13 {
+     /*CSS for twitter*/
+     .current-item13 {
         overflow: auto
     }
 
@@ -214,7 +222,7 @@
     /*Style text to appear besides images--------------------------------------------*/
     /*-------------------------------------------------------------------------------*/
 
-    /*Ensure that image does not overflow out of its designated space*/
+    /*Style text to appear besides image*/
     .image-text-container {
         display: grid;
         grid-template-columns: 30px auto;
@@ -222,7 +230,7 @@
         overflow: hidden;
     }
 
-    /*Smooth the zoom in effect animation*/
+    /*keep image for overflowing from it's place*/
     .image-tex-container img {
         width: 100%;
         height: 100%;
@@ -236,7 +244,7 @@
 /*'Current News' page: Tablet----------------*/
 /*-------------------------------------------*/
 
-@media screen and (min-width: 570px) and (max-width: 1010px) {
+@media screen and (min-width: 700px) and (max-width: 1080px) {
 
     #main-page-title {
         font-size: 1.6em;
@@ -267,27 +275,32 @@
         max-width: 100%;
     }
 
+    /*left grid*/ 
     .current-item1 {
         display: grid;
         grid-gap: 20px;
         grid-template-columns: 1fr;
     }
 
+    /*right grid*/
     .current-item2 {
         display: grid;
         grid-gap: 50px;
     }
 
+    /*featured item*/
     .current-item3 {
         padding: 20px;
         box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.5);
     }
 
+    /*CSS for non-featured item*/
     .current-item4 {
         padding: 20px;
         box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.5);
     }
     
+    /*CSS for breaking news card*/
     .current-item10 {
         padding: 20px;
         box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
@@ -297,6 +310,7 @@
         border-right: 1px solid black;
     }
 
+    /*CSS for game event card*/
     .current-item11 {
         padding: 20px;
         box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
@@ -306,6 +320,7 @@
         border-right: 1px solid black;
     }
 
+    /*CSS for community event card*/
     .current-item12 {
         padding: 20px;
         box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
@@ -315,6 +330,7 @@
         border-right: 1px solid black;
     }
 
+    /*CSS for twitter*/
     .current-item13 {
         overflow: auto
     }
@@ -323,7 +339,7 @@
     /*Style text to appear besides images--------------------------------------------*/
     /*-------------------------------------------------------------------------------*/
 
-    /*Ensure that image does not overflow out of its designated space*/
+    /*Style text to appear besides image*/
     .image-text-container {
         display: grid;
         grid-template-columns: 30px auto;
@@ -331,7 +347,7 @@
         overflow: hidden;
     }
 
-    /*Smooth the zoom in effect animation*/
+    /*keep image for overflowing from it's place*/
     .image-tex-container img {
         width: 100%;
         height: 100%;
