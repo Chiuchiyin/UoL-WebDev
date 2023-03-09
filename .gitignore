@@ -1,51 +1,15 @@
 
-Final Project/images/paldea_pokemon_league_logo_by_jormxdos_dffvs1y-fullview.png
-bootstrap-news-template/single-page.html
-bootstrap-news-template/READ-ME.txt
-bootstrap-news-template/LICENSE.txt
-bootstrap-news-template/lib/slick/slick.scss
-bootstrap-news-template/lib/slick/slick.min.js
-bootstrap-news-template/lib/slick/slick.less
-bootstrap-news-template/lib/slick/slick.js
-bootstrap-news-template/lib/slick/slick.css
-bootstrap-news-template/lib/slick/slick-theme.scss
-bootstrap-news-template/lib/slick/slick-theme.less
-bootstrap-news-template/lib/slick/slick-theme.css
-bootstrap-news-template/lib/slick/fonts/slick.woff
-bootstrap-news-template/lib/slick/fonts/slick.ttf
-bootstrap-news-template/lib/slick/fonts/slick.svg
-bootstrap-news-template/lib/slick/fonts/slick.eot
-bootstrap-news-template/lib/slick/config.rb
-bootstrap-news-template/lib/slick/ajax-loader.gif
-bootstrap-news-template/lib/easing/easing.min.js
-bootstrap-news-template/lib/easing/easing.js
-bootstrap-news-template/js/main.js
-bootstrap-news-template/index.html
-bootstrap-news-template/img/news-825x525.jpg
-bootstrap-news-template/img/news-450x350-2.jpg
-bootstrap-news-template/img/news-450x350-1.jpg
-bootstrap-news-template/img/news-350x223-5.jpg
-bootstrap-news-template/img/news-350x223-4.jpg
-bootstrap-news-template/img/news-350x223-3.jpg
-bootstrap-news-template/img/news-350x223-2.jpg
-bootstrap-news-template/img/news-350x223-1.jpg
-bootstrap-news-template/img/logo.png
-bootstrap-news-template/img/ads-2.jpg
-bootstrap-news-template/img/ads-1.jpg
-bootstrap-news-template/css/style.css
-bootstrap-news-template/contact.html
-bootstrap-news-template/bootstrap-news-template.jpg
-timeline/index.html
-timeline/main.js
-timeline/style.css
-vertical-timeline-master/assets/css/style.css
-vertical-timeline-master/assets/css/style.scss
-vertical-timeline-master/assets/img/cd-icon-location.svg
-vertical-timeline-master/assets/img/cd-icon-movie.svg
-vertical-timeline-master/assets/img/cd-icon-picture.svg
-vertical-timeline-master/assets/js/main.js
-vertical-timeline-master/index.html
 vertical-timeline-master/README.md
+vertical-timeline-master/index.html
+vertical-timeline-master/assets/js/main.js
+vertical-timeline-master/assets/img/cd-icon-picture.svg
+vertical-timeline-master/assets/img/cd-icon-movie.svg
+vertical-timeline-master/assets/img/cd-icon-location.svg
+vertical-timeline-master/assets/css/style.scss
+vertical-timeline-master/assets/css/style.css
+timeline/style.css
+timeline/main.js
+timeline/index.html
 SouthLondonOnlineReadingGroupCSSLayout/StyleSheet/style.css
 SouthLondonOnlineReadingGroupCSSLayout/onlineRead.html
 SouthLondonOnlineReadingGroupCSSLayout/localReadingGroups.html
@@ -98,10 +62,19 @@ SouthLondonOnlineReadingGroupCSSFramework/book4.html
 SouthLondonOnlineReadingGroupCSSFramework/book3.html
 SouthLondonOnlineReadingGroupCSSFramework/book2.html
 SouthLondonOnlineReadingGroupCSSFramework/book1.html
+Paldea Times.webm
+Paldea Times.mp4
+Final Project/scripts/Qk4yGHiw.json
+Final Project/images/logo.jpeg
+Final Project/combined.css
+Final Project/2023.03.09 Cleaned Final Project - Report still in work.zip
+Final Project/2023.03.02 Final Project - Report still in the work.zip
 example - chess news/topplayers.html
+example - chess news/stylesheet/report.css
 example - chess news/stylesheet/main.css
 example - chess news/scripts/scripts.js
 example - chess news/report.html
+example - chess news/report.css
 example - chess news/index.html
 example - chess news/images/world-chess-championship-game.png
 example - chess news/images/world-chess-championship-arena.jpeg
@@ -277,16 +250,40 @@ Chess News _ About Us_files/jquery.min.js.download
 Chess News _ About Us_files/developers.jpg
 Chess News _ About Us_files/all.min.css
 Chess News _ About Us.html
-.DS_Store
-Final Project/scripts/Qk4yGHiw.json
-Paldea Times.mp4
-Paldea Times.webm
-Final Project/2023.3.1 Final Project.zip
-Final Project/2023.03.01 Final Project Report still in work.zip
-Final Project/2023.03.01 Final Project- Report still in Work.zip
-Final Project/2021.03.01 Final Project - Report still in Work.zip
-Final Project/2023.03.02 Final Project - Report still in the work.zip
-Final Project/images/logo.jpeg
-Final Project/combined.css
-Final Project/2023.03.09 Cleaned Final Project - Report still in work.zip
-example - chess news/stylesheet/report.css
+bootstrap-news-template/single-page.html
+bootstrap-news-template/READ-ME.txt
+bootstrap-news-template/LICENSE.txt
+bootstrap-news-template/lib/slick/slick.scss
+bootstrap-news-template/lib/slick/slick.min.js
+bootstrap-news-template/lib/slick/slick.less
+bootstrap-news-template/lib/slick/slick.js
+bootstrap-news-template/lib/slick/slick.css
+bootstrap-news-template/lib/slick/slick-theme.scss
+bootstrap-news-template/lib/slick/slick-theme.less
+bootstrap-news-template/lib/slick/slick-theme.css
+bootstrap-news-template/lib/slick/fonts/slick.woff
+bootstrap-news-template/lib/slick/fonts/slick.ttf
+bootstrap-news-template/lib/slick/fonts/slick.svg
+bootstrap-news-template/lib/slick/fonts/slick.eot
+bootstrap-news-template/lib/slick/config.rb
+bootstrap-news-template/lib/slick/ajax-loader.gif
+bootstrap-news-template/lib/easing/easing.min.js
+bootstrap-news-template/lib/easing/easing.js
+bootstrap-news-template/js/main.js
+bootstrap-news-template/index.html
+bootstrap-news-template/img/news-825x525.jpg
+bootstrap-news-template/img/news-450x350-2.jpg
+bootstrap-news-template/img/news-450x350-1.jpg
+bootstrap-news-template/img/news-350x223-5.jpg
+bootstrap-news-template/img/news-350x223-4.jpg
+bootstrap-news-template/img/news-350x223-3.jpg
+bootstrap-news-template/img/news-350x223-2.jpg
+bootstrap-news-template/img/news-350x223-1.jpg
+bootstrap-news-template/img/logo.png
+bootstrap-news-template/img/ads-2.jpg
+bootstrap-news-template/img/ads-1.jpg
+bootstrap-news-template/css/style.css
+bootstrap-news-template/contact.html
+bootstrap-news-template/bootstrap-news-template.jpg
+example - chess news/report.css
+example - chess news/report.css
