@@ -128,6 +128,8 @@ $('.dropdown-item').eq(2).click(function () {
     $('body').toggleClass('grayscale');
     // Apply a grayscale filter to every image within the current web page
     $('img').toggleClass('gray');
+    // Apply a grayscale filter to every video within the current web page
+    $('video').toggleClass('gray');
 })
 
 /*----------------------------------------------------------------------------------------------------------*/
