@@ -226,7 +226,7 @@
         width: calc(75vw - 150px);
     }
 
-    .timeline ul li:nth-of-type(even)>div {
+    .timeline ul li:nth-of-type(odd)>div {
         left: 45px;
     }
 }
