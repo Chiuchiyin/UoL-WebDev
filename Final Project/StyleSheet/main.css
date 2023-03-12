@@ -9,14 +9,6 @@
     --background-light: #bdc0c9;
     --background-medium: #7b76ad;
     --background-dark: #000000;
-    --light-blue: #e3e8f5;
-    --pale-blue: #9cafcc;
-    --twitter-blue: #55ACEE;
-    --medium-blue: rgb(84, 96, 150);
-    --linkedin-blue: #007cb6;
-    --facebook-blue: #324d86;
-    --dark-blue: rgb(48, 61, 90);
-    --light-medium-blue: rgb(215, 218, 250);
     --section-background: rgb(248, 249, 255);
     --main-background: rgb(247, 250, 253);
     --dark-black: rgb(26, 26, 27);
@@ -25,15 +17,11 @@
     --dark-grey: rgb(73, 74, 87);
     --medium-grey: rgb(94, 94, 104);
     --light-medium-grey: rgb(102, 102, 114);
-    --beige: rgb(245, 238, 229);
     --light-grey: rgb(214, 214, 214);
     --lighter-grey: rgb(220, 220, 220);
     --lightest-grey: rgb(240, 240, 240);
     --almost-white: rgb(248, 250, 255);
     --white: rgb(255, 255, 255);
-    --title-red: rgb(204, 34, 34);
-    --light-red: rgb(238, 39, 39);
-    --red: rgb(121, 45, 45);
     --dropdown-selected: rgba(0, 0, 0, .2);
     /*Font used for company logo, page headers, and section headers with sans-serif fonts*/
     --main-header: 'Josefin Sans', 'Futura', sans-serif;
@@ -50,14 +38,6 @@
     --background-light: #c0c2c7;
     --background-medium: #69677a;
     --background-dark: #242121;
-    --light-blue: #a1abc5;
-    --pale-blue: #a0aabe;
-    --twitter-blue: #67a6d6;
-    --medium-blue: rgb(93, 98, 124);
-    --linkedin-blue: #13658b;
-    --facebook-blue: #3b4d74;
-    --dark-blue: rgb(96, 104, 119);
-    --light-medium-blue: rgb(191, 193, 211);
     --section-background: rgb(201, 207, 223);
     --main-background: rgb(234, 239, 243);
     --dark-black: rgb(49, 49, 53);
@@ -73,9 +53,6 @@
     --lightest-grey: rgb(221, 221, 221);
     --almost-white: rgb(227, 229, 233);
     --white: rgb(233, 230, 230);
-    --title-red: rgb(119, 7, 7);
-    --light-red: rgb(139, 34, 34);
-    --red: rgb(80, 41, 41);
     --dropdown-selected: rgba(0, 0, 0, 0.3);
 }
 
@@ -84,14 +61,6 @@
     --background-light: #dfdfdf;
     --background-medium: #969696;
     --background-dark: #474747;
-    --light-blue: #c2c2c2;
-    --pale-blue: #bebebe;
-    --twitter-blue: #dddddd;
-    --medium-blue: rgb(121, 121, 121);
-    --linkedin-blue: #aaaaaa;
-    --facebook-blue: #646464;
-    --dark-blue: rgb(61, 61, 61);
-    --light-medium-blue: rgb(214, 214, 214);
     --section-background: rgb(231, 231, 231);
     --main-background: rgb(247, 247, 247);
     --dark-black: rgb(48, 48, 48);
@@ -104,9 +73,6 @@
     --lighter-grey: rgb(218, 218, 218);
     --almost-white: rgb(241, 241, 241);
     --white: rgb(255, 255, 255);
-    --title-red: rgb(121, 121, 121);
-    --light-red: rgb(145, 145, 145);
-    --red: rgb(77, 77, 77);
     --dropdown-selected: rgba(0, 0, 0, 0.3);
 }
 
@@ -123,7 +89,7 @@
 }
 
 /*-------------------------------------------------------------------------------*/
-/*Style images to have 'Zoom in' effect on mouse hover for emphasis--------------*/
+/*Style images on mouse hover for emphasis---------------------------------------*/
 /*-------------------------------------------------------------------------------*/
 
 /*Prevent scaled image from overflowing from its supposed space*/
@@ -251,11 +217,11 @@ footer {
     text-transform: uppercase;
     margin-bottom: 2em;
     font-weight: 300;
-    /*Decorative blue line below is positioned absolutely in relation to the header*/
+    /*Decorative line below is positioned absolutely in relation to the header*/
     position: relative;
 }
 
-/*Add decorative blue line below header to separate section headers from the footer links*/
+/*Add decorative line below header to separate section headers from the footer links*/
 .footer-section h3::before {
     content: '';
     height: 0.1em;
@@ -263,10 +229,10 @@ footer {
     position: absolute;
     left: 0;
     bottom: -0.2em;
-    background-color: var(--light-medium-blue);
+    background-color: var(--light-grey);
 }
 
-/*Make the decorative blue link grow and shrink when hovered to appear interactive*/
+/*Make the decorative link grow and shrink when hovered to appear interactive*/
 .footer-section h3:hover::before {
     width: 20%;
 }
@@ -423,23 +389,23 @@ button {
     position: absolute;
     height: 0.1875em;
     width: 100%;
-    /*Blue line appears above each navigation link when hovered*/
-    background-color: var(--pale-blue);
+    /*Line appears above each navigation link when hovered*/
+    background-color: var(--light-grey);
     left: 0;
     top: 0;
-    /*Initially hide the blue line*/
+    /*Initially hide the line*/
     transform: scale(0, 1);
 }
 
-/*Selected indicator (blue line) appears when a user hovers over a navigation link*/
+/*Selected indicator appears when a user hovers over a navigation link*/
 .nav-bar-links a:hover::after {
-    /*Blue line that appears above navigation link is roughly the same width as the navigation link itself*/
+    /*Line that appears above navigation link is roughly the same width as the navigation link itself*/
     transform: scale(0.7, 1);
 }
 
 /*Indicate an interactive element by adding a subtle text color change when a navigation link is hovered*/
 .nav-bar-links li a:hover {
-    color: var(--dark-blue);
+    color: var(--dark-grey);
 }
 
 /*---------------------------------------------------------------------------------------*/
@@ -507,7 +473,7 @@ button {
     /*Visible over all other elements*/
     z-index: 99;
     font-size: 1.2em;
-    color: var(--dark-blue);
+    color: var(--dark-grey);
     background-color: var(--almost-white);
     border: 0.11em solid var(--light-grey);
     /*Button is not visible on page load
